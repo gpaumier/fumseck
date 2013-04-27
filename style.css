@@ -19,3 +19,8 @@ Version:        0.1
 	margin-bottom: 1.71429rem;
 	margin-top: -1.5rem;
 }
+
+
+a {
+    text-decoration: none;
+}
