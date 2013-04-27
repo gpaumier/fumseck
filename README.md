@@ -1,4 +1,4 @@
 fumseck
 =======
 
-Just another WordPress theme
+Just another WordPress theme. For now, just a dumb child theme.
