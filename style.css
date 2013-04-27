@@ -9,3 +9,13 @@ Version:        0.1
 */
 
 @import url("../twentytwelve/style.css");
+
+.post_thumbnail_caption {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #757575;
+	margin-bottom: 1.71429rem;
+	margin-top: -1.5rem;
+}

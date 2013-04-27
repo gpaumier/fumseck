@@ -16,6 +16,11 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
+			<?php $post_thumbnail_caption = get_post_meta($post->ID, 'Featured image caption', true);
+			if ($post_thumbnail_caption) :
+			?>
+			<p class="post_thumbnail_caption"><?php echo $post_thumbnail_caption ?></p>
+			<?php endif; // $post_thumbnail_caption ?>	
 			<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
