@@ -427,3 +427,23 @@ table {
 }
 
 /*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
+/* Light Solarized scheme */
+/* line 3, sass/partials/_base.scss */
+body {
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+/* line 8, sass/partials/_base.scss */
+a {
+  color: #268bd2;
+  text-decoration: none;
+}
+/* line 11, sass/partials/_base.scss */
+a:hover, a:focus {
+  text-decoration: underline;
+}
+/* line 14, sass/partials/_base.scss */
+a:visited, a:active {
+  color: #6c71c4;
+}

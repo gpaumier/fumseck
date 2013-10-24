@@ -1,0 +1,17 @@
+/* Light Solarized scheme */
+
+body {
+	background: $base3;
+	color: $base00;
+} 
+
+a {
+	color: $blue;
+	text-decoration: none;
+		&:hover,&:focus{
+			text-decoration: underline;
+		}
+	&:visited,&:active{
+		color:$violet;
+	}
+}
