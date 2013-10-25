@@ -447,3 +447,47 @@ a:hover, a:focus {
 a:visited, a:active {
   color: #6c71c4;
 }
+
+/* line 3, sass/partials/_posts.scss */
+.syndication {
+  padding: 0;
+  font-size: 0.8em;
+  color: #93a1a1;
+}
+/* line 9, sass/partials/_posts.scss */
+.syndication li {
+  display: inline-block;
+}
+/* line 18, sass/partials/_posts.scss */
+.syndication a {
+  color: #93a1a1;
+  text-decoration: none;
+  padding: .3em .6em;
+  margin-left: .7em;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  background-color: #eee8d5;
+}
+/* line 25, sass/partials/_posts.scss */
+.syndication a:hover {
+  color: white;
+}
+/* line 28, sass/partials/_posts.scss */
+.syndication .facebook:hover {
+  background-color: #3b5998;
+}
+/* line 30, sass/partials/_posts.scss */
+.syndication .twitter:hover {
+  background-color: #00aced;
+}
+/* line 32, sass/partials/_posts.scss */
+.syndication .googleplus:hover {
+  background-color: #c03220;
+}
+/* line 34, sass/partials/_posts.scss */
+.syndication .tumblr:hover {
+  background-color: #365069;
+}

@@ -11,8 +11,19 @@ Tags:
 Text Domain: fumseck
 */
 
+ // Compass
 @import "compass";
+
+// Setup
 @import "partials/normalize";
 @import "partials/solarized";
 @import "partials/variables";
+//@import "partials/mixins";
+//@import "partials/placeholders";
+
+// Site
 @import "partials/base";
+//@import "partials/layout";
+
+// Content
+@import "partials/posts";

@@ -1,0 +1,35 @@
+// Syndication buttons
+
+.syndication{
+	
+	// Layout
+	
+	padding: 0;
+	
+	li { display: inline-block;	}
+	
+	// Typography
+	
+	font-size: $secondary-content-size;
+	color: $secondary-content-color;
+	
+	// Links
+	
+	a {
+		color: $secondary-content-color;
+		text-decoration: none;
+		padding: .3em .6em;
+		margin-left: .7em;
+		@include border-radius(.4em);
+		background-color: $background-highlights-color;
+		&:hover { color: white;	}
+	}
+
+	.facebook:hover { background-color: $facebook-color; }
+	
+	.twitter:hover { background-color: $twitter-color; }
+	
+	.googleplus:hover { background-color: $googleplus-color; }
+	
+	.tumblr:hover { background-color: $tumblr-color; }
+}
