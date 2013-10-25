@@ -1,9 +1,12 @@
-/* Light Solarized scheme */
+// Colors and typography
 
 body {
-	background: $base3;
-	color: $base00;
+	background: $background-color;
+	color: $primary-content-color;
+	font-size: $primary-content-size;
 } 
+
+// Links
 
 a {
 	color: $blue;
