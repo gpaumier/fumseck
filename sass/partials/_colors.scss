@@ -1,17 +1,13 @@
-// Colors
+
+@import "partials/solarized";
 
 // General Solarized (Light)-based color scheme, but more semantic
+
 $background-color: $base3;
 $background-highlights-color: $base2;
 $primary-content-color: $base00;
 $secondary-content-color: $base1;
 $emphasized-content-color: $base01;
-
-// Typography
-
-$primary-content-size: 1em;
-$secondary-content-size: .8em;
-$tertiary-content-size: .7em;
 
 // Extra colors not in color scheme (for rare exceptions)
 
