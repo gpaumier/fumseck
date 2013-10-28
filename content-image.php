@@ -13,7 +13,7 @@
 		<?php endif;?>
 				
 		<?php if ( $batbelt_location = get_the_term_list( get_the_ID(), 'batbelt_locations', '', __( ', ', 'fumseck' ) ) ) :?>
-		<li><span class="image-meta-label"><?php _ex( 'in: ' , 'in location', 'fumseck' ); ?></span><?php printf( $batbelt_location ); ?></li>
+		<li><span class="image-meta-label opt"><?php _ex( 'in: ' , 'in location', 'fumseck' ); ?></span><?php printf( $batbelt_location ); ?></li>
 		<?php endif; ?>
 			
 		<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) :?>
