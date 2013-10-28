@@ -22,7 +22,7 @@
 			
 		<?php if ( $featured_image_exif ):
 			if ( $exif_aperture = $featured_image_exif['image_meta']['aperture'] ) :?>
-		<li><span class="image-meta-label opt"><?php _e( 'aperture: ' , 'fumseck' ); ?></span><?php echo 'ƒ/' . sanitize_text_field( $exif_aperture ) ; ?></li>
+		<li><span class="image-meta-label opt"><?php _e( 'aperture: ' , 'fumseck' ); ?></span><?php echo '<i>ƒ</i>/' . sanitize_text_field( $exif_aperture ) ; ?></li>
 			<?php endif; ?>
 			
 			<?php if ( $exif_focal_length = $featured_image_exif['image_meta']['focal_length'] ) :?>
