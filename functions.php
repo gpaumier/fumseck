@@ -11,4 +11,11 @@ function fumseck_add_cpt_search( $query ) {
 	return $query;
 }
 
+# Return the linked title of a given post object
+
+function fumseck_linked_title( $id ) {
+	$post_title = get_the_title( $id );
+	echo '<a href="' . esc_url( get_permalink( $id ) ) . '" title="' . esc_attr( $post_title, 'fumseck' ) . '">'. $post_title . '</a>' ;
+}
+
 ?>
