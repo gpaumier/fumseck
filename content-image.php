@@ -4,6 +4,7 @@
 							
 	<h1><?php the_title(); ?></h1>
 	
+	<aside>
 	<ul class="image-meta">
 		
 		<?php if ( $featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ) ):
@@ -52,6 +53,7 @@
 		<li><span class="image-meta-label"><?php _e( 'project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
 		<?php endif; ?>
 	</ul>
+	<aside>
 	
 	<?php the_content(); ?>
 </article><!-- #post -->
