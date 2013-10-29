@@ -56,7 +56,7 @@
 		<li><span class="image-meta-label"><?php _e( 'project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
 		<?php endif; ?>
 	</ul>
-	<aside>
+	</aside>
 	
 	<?php the_content(); ?>
 </article><!-- #post -->
