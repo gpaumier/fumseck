@@ -1,4 +1,4 @@
-	<?php $featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ); 
+	<?php	$featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ); 
 			if ( $featured_image_exif['height'] >= $featured_image_exif['width'] ) {
 				$ratio = 'portrait';
 			} else {
@@ -18,33 +18,33 @@
 	<aside>
 		<ul class="image-meta">
 		
-			<?php if ( $featured_image_exif ):
-				if ( $exif_date_taken = $featured_image_exif['image_meta']['created_timestamp'] ) :?>
+			<?php if ( $featured_image_exif ) {
+					if ( $exif_date_taken = $featured_image_exif['image_meta']['created_timestamp'] ) {?>
 			<li><span class="label opt"><?php _e( 'taken on: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( date( 'c', $exif_date_taken ) ); ?>"><?php echo date_i18n( __("F j, Y", 'fumseck'), $exif_date_taken ) ; ?></time></li>
-				<?php endif;?>
-			<?php endif;?>
+					<?php };?>
+			<?php };?>
 			
-			<?php if ( $batbelt_location = get_the_term_list( get_the_ID(), 'batbelt_locations', '', __( ', ', 'fumseck' ) ) ) :?>
+			<?php if ( $batbelt_location = get_the_term_list( get_the_ID(), 'batbelt_locations', '', __( ', ', 'fumseck' ) ) ) {?>
 			<li><span class="label opt"><?php _ex( 'in: ' , 'in location', 'fumseck' ); ?></span><?php printf( $batbelt_location ); ?></li>
-			<?php endif; ?>
+			<?php };?>
 			
-			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) :?>
+			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) {?>
 			<li><span class="label"><?php _e( 'during: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_event ); ?></li>
-			<?php endif; ?>
+			<?php };?>
 			
-			<?php if ( $featured_image_exif ):
-				if ( $exif_aperture = $featured_image_exif['image_meta']['aperture'] ) :?>
+			<?php if ( $featured_image_exif ) {
+				if ( $exif_aperture = $featured_image_exif['image_meta']['aperture'] ) {?>
 			<li><span class="label opt"><?php _e( 'aperture: ' , 'fumseck' ); ?></span><?php echo '<i>ƒ</i>/' . sanitize_text_field( $exif_aperture ) ; ?></li>
-				<?php endif; ?>
+				<?php };?>
 			
-				<?php if ( $exif_focal_length = $featured_image_exif['image_meta']['focal_length'] ) :?>
+				<?php if ( $exif_focal_length = $featured_image_exif['image_meta']['focal_length'] ) {?>
 			<li><span class="label opt"><?php _e( 'focal length: ' , 'fumseck' ); ?></span><?php echo sanitize_text_field( $exif_focal_length ) . ' mm' ; ?></li>
-				<?php endif; ?>
+				<?php };?>
 			
-				<?php if ( $exif_exposure = $featured_image_exif['image_meta']['shutter_speed'] ) :?>
+				<?php if ( $exif_exposure = $featured_image_exif['image_meta']['shutter_speed'] ) {?>
 			<li><span class="label opt"><?php _e( 'exposure time: ' , 'fumseck' ); ?></span><?php echo sanitize_text_field( $exif_exposure ) . ' s' ; ?></li>
-				<?php endif; 
-			endif; # end exif?>
+				<?php };?>
+			<?php }; # end exif?>
 		
 		</ul>
 	</aside>
