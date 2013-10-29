@@ -18,4 +18,10 @@ function fumseck_linked_title( $id ) {
 	echo '<a href="' . esc_url( get_permalink( $id ) ) . '" title="' . esc_attr( $post_title, 'fumseck' ) . '">'. $post_title . '</a>' ;
 }
 
+# Display the default image for content without a featured image
+
+function fumseck_default_image( $post_type ) {
+	// TODO
+}
+
 ?>
