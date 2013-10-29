@@ -1,4 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php $featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ); 
+			if ( $featured_image_exif['height'] >= $featured_image_exif['width'] ) {
+				$ratio = 'portrait';
+			} else {
+				$ratio = 'landscape';
+			};
+	?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( $ratio) ; ?>>
 	
 	<header><h1><?php the_title(); ?></h1></header>
 	
@@ -10,10 +18,10 @@
 	<aside>
 		<ul class="image-meta">
 		
-			<?php if ( $featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ) ):
+			<?php if ( $featured_image_exif ):
 				if ( $exif_date_taken = $featured_image_exif['image_meta']['created_timestamp'] ) :?>
 			<li><span class="label opt"><?php _e( 'taken on: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( date( 'c', $exif_date_taken ) ); ?>"><?php echo date_i18n( __("F j, Y", 'fumseck'), $exif_date_taken ) ; ?></time></li>
-					<?php endif;?>
+				<?php endif;?>
 			<?php endif;?>
 			
 			<?php if ( $batbelt_location = get_the_term_list( get_the_ID(), 'batbelt_locations', '', __( ', ', 'fumseck' ) ) ) :?>
