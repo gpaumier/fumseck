@@ -448,17 +448,23 @@ a:visited, a:active {
   color: #6c71c4;
 }
 
-/* line 3, sass/partials/_posts.scss */
+/* line 1, sass/partials/_posts.scss */
+.wp-post-image {
+  width: 100%;
+  height: auto;
+}
+
+/* line 9, sass/partials/_posts.scss */
 .syndication {
   padding: 0;
   font-size: 0.8em;
   color: #93a1a1;
 }
-/* line 9, sass/partials/_posts.scss */
+/* line 15, sass/partials/_posts.scss */
 .syndication li {
   display: inline-block;
 }
-/* line 18, sass/partials/_posts.scss */
+/* line 24, sass/partials/_posts.scss */
 .syndication a {
   color: #93a1a1;
   text-decoration: none;
@@ -471,23 +477,23 @@ a:visited, a:active {
   border-radius: 0.4em;
   background-color: #eee8d5;
 }
-/* line 25, sass/partials/_posts.scss */
+/* line 31, sass/partials/_posts.scss */
 .syndication a:hover {
   color: white;
 }
-/* line 28, sass/partials/_posts.scss */
+/* line 34, sass/partials/_posts.scss */
 .syndication .facebook:hover {
   background-color: #3b5998;
 }
-/* line 30, sass/partials/_posts.scss */
+/* line 36, sass/partials/_posts.scss */
 .syndication .twitter:hover {
   background-color: #00aced;
 }
-/* line 32, sass/partials/_posts.scss */
+/* line 38, sass/partials/_posts.scss */
 .syndication .googleplus:hover {
   background-color: #c03220;
 }
-/* line 34, sass/partials/_posts.scss */
+/* line 40, sass/partials/_posts.scss */
 .syndication .tumblr:hover {
   background-color: #365069;
 }
