@@ -36,7 +36,7 @@
 
 		<li><span class="image-meta-label"><?php _e( 'published on: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time></li>
 
-			<?php if ( $categories_list = get_the_category_list( __( ', ', 'fumseck' ) ) ) :?>
+		<?php if ( $categories_list = get_the_category_list( __( ', ', 'fumseck' ) ) ) :?>
 		<li><span class="image-meta-label"><?php _ex( 'in: ' , 'in categories', 'fumseck' ); ?></span><?php echo $categories_list ; ?></li>
 		<?php endif; ?>
 
