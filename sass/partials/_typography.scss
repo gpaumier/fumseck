@@ -1,6 +1,6 @@
 
 @import "compass/typography/vertical_rhythm";
-//@import "modular-scale";
+@import "modular-scale";
 
 // Reset to set up vertical rhythm
 
@@ -24,6 +24,7 @@ time, mark, audio, video {
 
 $base-font-size: 16px;
 $base-line-height: 24px;
+$modular-scale-ratio: minor-third();
 
 @include establish-baseline;
 
@@ -32,18 +33,18 @@ ul, ol, dl, p {
 }
 
 h1 {
-	@include adjust-font-size-to(37.9px);
+	font-size: modular-scale(3, 1em, $modular-scale-ratio);
 }
 h2 {
-	@include adjust-font-size-to(28.4px);
+	font-size: modular-scale(2, 1em, $modular-scale-ratio);
 }
 h3, .lead {
-	@include adjust-font-size-to(21.3px);
+	font-size: modular-scale(1, 1em, $modular-scale-ratio);
 }
 
+$secondary-content-size: modular-scale(-1, 1em, $modular-scale-ratio);
+$tertiary-content-size: modular-scale(-2, 1em, $modular-scale-ratio);
 
-// Until we get modular-scale to work
-
-$primary-content-size: 1em;
-$secondary-content-size: 0.75 * $primary-content-size;
-$tertiary-content-size: 0.75 * $secondary-content-size;
+figcaption {
+	font-size: $secondary-content-size;
+}
