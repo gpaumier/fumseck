@@ -9,11 +9,8 @@ $grid-padding: 0em;
 
 // Breakpoints
 $narrower-viewport-columns: 2;
-
 $narrow-viewport-columns: 3;
-
 $smaller-viewport-columns: 5;
-
 $small-viewport-columns: 6;
 
 $fair-viewport-columns: 7;
@@ -29,6 +26,11 @@ $wider-viewport: col2width( $wider-viewport-columns, $column-width , $gutter-wid
 
 
 article {
+	&.regular {
+		@include container($smaller-viewport-columns, $fair-viewport-columns, $wider-viewport-columns);
+		//@include susy-grid-background;
+	}
+	
 	&.landscape {
 		@include container($fair-viewport-columns, $wider-viewport-columns);
 		//@include susy-grid-background;
@@ -41,6 +43,53 @@ article {
 
 }
 
+// Regular posts
+
+figcaption {
+	
+}
+
+article.regular {
+	header{
+		@include at-breakpoint($fair-viewport-columns) {
+			@include span-columns(5 omega, $fair-viewport-columns);
+		}
+		@include at-breakpoint($wider-viewport-columns) {
+			@include span-columns(3, $wider-viewport-columns);
+			@include pre(2);
+		}
+	}
+	
+	.featured-image, .default-image {
+		@include at-breakpoint($fair-viewport-columns) {
+			@include span-columns(5 omega, $fair-viewport-columns);
+		}
+		@include at-breakpoint($wider-viewport-columns) {
+			@include span-columns(5 omega, $wider-viewport-columns);
+			@include post(2);
+		}
+	}
+}
+
+.pub-meta {
+	@include at-breakpoint($fair-viewport-columns) {
+		@include span-columns(2, $fair-viewport-columns);
+	}
+	@include at-breakpoint($wider-viewport-columns) {
+		@include span-columns(3, $wider-viewport-columns);
+		@include pre(2);
+	}
+}
+
+.the-content {
+	@include at-breakpoint($fair-viewport-columns) {
+		@include span-columns(5 omega, $fair-viewport-columns);
+	}
+	@include at-breakpoint($wider-viewport-columns) {
+		@include span-columns(5 omega, $wider-viewport-columns);
+		@include post(2)
+	}
+}
 
 // Image posts
 
