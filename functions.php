@@ -3,10 +3,12 @@
 # Modify the WP query to include custom content types to search results
 # and archive pages
 
+# FIXME This shows all three kinds of posts in the back-end
+
 add_filter( 'pre_get_posts', 'fumseck_add_cpt_search' );
 
 function fumseck_add_cpt_search( $query ) {
-	if ( $query->is_search || $query->is_archive )
+	if ( $query->is_search || $query->is_archive && ! is_admin() )
 		$query->set( 'post_type', array( 'post', 'batbelt_project', 'batbelt_event' ) );
 	return $query;
 }
