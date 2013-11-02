@@ -1,0 +1,12 @@
+
+@mixin media-query ($canvas) {
+	@if $canvas == short-height {
+		@media only screen and (max-height:40em) { @content; }
+	}
+	@else if $canvas == medium-height {
+		@media only screen and (min-height:40em) and (max-height:55em) { @content; }
+	}
+	@else if $canvas == tall-height {
+		@media only screen and (min-height:55em) { @content; }
+	}
+}

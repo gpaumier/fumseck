@@ -1,0 +1,203 @@
+// Susy config
+
+@import "susy";
+$total-columns: 12;
+$column-width: 6em;
+$gutter-width: 2em;
+$grid-padding: 0em;
+//@include border-box-sizing;
+
+// Breakpoints
+$narrower-viewport-columns: 2;
+
+$narrow-viewport-columns: 3;
+
+$smaller-viewport-columns: 5;
+
+$small-viewport-columns: 6;
+
+$fair-viewport-columns: 7;
+$fair-viewport: col2width( $fair-viewport-columns, $column-width , $gutter-width);
+
+$good-viewport-columns: 8;
+$good-viewport: col2width( $good-viewport-columns, $column-width , $gutter-width);
+
+$wide-viewport-columns: 10;
+
+$wider-viewport-columns: 12;
+$wider-viewport: col2width( $wider-viewport-columns, $column-width , $gutter-width);
+
+
+article {
+	&.landscape {
+		@include container($fair-viewport-columns, $wider-viewport-columns);
+		//@include susy-grid-background;
+	}
+	
+	&.portrait {
+		@include container($good-viewport-columns, $wider-viewport-columns, 24);
+
+	}
+
+}
+
+
+// Image posts
+
+.format-image {
+	
+	&.landscape {
+			
+		figure {
+			
+			@include at-breakpoint( $wider-viewport-columns ) {
+				@include span-columns(9, $wider-viewport-columns);
+			}
+		
+		}
+	
+		.image-meta, .image-pub-meta {
+			@include at-breakpoint( $small-viewport-columns ) {
+				@include span-columns(2, $fair-viewport-columns);
+			}
+		}
+		
+		header, .image-summary, .the-content {
+			@include at-breakpoint( $small-viewport-columns ) {
+				@include span-columns(5 omega, $fair-viewport-columns);
+			}
+		}
+	
+		header, .image-meta, .image-summary, .image-pub-meta {
+			@include at-breakpoint( $wider-viewport-columns ) {
+				@include span-columns(3 omega, $wider-viewport-columns);
+			}
+		}
+		
+		.the-content {
+			@include at-breakpoint( $wider-viewport-columns ) {
+				@include span-columns(6, $wider-viewport-columns);
+				@include pre(3); 
+			}
+		}
+	}
+	
+	&.portrait {
+		
+		// By default, we stack everything below a width-constrained image
+		
+		figure, header, .image-meta, .image-summary, .image-pub-meta, .the-content {
+			@include media-query(short-height) {
+				max-width: col2width( 3, $column-width , $gutter-width);
+				margin: auto;
+			}
+			@include media-query(medium-height) {
+				max-width: col2width( 4, $column-width , $gutter-width);
+				margin: auto;
+			}
+			@include media-query(tall-height) {
+				max-width: col2width( 5, $column-width , $gutter-width);
+				margin: auto;
+			}
+		}
+		
+		// If there's some extra room on the side, let's take advantage of it,
+		// but only if we can actually fit our stuff there
+		
+		figure {
+			@include media-query(short-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					@include span-columns(3, $good-viewport-columns);
+					@include pre(1);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(3, $wider-viewport-columns);
+					@include pre(3);
+				}
+			}
+			@include media-query(medium-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					@include span-columns(4, $good-viewport-columns);
+					@include pre(1);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(4, $wider-viewport-columns);
+					@include pre(3);
+				}
+			}
+			@include media-query(tall-height) {
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(5, $wider-viewport-columns);
+					@include pre(3);
+				}
+			}
+		}
+		
+		header, .image-meta, .image-summary, .image-pub-meta,  {
+			@include media-query(short-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					@include span-columns(3 omega, $good-viewport-columns);
+					@include post(1);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(3 omega, $wider-viewport-columns);
+					@include post(3);
+				}
+			}
+			@include media-query(medium-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					@include span-columns(3 omega, $good-viewport-columns);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(3 omega, $wider-viewport-columns);
+					@include post(2);
+				}
+			}
+			@include media-query(tall-height) {
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(3 omega, $wider-viewport-columns);
+					@include post(1);
+				}
+			}
+		}
+		
+		.the-content {
+			@include media-query(short-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					max-width: col2width( 6, $column-width , $gutter-width);
+					@include span-columns(6, $good-viewport-columns);
+					@include squish(1,1);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					max-width: col2width( 6, $column-width , $gutter-width);
+					@include span-columns(6, $wider-viewport-columns);
+					@include squish(3,3);
+				}
+			}
+			@include media-query(medium-height) {
+				@include at-breakpoint( $good-viewport-columns ) {
+					@include span-columns(4, $good-viewport-columns);
+					@include pre(1);
+				}
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(4, $wider-viewport-columns);
+					@include pre(3);
+				}
+			}
+			@include media-query(tall-height) {
+				@include at-breakpoint( $wider-viewport-columns ) {
+					@include span-columns(5, $wider-viewport-columns);
+					@include pre(3);
+				}
+			}
+		}
+	}
+}
+
+// Hide optional content on narrow viewports
+// TODO select only those
+
+.opt {
+	@extend %hidden;
+}
+
