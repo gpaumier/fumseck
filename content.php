@@ -25,9 +25,8 @@
 	
 	<div class="the-content"><?php the_content(); ?></div>
 	
-	<aside class="pub-meta">
+	<aside class="meta2">
 		<ul>
-		
 			<?php if ( $categories_list = get_the_category_list( __( ', ', 'fumseck' ) ) ) {?>
 			<li><span class="label"><?php _ex( 'in ' , 'in categories', 'fumseck' ); ?></span><?php echo $categories_list ; ?></li>
 			<?php }; ?>
@@ -43,7 +42,6 @@
 			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) {?>
 			<li><span class="label"><?php _e( 'event: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_event ); ?></li>
 			<?php }; ?>
-
 		</ul>
 	</aside>
 </article><!-- #post -->

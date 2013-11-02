@@ -24,6 +24,7 @@ $wide-viewport-columns: 10;
 $wider-viewport-columns: 12;
 $wider-viewport: col2width( $wider-viewport-columns, $column-width , $gutter-width);
 
+// Set up the grids
 
 article {
 	&.regular {
@@ -41,12 +42,6 @@ article {
 
 	}
 
-}
-
-// Regular posts
-
-figcaption {
-	
 }
 
 article.regular {
@@ -71,7 +66,7 @@ article.regular {
 	}
 }
 
-.pub-meta {
+.meta2 {
 	@include at-breakpoint($fair-viewport-columns) {
 		@include span-columns(2, $fair-viewport-columns);
 	}
