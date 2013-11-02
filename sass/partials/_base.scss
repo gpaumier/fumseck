@@ -3,7 +3,8 @@
 body {
 	background: $background-color;
 	color: $primary-content-color;
-	font-size: $primary-content-size;
+	
+	@include debug-vertical-alignment();
 } 
 
 // Links

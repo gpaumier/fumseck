@@ -5,7 +5,8 @@ $total-columns: 12;
 $column-width: 6em;
 $gutter-width: 2em;
 $grid-padding: 0em;
-//@include border-box-sizing;
+@include border-box-sizing;
+$grid-background-baseline-height: $base-line-height;
 
 // Breakpoints
 $narrower-viewport-columns: 2;

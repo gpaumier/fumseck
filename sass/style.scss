@@ -15,12 +15,12 @@ Text Domain: fumseck
 @import "compass";
 
 // Definitions
+@import "partials/normalize";
+@import "partials/typography";
 @import "partials/mixins";
 @import "partials/functions";
-@import "partials/normalize";
 @import "partials/colors";
 @import "partials/placeholders";
-@import "partials/typography";
 @import "partials/layout";
 
 // Site

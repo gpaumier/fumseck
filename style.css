@@ -426,14 +426,74 @@ table {
   border-spacing: 0;
 }
 
+/* line 19, sass/partials/_typography.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 61, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 30, sass/partials/_typography.scss */
+ul, ol, dl, p {
+  margin: 24px 0;
+}
+
+/* line 34, sass/partials/_typography.scss */
+h1 {
+  font-size: 2.36875em;
+  line-height: 1.26649em;
+}
+
+/* line 37, sass/partials/_typography.scss */
+h2 {
+  font-size: 1.775em;
+  line-height: 1.69014em;
+}
+
+/* line 40, sass/partials/_typography.scss */
+h3, .lead {
+  font-size: 1.33125em;
+  line-height: 2.25352em;
+}
+
 /*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
 /* line 3, sass/partials/_placeholders.scss */
 .opt, .format-image figcaption {
   display: none;
 }
 
+/* line 14, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/susy-1.0.9/sass/susy/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @media (min-width: 38em) {
-  /* line 30, sass/partials/_layout.scss */
+  /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 38em;
     padding-left: 0em;
@@ -449,19 +509,19 @@ table {
   }
 }
 @media (min-width: 54em) {
-  /* line 30, sass/partials/_layout.scss */
+  /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 54em;
   }
 }
 @media (min-width: 94em) {
-  /* line 30, sass/partials/_layout.scss */
+  /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 94em;
   }
 }
 @media (min-width: 54em) {
-  /* line 35, sass/partials/_layout.scss */
+  /* line 36, sass/partials/_layout.scss */
   article.landscape {
     max-width: 54em;
     padding-left: 0em;
@@ -477,13 +537,13 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 35, sass/partials/_layout.scss */
+  /* line 36, sass/partials/_layout.scss */
   article.landscape {
     max-width: 94em;
   }
 }
 @media (min-width: 62em) {
-  /* line 40, sass/partials/_layout.scss */
+  /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 62em;
     padding-left: 0em;
@@ -499,20 +559,20 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 40, sass/partials/_layout.scss */
+  /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 94em;
   }
 }
 @media (min-width: 190em) {
-  /* line 40, sass/partials/_layout.scss */
+  /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 190em;
   }
 }
 
 @media (min-width: 54em) {
-  /* line 48, sass/partials/_layout.scss */
+  /* line 49, sass/partials/_layout.scss */
   article.regular header {
     width: 70.37037%;
     float: right;
@@ -520,7 +580,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 48, sass/partials/_layout.scss */
+  /* line 49, sass/partials/_layout.scss */
   article.regular header {
     width: 23.40426%;
     float: left;
@@ -529,7 +589,7 @@ table {
   }
 }
 @media (min-width: 54em) {
-  /* line 58, sass/partials/_layout.scss */
+  /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 70.37037%;
     float: right;
@@ -537,7 +597,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 58, sass/partials/_layout.scss */
+  /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 40.42553%;
     float: right;
@@ -547,7 +607,7 @@ table {
 }
 
 @media (min-width: 54em) {
-  /* line 69, sass/partials/_layout.scss */
+  /* line 70, sass/partials/_layout.scss */
   .meta2 {
     width: 25.92593%;
     float: left;
@@ -555,7 +615,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 69, sass/partials/_layout.scss */
+  /* line 70, sass/partials/_layout.scss */
   .meta2 {
     width: 23.40426%;
     float: left;
@@ -565,7 +625,7 @@ table {
 }
 
 @media (min-width: 54em) {
-  /* line 79, sass/partials/_layout.scss */
+  /* line 80, sass/partials/_layout.scss */
   .the-content {
     width: 70.37037%;
     float: right;
@@ -573,7 +633,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 79, sass/partials/_layout.scss */
+  /* line 80, sass/partials/_layout.scss */
   .the-content {
     width: 40.42553%;
     float: right;
@@ -583,7 +643,7 @@ table {
 }
 
 @media (min-width: 94em) {
-  /* line 95, sass/partials/_layout.scss */
+  /* line 96, sass/partials/_layout.scss */
   .format-image.landscape figure {
     width: 74.46809%;
     float: left;
@@ -591,7 +651,7 @@ table {
   }
 }
 @media (min-width: 46em) {
-  /* line 103, sass/partials/_layout.scss */
+  /* line 104, sass/partials/_layout.scss */
   .format-image.landscape .image-meta, .format-image.landscape .image-pub-meta {
     width: 25.92593%;
     float: left;
@@ -599,7 +659,7 @@ table {
   }
 }
 @media (min-width: 46em) {
-  /* line 109, sass/partials/_layout.scss */
+  /* line 110, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-summary, .format-image.landscape .the-content {
     width: 70.37037%;
     float: right;
@@ -607,7 +667,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 115, sass/partials/_layout.scss */
+  /* line 116, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .image-summary, .format-image.landscape .image-pub-meta {
     width: 23.40426%;
     float: right;
@@ -615,7 +675,7 @@ table {
   }
 }
 @media (min-width: 94em) {
-  /* line 121, sass/partials/_layout.scss */
+  /* line 122, sass/partials/_layout.scss */
   .format-image.landscape .the-content {
     width: 48.93617%;
     float: left;
@@ -624,28 +684,28 @@ table {
   }
 }
 @media only screen and (max-height: 40em) {
-  /* line 133, sass/partials/_layout.scss */
+  /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 22em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) {
-  /* line 133, sass/partials/_layout.scss */
+  /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 30em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 55em) {
-  /* line 133, sass/partials/_layout.scss */
+  /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 38em;
     margin: auto;
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 62em) {
-  /* line 151, sass/partials/_layout.scss */
+  /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 35.48387%;
     float: left;
@@ -654,7 +714,7 @@ table {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 94em) {
-  /* line 151, sass/partials/_layout.scss */
+  /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 23.40426%;
     float: left;
@@ -663,7 +723,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
-  /* line 151, sass/partials/_layout.scss */
+  /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 48.3871%;
     float: left;
@@ -672,7 +732,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
-  /* line 151, sass/partials/_layout.scss */
+  /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 31.91489%;
     float: left;
@@ -681,7 +741,7 @@ table {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 94em) {
-  /* line 151, sass/partials/_layout.scss */
+  /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 40.42553%;
     float: left;
@@ -690,7 +750,7 @@ table {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 62em) {
-  /* line 180, sass/partials/_layout.scss */
+  /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 35.48387%;
     float: right;
@@ -699,7 +759,7 @@ table {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 94em) {
-  /* line 180, sass/partials/_layout.scss */
+  /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
     float: right;
@@ -708,7 +768,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
-  /* line 180, sass/partials/_layout.scss */
+  /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 35.48387%;
     float: right;
@@ -716,7 +776,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
-  /* line 180, sass/partials/_layout.scss */
+  /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
     float: right;
@@ -725,7 +785,7 @@ table {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 94em) {
-  /* line 180, sass/partials/_layout.scss */
+  /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
     float: right;
@@ -734,7 +794,7 @@ table {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 62em) {
-  /* line 208, sass/partials/_layout.scss */
+  /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 46em;
     width: 74.19355%;
@@ -745,7 +805,7 @@ table {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 94em) {
-  /* line 208, sass/partials/_layout.scss */
+  /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 46em;
     width: 48.93617%;
@@ -756,7 +816,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
-  /* line 208, sass/partials/_layout.scss */
+  /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 48.3871%;
     float: left;
@@ -765,7 +825,7 @@ table {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
-  /* line 208, sass/partials/_layout.scss */
+  /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 31.91489%;
     float: left;
@@ -774,7 +834,7 @@ table {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 94em) {
-  /* line 208, sass/partials/_layout.scss */
+  /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 40.42553%;
     float: left;
@@ -787,19 +847,28 @@ table {
 body {
   background: #fdf6e3;
   color: #657b83;
-  font-size: 1em;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  -webkit-background-size: 100% 1.5em;
+  -moz-background-size: 100% 1.5em;
+  -o-background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-position: left top;
 }
 
-/* line 11, sass/partials/_base.scss */
+/* line 12, sass/partials/_base.scss */
 a {
   color: #268bd2;
   text-decoration: none;
 }
-/* line 14, sass/partials/_base.scss */
+/* line 15, sass/partials/_base.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
-/* line 17, sass/partials/_base.scss */
+/* line 18, sass/partials/_base.scss */
 a:visited, a:active {
   color: #6c71c4;
 }
@@ -813,7 +882,7 @@ a:visited, a:active {
 /* line 8, sass/partials/_posts.scss */
 .syndication {
   padding: 0;
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: #93a1a1;
 }
 /* line 14, sass/partials/_posts.scss */
