@@ -16,11 +16,11 @@ Text Domain: fumseck
 
 // Definitions
 @import "partials/normalize";
-@import "partials/typography";
 @import "partials/mixins";
 @import "partials/functions";
 @import "partials/colors";
 @import "partials/placeholders";
+@import "partials/typography";
 @import "partials/layout";
 @import "partials/ui";
 
@@ -29,3 +29,5 @@ Text Domain: fumseck
 
 // Content
 @import "partials/posts";
+
+// body {	@include debug-vertical-alignment(); }

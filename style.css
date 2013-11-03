@@ -426,7 +426,178 @@ table {
   border-spacing: 0;
 }
 
-/* line 19, sass/partials/_typography.scss */
+/*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
+/* line 3, sass/partials/_placeholders.scss */
+.opt, .format-image figcaption {
+  display: none;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Regular";
+  src: url('fonts/latinmodern/roman/lmroman10-regular-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmroman10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Bold";
+  src: url('fonts/latinmodern/roman/lmroman10-bold-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmroman10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Italic";
+  src: url('fonts/latinmodern/roman/lmroman10-italic-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmroman10-italic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Bold Italic";
+  src: url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Caps Regular";
+  src: url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Roman Caps Oblique";
+  src: url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot');
+  src: url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* line 77, sass/partials/_typography.scss */
+body {
+  font-family: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
+}
+
+/* line 81, sass/partials/_typography.scss */
+h1, h2, h3, .lead, strong {
+  font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
+  font-weight: bold;
+}
+
+/* line 86, sass/partials/_typography.scss */
+em {
+  font-family: 'Latin Modern Roman Italic', 'Baskerville', 'Georgia', serif;
+  font-style: italic;
+}
+
+/* line 91, sass/partials/_typography.scss */
+em strong, strong em {
+  font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Latin Modern Sans Regular";
+  src: url('fonts/latinmodern/sans/lmsans10-regular-webfont.eot');
+  src: url('fonts/latinmodern/sans/lmsans10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Sans Bold";
+  src: url('fonts/latinmodern/sans/lmsans10-bold-webfont.eot');
+  src: url('fonts/latinmodern/sans/lmsans10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Sans Oblique";
+  src: url('fonts/latinmodern/sans/lmsans10-oblique-webfont.eot');
+  src: url('fonts/latinmodern/sans/lmsans10-oblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Latin Modern Sans Bold Oblique";
+  src: url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot');
+  src: url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 154, sass/partials/_typography.scss */
+figcaption {
+  font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+}
+
+@font-face {
+  font-family: "Latin Modern Monospace Regular";
+  src: url('fonts/latinmodern/mono/lmmono10-regular-webfont.eot');
+  src: url('fonts/latinmodern/mono/lmmono10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Monospace Italic";
+  src: url('fonts/latinmodern/mono/lmmono10-italic-webfont.eot');
+  src: url('fonts/latinmodern/mono/lmmono10-italic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Latin Modern Monospace Light Bold";
+  src: url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot');
+  src: url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latin Modern Monospace Light Bold Oblique";
+  src: url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot');
+  src: url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 222, sass/partials/_typography.scss */
+pre {
+  font-family: 'Latin Modern Monospace Regular', 'Courier', monospace;
+}
+
+/* line 226, sass/partials/_typography.scss */
+pre em {
+  font-family: 'Latin Modern Monospace Italic', 'Courier', monospace;
+  font-style: italic;
+}
+
+/* line 231, sass/partials/_typography.scss */
+pre strong {
+  font-family: 'Latin Modern Monospace Light Bold', 'Courier', monospace;
+  font-weight: bold;
+}
+
+/* line 236, sass/partials/_typography.scss */
+pre em strong, pre strong em {
+  font-family: 'Latin Modern Monospace Light Bold Oblique', 'Courier', monospace;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 257, sass/partials/_typography.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -447,44 +618,38 @@ time, mark, audio, video {
 
 /* line 61, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 100%;
+  font-size: 125%;
 }
 
 /* line 64, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 20px;
+  line-height: 1.61803em;
 }
 
-/* line 31, sass/partials/_typography.scss */
-ul, ol, dl, p {
-  margin: 24px 0;
+/* line 272, sass/partials/_typography.scss */
+ul, ol, dl, p, pre, h1, h2, h3 {
+  padding-bottom: 32.36068px;
 }
 
-/* line 35, sass/partials/_typography.scss */
+/* line 280, sass/partials/_typography.scss */
 h1 {
   font-size: 1.728em;
 }
 
-/* line 38, sass/partials/_typography.scss */
+/* line 284, sass/partials/_typography.scss */
 h2 {
   font-size: 1.44em;
 }
 
-/* line 41, sass/partials/_typography.scss */
+/* line 288, sass/partials/_typography.scss */
 h3, .lead {
   font-size: 1.2em;
 }
 
-/* line 48, sass/partials/_typography.scss */
+/* line 324, sass/partials/_typography.scss */
 figcaption {
   font-size: 0.83333em;
-}
-
-/*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
-/* line 3, sass/partials/_placeholders.scss */
-.opt, .format-image figcaption {
-  display: none;
 }
 
 /* line 14, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/susy-1.0.9/sass/susy/_grid.scss */
@@ -494,7 +659,7 @@ figcaption {
   box-sizing: border-box;
 }
 
-@media (min-width: 38em) {
+@media (min-width: 47.5em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 38em;
@@ -510,19 +675,19 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 54em;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
     max-width: 94em;
   }
 }
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 36, sass/partials/_layout.scss */
   article.landscape {
     max-width: 54em;
@@ -538,13 +703,13 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 36, sass/partials/_layout.scss */
   article.landscape {
     max-width: 94em;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 77.5em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 62em;
@@ -560,20 +725,20 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 94em;
   }
 }
-@media (min-width: 190em) {
+@media (min-width: 237.5em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
     max-width: 190em;
   }
 }
 
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 49, sass/partials/_layout.scss */
   article.regular header {
     width: 70.37037%;
@@ -581,7 +746,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 49, sass/partials/_layout.scss */
   article.regular header {
     width: 23.40426%;
@@ -590,7 +755,7 @@ figcaption {
     margin-left: 17.02128%;
   }
 }
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 70.37037%;
@@ -598,7 +763,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 40.42553%;
@@ -608,7 +773,7 @@ figcaption {
   }
 }
 
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 70, sass/partials/_layout.scss */
   .meta2 {
     width: 25.92593%;
@@ -616,7 +781,7 @@ figcaption {
     margin-right: 3.7037%;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 70, sass/partials/_layout.scss */
   .meta2 {
     width: 23.40426%;
@@ -626,7 +791,7 @@ figcaption {
   }
 }
 
-@media (min-width: 54em) {
+@media (min-width: 67.5em) {
   /* line 80, sass/partials/_layout.scss */
   .the-content {
     width: 70.37037%;
@@ -634,7 +799,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 80, sass/partials/_layout.scss */
   .the-content {
     width: 40.42553%;
@@ -644,7 +809,7 @@ figcaption {
   }
 }
 
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 96, sass/partials/_layout.scss */
   .format-image.landscape figure {
     width: 74.46809%;
@@ -652,7 +817,7 @@ figcaption {
     margin-right: 2.12766%;
   }
 }
-@media (min-width: 46em) {
+@media (min-width: 57.5em) {
   /* line 104, sass/partials/_layout.scss */
   .format-image.landscape .image-meta, .format-image.landscape .image-pub-meta {
     width: 25.92593%;
@@ -660,7 +825,7 @@ figcaption {
     margin-right: 3.7037%;
   }
 }
-@media (min-width: 46em) {
+@media (min-width: 57.5em) {
   /* line 110, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-summary, .format-image.landscape .the-content {
     width: 70.37037%;
@@ -668,7 +833,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 116, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .image-summary, .format-image.landscape .image-pub-meta {
     width: 23.40426%;
@@ -676,7 +841,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media (min-width: 94em) {
+@media (min-width: 117.5em) {
   /* line 122, sass/partials/_layout.scss */
   .format-image.landscape .the-content {
     width: 48.93617%;
@@ -706,7 +871,7 @@ figcaption {
     margin: auto;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 62em) {
+@media only screen and (max-height: 40em) and (min-width: 77.5em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 35.48387%;
@@ -715,7 +880,7 @@ figcaption {
     margin-left: 12.90323%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 94em) {
+@media only screen and (max-height: 40em) and (min-width: 117.5em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 23.40426%;
@@ -724,7 +889,7 @@ figcaption {
     margin-left: 25.53191%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 48.3871%;
@@ -733,7 +898,7 @@ figcaption {
     margin-left: 12.90323%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 31.91489%;
@@ -742,7 +907,7 @@ figcaption {
     margin-left: 25.53191%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 55em) and (min-width: 117.5em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 40.42553%;
@@ -751,7 +916,7 @@ figcaption {
     margin-left: 25.53191%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 62em) {
+@media only screen and (max-height: 40em) and (min-width: 77.5em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 35.48387%;
@@ -760,7 +925,7 @@ figcaption {
     margin-right: 12.90323%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 94em) {
+@media only screen and (max-height: 40em) and (min-width: 117.5em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
@@ -769,7 +934,7 @@ figcaption {
     margin-right: 25.53191%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 35.48387%;
@@ -777,7 +942,7 @@ figcaption {
     margin-right: 0;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
@@ -786,7 +951,7 @@ figcaption {
     margin-right: 17.02128%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 55em) and (min-width: 117.5em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
     width: 23.40426%;
@@ -795,7 +960,7 @@ figcaption {
     margin-right: 8.51064%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 62em) {
+@media only screen and (max-height: 40em) and (min-width: 77.5em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 46em;
@@ -806,7 +971,7 @@ figcaption {
     margin-right: 12.90323%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 94em) {
+@media only screen and (max-height: 40em) and (min-width: 117.5em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 46em;
@@ -817,7 +982,7 @@ figcaption {
     margin-right: 25.53191%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 62em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 48.3871%;
@@ -826,7 +991,7 @@ figcaption {
     margin-left: 12.90323%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 31.91489%;
@@ -835,7 +1000,7 @@ figcaption {
     margin-left: 25.53191%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 94em) {
+@media only screen and (min-height: 55em) and (min-width: 117.5em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 40.42553%;
@@ -849,28 +1014,18 @@ figcaption {
 body {
   background: #fdf6e3;
   color: #657b83;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  -webkit-background-size: 100% 1.5em;
-  -moz-background-size: 100% 1.5em;
-  -o-background-size: 100% 1.5em;
-  background-size: 100% 1.5em;
-  background-position: left top;
 }
 
-/* line 12, sass/partials/_base.scss */
+/* line 10, sass/partials/_base.scss */
 a {
   color: #268bd2;
   text-decoration: none;
 }
-/* line 15, sass/partials/_base.scss */
+/* line 13, sass/partials/_base.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
-/* line 18, sass/partials/_base.scss */
+/* line 16, sass/partials/_base.scss */
 a:visited, a:active {
   color: #6c71c4;
 }
