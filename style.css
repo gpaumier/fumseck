@@ -486,7 +486,7 @@ body {
 }
 
 /* line 81, sass/partials/_typography.scss */
-h1, h2, h3, .lead, strong {
+strong {
   font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
   font-weight: bold;
 }
@@ -502,6 +502,11 @@ em strong, strong em {
   font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
   font-weight: bold;
   font-style: italic;
+}
+
+/* line 97, sass/partials/_typography.scss */
+.byline, meta1 {
+  font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
 }
 
 @font-face {
@@ -537,8 +542,14 @@ em strong, strong em {
 }
 
 /* line 154, sass/partials/_typography.scss */
-figcaption {
+figcaption, .meta2, .image-meta, .image-pub-meta {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+}
+
+/* line 158, sass/partials/_typography.scss */
+h1, h2, h3 {
+  font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
+  font-weight: bold;
 }
 
 @font-face {
@@ -643,12 +654,28 @@ h2 {
 }
 
 /* line 288, sass/partials/_typography.scss */
-h3, .lead {
+h3 {
   font-size: 1.2em;
 }
 
-/* line 324, sass/partials/_typography.scss */
+/* line 293, sass/partials/_typography.scss */
+.summary {
+  font-size: 1.2em;
+}
+
+/* line 328, sass/partials/_typography.scss */
 figcaption {
+  font-size: 0.83333em;
+  color: #93a1a1;
+}
+
+/* line 334, sass/partials/_typography.scss */
+.byline, meta1 {
+  font-size: 0.83333em;
+}
+
+/* line 339, sass/partials/_typography.scss */
+.meta2, .image-meta, .image-pub-meta {
   font-size: 0.83333em;
 }
 
@@ -827,7 +854,7 @@ figcaption {
 }
 @media (min-width: 46.875em) {
   /* line 110, sass/partials/_layout.scss */
-  .format-image.landscape header, .format-image.landscape .image-summary, .format-image.landscape .the-content {
+  .format-image.landscape header, .format-image.landscape .summary, .format-image.landscape .the-content {
     width: 70.45455%;
     float: right;
     margin-right: 0;
@@ -835,7 +862,7 @@ figcaption {
 }
 @media (min-width: 95.625em) {
   /* line 116, sass/partials/_layout.scss */
-  .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .image-summary, .format-image.landscape .image-pub-meta {
+  .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .summary, .format-image.landscape .image-pub-meta {
     width: 23.52941%;
     float: right;
     margin-right: 0;
@@ -852,21 +879,21 @@ figcaption {
 }
 @media only screen and (max-height: 40em) {
   /* line 134, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
+  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 18em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) {
   /* line 134, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
+  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 24.5em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 55em) {
   /* line 134, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
+  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 31em;
     margin: auto;
   }
@@ -918,7 +945,7 @@ figcaption {
 }
 @media only screen and (max-height: 40em) and (min-width: 63.125em) {
   /* line 181, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
+  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 35.64356%;
     float: right;
     margin-right: 0;
@@ -927,7 +954,7 @@ figcaption {
 }
 @media only screen and (max-height: 40em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
+  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
     margin-right: 0;
@@ -936,7 +963,7 @@ figcaption {
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
   /* line 181, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
+  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 35.64356%;
     float: right;
     margin-right: 0;
@@ -944,7 +971,7 @@ figcaption {
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
+  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
     margin-right: 0;
@@ -953,7 +980,7 @@ figcaption {
 }
 @media only screen and (min-height: 55em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
+  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
     margin-right: 0;

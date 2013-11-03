@@ -98,7 +98,7 @@
 	font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
 }
 
-%serif-caps {
+%serif-caps-italic {
 	font-family: 'Latin Modern Roman Caps Oblique', 'Baskerville', 'Georgia', serif;
 	font-style: italic;
 }
@@ -279,15 +279,19 @@ body {
 
 h1 {
 	font-size: modular-scale(3, 1em, $modular-scale-ratio);
-	@extend %serif-bold;
+	@extend %sans-bold;
 }
 h2 {
 	font-size: modular-scale(2, 1em, $modular-scale-ratio);
-	@extend %serif-bold;
+	@extend %sans-bold;
 }
-h3, .lead {
+h3 {
 	font-size: modular-scale(1, 1em, $modular-scale-ratio);
-	@extend %serif-bold;
+	@extend %sans-bold;
+}
+
+.summary {
+	font-size: modular-scale(1, 1em, $modular-scale-ratio);
 }
 
 strong {
@@ -324,4 +328,16 @@ $tertiary-content-size: modular-scale(-2, 1em, $modular-scale-ratio);
 figcaption {
 	font-size: $secondary-content-size;
 	@extend %sans;
+	color: $secondary-content-color;
 }
+
+.byline, meta1 {
+	font-size: $secondary-content-size;
+	@extend %serif-caps;
+}
+
+.meta2, .image-meta, .image-pub-meta {
+	font-size: $secondary-content-size;
+	@extend %sans;
+}
+

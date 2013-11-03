@@ -107,13 +107,13 @@ article.regular {
 			}
 		}
 		
-		header, .image-summary, .the-content {
+		header, .summary, .the-content {
 			@include at-breakpoint( $small-viewport-columns ) {
 				@include span-columns(5 omega, $fair-viewport-columns);
 			}
 		}
 	
-		header, .image-meta, .image-summary, .image-pub-meta {
+		header, .image-meta, .summary, .image-pub-meta {
 			@include at-breakpoint( $wider-viewport-columns ) {
 				@include span-columns(3 omega, $wider-viewport-columns);
 			}
@@ -131,7 +131,7 @@ article.regular {
 		
 		// By default, we stack everything below a width-constrained image
 		
-		figure, header, .image-meta, .image-summary, .image-pub-meta, .the-content {
+		figure, header, .image-meta, .summary, .image-pub-meta, .the-content {
 			@include media-query(short-height) {
 				max-width: col2width( 3, $column-width , $gutter-width);
 				margin: auto;
@@ -178,7 +178,7 @@ article.regular {
 			}
 		}
 		
-		header, .image-meta, .image-summary, .image-pub-meta,  {
+		header, .image-meta, .summary, .image-pub-meta,  {
 			@include media-query(short-height) {
 				@include at-breakpoint( $good-viewport-columns ) {
 					@include span-columns(3 omega, $good-viewport-columns);
