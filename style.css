@@ -659,10 +659,10 @@ figcaption {
   box-sizing: border-box;
 }
 
-@media (min-width: 47.5em) {
+@media (min-width: 38.75em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
-    max-width: 38em;
+    max-width: 31em;
     padding-left: 0em;
     padding-right: 0em;
     margin-left: auto;
@@ -675,22 +675,22 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
-    max-width: 54em;
+    max-width: 44em;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 31, sass/partials/_layout.scss */
   article.regular {
-    max-width: 94em;
+    max-width: 76.5em;
   }
 }
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 36, sass/partials/_layout.scss */
   article.landscape {
-    max-width: 54em;
+    max-width: 44em;
     padding-left: 0em;
     padding-right: 0em;
     margin-left: auto;
@@ -703,16 +703,16 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 36, sass/partials/_layout.scss */
   article.landscape {
-    max-width: 94em;
+    max-width: 76.5em;
   }
 }
-@media (min-width: 77.5em) {
+@media (min-width: 63.125em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
-    max-width: 62em;
+    max-width: 50.5em;
     padding-left: 0em;
     padding-right: 0em;
     margin-left: auto;
@@ -725,288 +725,288 @@ figcaption {
     clear: both;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
-    max-width: 94em;
+    max-width: 76.5em;
   }
 }
-@media (min-width: 237.5em) {
+@media (min-width: 193.125em) {
   /* line 41, sass/partials/_layout.scss */
   article.portrait {
-    max-width: 190em;
+    max-width: 154.5em;
   }
 }
 
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 49, sass/partials/_layout.scss */
   article.regular header {
-    width: 70.37037%;
+    width: 70.45455%;
     float: right;
     margin-right: 0;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 49, sass/partials/_layout.scss */
   article.regular header {
-    width: 23.40426%;
+    width: 23.52941%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 17.02128%;
+    margin-right: 1.96078%;
+    margin-left: 16.99346%;
   }
 }
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
-    width: 70.37037%;
+    width: 70.45455%;
     float: right;
     margin-right: 0;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 59, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
-    width: 40.42553%;
+    width: 40.52288%;
     float: right;
     margin-right: 0;
-    margin-right: 17.02128%;
+    margin-right: 16.99346%;
   }
 }
 
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 70, sass/partials/_layout.scss */
   .meta2 {
-    width: 25.92593%;
+    width: 26.13636%;
     float: left;
-    margin-right: 3.7037%;
+    margin-right: 3.40909%;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 70, sass/partials/_layout.scss */
   .meta2 {
-    width: 23.40426%;
+    width: 23.52941%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 17.02128%;
+    margin-right: 1.96078%;
+    margin-left: 16.99346%;
   }
 }
 
-@media (min-width: 67.5em) {
+@media (min-width: 55em) {
   /* line 80, sass/partials/_layout.scss */
   .the-content {
-    width: 70.37037%;
+    width: 70.45455%;
     float: right;
     margin-right: 0;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 80, sass/partials/_layout.scss */
   .the-content {
-    width: 40.42553%;
+    width: 40.52288%;
     float: right;
     margin-right: 0;
-    margin-right: 17.02128%;
+    margin-right: 16.99346%;
   }
 }
 
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 96, sass/partials/_layout.scss */
   .format-image.landscape figure {
-    width: 74.46809%;
+    width: 74.5098%;
     float: left;
-    margin-right: 2.12766%;
+    margin-right: 1.96078%;
   }
 }
-@media (min-width: 57.5em) {
+@media (min-width: 46.875em) {
   /* line 104, sass/partials/_layout.scss */
   .format-image.landscape .image-meta, .format-image.landscape .image-pub-meta {
-    width: 25.92593%;
+    width: 26.13636%;
     float: left;
-    margin-right: 3.7037%;
+    margin-right: 3.40909%;
   }
 }
-@media (min-width: 57.5em) {
+@media (min-width: 46.875em) {
   /* line 110, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-summary, .format-image.landscape .the-content {
-    width: 70.37037%;
+    width: 70.45455%;
     float: right;
     margin-right: 0;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 116, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .image-summary, .format-image.landscape .image-pub-meta {
-    width: 23.40426%;
+    width: 23.52941%;
     float: right;
     margin-right: 0;
   }
 }
-@media (min-width: 117.5em) {
+@media (min-width: 95.625em) {
   /* line 122, sass/partials/_layout.scss */
   .format-image.landscape .the-content {
-    width: 48.93617%;
+    width: 49.01961%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
 @media only screen and (max-height: 40em) {
   /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 22em;
+    max-width: 18em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) {
   /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 30em;
+    max-width: 24.5em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 55em) {
   /* line 134, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 38em;
+    max-width: 31em;
     margin: auto;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 77.5em) {
+@media only screen and (max-height: 40em) and (min-width: 63.125em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
-    width: 35.48387%;
+    width: 35.64356%;
     float: left;
-    margin-right: 3.22581%;
-    margin-left: 12.90323%;
+    margin-right: 2.9703%;
+    margin-left: 12.87129%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 117.5em) {
+@media only screen and (max-height: 40em) and (min-width: 95.625em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
-    width: 23.40426%;
+    width: 23.52941%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
-    width: 48.3871%;
+    width: 48.51485%;
     float: left;
-    margin-right: 3.22581%;
-    margin-left: 12.90323%;
+    margin-right: 2.9703%;
+    margin-left: 12.87129%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
-    width: 31.91489%;
+    width: 32.02614%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 55em) and (min-width: 95.625em) {
   /* line 152, sass/partials/_layout.scss */
   .format-image.portrait figure {
-    width: 40.42553%;
+    width: 40.52288%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 77.5em) {
+@media only screen and (max-height: 40em) and (min-width: 63.125em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
-    width: 35.48387%;
+    width: 35.64356%;
     float: right;
     margin-right: 0;
-    margin-right: 12.90323%;
+    margin-right: 12.87129%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 117.5em) {
+@media only screen and (max-height: 40em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
-    width: 23.40426%;
+    width: 23.52941%;
     float: right;
     margin-right: 0;
-    margin-right: 25.53191%;
+    margin-right: 25.4902%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
-    width: 35.48387%;
+    width: 35.64356%;
     float: right;
     margin-right: 0;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
-    width: 23.40426%;
+    width: 23.52941%;
     float: right;
     margin-right: 0;
-    margin-right: 17.02128%;
+    margin-right: 16.99346%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 55em) and (min-width: 95.625em) {
   /* line 181, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .image-summary, .format-image.portrait .image-pub-meta {
-    width: 23.40426%;
+    width: 23.52941%;
     float: right;
     margin-right: 0;
-    margin-right: 8.51064%;
+    margin-right: 8.49673%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 77.5em) {
+@media only screen and (max-height: 40em) and (min-width: 63.125em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
-    max-width: 46em;
-    width: 74.19355%;
+    max-width: 37.5em;
+    width: 74.25743%;
     float: left;
-    margin-right: 3.22581%;
-    margin-left: 12.90323%;
-    margin-right: 12.90323%;
+    margin-right: 2.9703%;
+    margin-left: 12.87129%;
+    margin-right: 12.87129%;
   }
 }
-@media only screen and (max-height: 40em) and (min-width: 117.5em) {
+@media only screen and (max-height: 40em) and (min-width: 95.625em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
-    max-width: 46em;
-    width: 48.93617%;
+    max-width: 37.5em;
+    width: 49.01961%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
-    margin-right: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
+    margin-right: 25.4902%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 77.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
-    width: 48.3871%;
+    width: 48.51485%;
     float: left;
-    margin-right: 3.22581%;
-    margin-left: 12.90323%;
+    margin-right: 2.9703%;
+    margin-left: 12.87129%;
   }
 }
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
-    width: 31.91489%;
+    width: 32.02614%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
-@media only screen and (min-height: 55em) and (min-width: 117.5em) {
+@media only screen and (min-height: 55em) and (min-width: 95.625em) {
   /* line 209, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
-    width: 40.42553%;
+    width: 40.52288%;
     float: left;
-    margin-right: 2.12766%;
-    margin-left: 25.53191%;
+    margin-right: 1.96078%;
+    margin-left: 25.4902%;
   }
 }
 

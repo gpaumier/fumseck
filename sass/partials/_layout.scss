@@ -2,8 +2,8 @@
 
 @import "susy";
 $total-columns: 12;
-$column-width: 6em;
-$gutter-width: 2em;
+$column-width: 5em;
+$gutter-width: 1.5em;
 $grid-padding: 0em;
 @include border-box-sizing;
 $grid-background-baseline-height: $base-line-height;
