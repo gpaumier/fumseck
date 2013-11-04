@@ -2,7 +2,9 @@
 @import "compass/typography/vertical_rhythm";
 @import "modular-scale";
 
+////////////////////////////////////////////////////////////////////////////////
 // Typefaces ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 //// Latin Modern Roman ////////////////////////////////////////////////////////
 
@@ -240,7 +242,9 @@
 }
 
 
-// Reset to set up vertical rhythm
+////////////////////////////////////////////////////////////////////////////////
+// Reset to set up vertical rhythm /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -260,6 +264,10 @@ time, mark, audio, video {
 	border: 0;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+// Set up vertical rhythm and modular scale ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 $modular-scale-ratio: minor-third();
 $height-ratio: golden();
 
@@ -273,6 +281,13 @@ ul, ol, dl, p, pre, h1, h2, h3 {
 	padding-bottom: $base-line-height;
 }
 
+$secondary-content-size: modular-scale(-1, 1em, $modular-scale-ratio);
+$tertiary-content-size: modular-scale(-2, 1em, $modular-scale-ratio);
+
+////////////////////////////////////////////////////////////////////////////////
+// Set up fonts ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 body {
 	@extend %serif;
 }
@@ -280,6 +295,7 @@ body {
 h1 {
 	font-size: modular-scale(3, 1em, $modular-scale-ratio);
 	@extend %sans-bold;
+
 }
 h2 {
 	font-size: modular-scale(2, 1em, $modular-scale-ratio);
@@ -300,7 +316,7 @@ strong {
 
 em {
 	@extend %serif-italic;
-}
+	}
 
 em strong, strong em {
 	@extend %serif-bolditalic;
@@ -322,22 +338,22 @@ pre {
 	}
 }
 
-$secondary-content-size: modular-scale(-1, 1em, $modular-scale-ratio);
-$tertiary-content-size: modular-scale(-2, 1em, $modular-scale-ratio);
-
 figcaption {
 	font-size: $secondary-content-size;
 	@extend %sans;
 	color: $secondary-content-color;
 }
 
-.byline, meta1 {
+.byline, .meta1 {
 	font-size: $secondary-content-size;
 	@extend %serif-caps;
+	@extend %no-bullet;
 }
 
 .meta2, .image-meta, .image-pub-meta {
 	font-size: $secondary-content-size;
 	@extend %sans;
+	@extend %no-bullet;
 }
+
 

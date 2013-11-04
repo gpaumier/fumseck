@@ -20,12 +20,14 @@ Text Domain: fumseck
 @import "partials/functions";
 @import "partials/colors";
 @import "partials/placeholders";
-@import "partials/typography";
-@import "partials/layout";
-@import "partials/ui";
 
 // Site
 @import "partials/base";
+@import "partials/typography";
+@import "partials/layout";
+
+//@import "partials/font-awesome";
+@import "partials/ui";
 
 // Content
 @import "partials/posts";

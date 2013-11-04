@@ -1,0 +1,140 @@
+////////////////////////////////////////////////////////////////////////////////
+// Font Awesome ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+@import "partials/fontawesome";
+
+//// Typeface //////////////////////////////////////////////////////////////////
+
+@include font-face(
+	'Font Awesome', 
+	font-files(
+		'fontawesome/fontawesome-webfont.woff', woff,
+		'fontawesome/fontawesome-webfont.ttf', ttf,
+		'fontawesome/fontawesome-webfont.svg', svg),
+	'fontawesome/fontawesome-webfont.eot',
+	normal,
+	normal
+);
+
+//// Mixin for easy inclusion without butchering the markup ////////////////////
+
+// Adapted from the code provided with the font
+
+@mixin fa-icon($icon, $list: false, $position: 'before') {
+	@if $list {
+		position: relative;
+		left: $fa-li-width;
+		margin-right: $fa-li-width;
+	}
+	&:#{$position} {
+		content: $icon;
+		display: inline-block;
+		font-family: 'Font Awesome';
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;	
+		padding-right: 1em;
+		color: $secondary-content-color;
+		//Set fixed width by default
+		width: (18em / 16);
+		@if $list {
+			position: absolute;
+			margin-left: -$fa-li-width;
+			top: $base-line-height * 0.25;
+		}
+	}
+	@content;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Buttons /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+@import "sassy-buttons";
+
+////////////////////////////////////////////////////////////////////////////////
+// Actual UI ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.author {
+	@include fa-icon( $fa-var-user, true )
+}
+
+.categories {
+	@include fa-icon( $fa-var-folder-open, true )
+}
+
+.start_date, .pub_date, .date_taken {
+	@include fa-icon( $fa-var-calendar, true )
+}
+
+.batbelt_event .end_date {
+	@include fa-icon( $fa-var-long-arrow-right, true  )
+}
+
+.batbelt_project .end_date {
+	@include fa-icon( $fa-var-check-square-o, true  )
+}
+
+.status {
+	
+	&.research {
+		@include fa-icon( $fa-var-flask, true )
+	}
+	
+	&.ongoing {
+		@include fa-icon( $fa-var-play, true )
+	}
+	
+	&.completed {
+		@include fa-icon( $fa-var-check-square-o, true )
+	}
+	
+	&.on-hold {
+		@include fa-icon( $fa-var-pause, true )
+	}
+	
+	&.shelved {
+		@include fa-icon( $fa-var-archive, true )
+	}
+}
+
+.roles {
+	@include fa-icon( $fa-var-user, true )
+}
+
+.topics {
+	@include fa-icon( $fa-var-tag, true )
+}
+
+.project {
+	@include fa-icon( $fa-var-tasks, true ) // or $fa-var-briefcase
+}
+
+.event {
+	@include fa-icon( $fa-var-calendar-o, true )
+}
+
+.location {
+	@include fa-icon( $fa-var-globe, true )
+}
+
+.aperture {
+	@include fa-icon( $fa-var-dot-circle-o, true )
+}
+
+.focal_length {
+	@include fa-icon( $fa-var-resize-horizontal, true )
+}
+
+.exposure {
+	@include fa-icon( $fa-var-clock-o, true )
+}
+
+.people {
+	@include fa-icon( $fa-var-user, true )
+}
+
