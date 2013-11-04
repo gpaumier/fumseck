@@ -30,6 +30,7 @@ Text Domain: fumseck
 @import "partials/ui";
 
 // Content
+@import "partials/header";
 @import "partials/posts";
 
-// body {	@include debug-vertical-alignment(); }
+//body { @include debug-vertical-alignment(); }

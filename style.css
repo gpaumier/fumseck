@@ -433,7 +433,7 @@ table {
 }
 
 /* line 7, sass/partials/_placeholders.scss */
-.byline, .meta1, .meta2, .image-meta, .image-pub-meta {
+.byline, .meta1, .meta2, .image-meta, .image-pub-meta, .main-navigation ul {
   list-style-type: none;
 }
 
@@ -567,7 +567,7 @@ em strong, strong em {
 }
 
 /* line 156, sass/partials/_typography.scss */
-figcaption, .meta2, .image-meta, .image-pub-meta {
+figcaption, .meta2, .image-meta, .image-pub-meta, .main-navigation {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
 }
 
@@ -1070,14 +1070,14 @@ figcaption {
   font-style: normal;
 }
 
-/* line 62, sass/partials/_ui.scss */
-.author {
+/* line 66, sass/partials/_ui.scss */
+.author, .about {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
-.author:before {
+/* line 34, sass/partials/_ui.scss */
+.author:before, .about:before {
   content: "\f007";
   display: inline-block;
   font-family: 'Font Awesome';
@@ -1088,19 +1088,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 66, sass/partials/_ui.scss */
+/* line 70, sass/partials/_ui.scss */
 .categories {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .categories:before {
   content: "\f07c";
   display: inline-block;
@@ -1112,19 +1112,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 70, sass/partials/_ui.scss */
+/* line 74, sass/partials/_ui.scss */
 .start_date, .pub_date, .date_taken {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .start_date:before, .pub_date:before, .date_taken:before {
   content: "\f073";
   display: inline-block;
@@ -1136,19 +1136,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 74, sass/partials/_ui.scss */
+/* line 78, sass/partials/_ui.scss */
 .batbelt_event .end_date {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .batbelt_event .end_date:before {
   content: "\f178";
   display: inline-block;
@@ -1160,19 +1160,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 78, sass/partials/_ui.scss */
+/* line 82, sass/partials/_ui.scss */
 .batbelt_project .end_date {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .batbelt_project .end_date:before {
   content: "\f046";
   display: inline-block;
@@ -1184,19 +1184,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 84, sass/partials/_ui.scss */
+/* line 88, sass/partials/_ui.scss */
 .status.research {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .status.research:before {
   content: "\f0c3";
   display: inline-block;
@@ -1208,18 +1208,18 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 88, sass/partials/_ui.scss */
+/* line 92, sass/partials/_ui.scss */
 .status.ongoing {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .status.ongoing:before {
   content: "\f04b";
   display: inline-block;
@@ -1231,18 +1231,18 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 92, sass/partials/_ui.scss */
+/* line 96, sass/partials/_ui.scss */
 .status.completed {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .status.completed:before {
   content: "\f046";
   display: inline-block;
@@ -1254,18 +1254,18 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 96, sass/partials/_ui.scss */
+/* line 100, sass/partials/_ui.scss */
 .status.on-hold {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .status.on-hold:before {
   content: "\f04c";
   display: inline-block;
@@ -1277,18 +1277,18 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 100, sass/partials/_ui.scss */
+/* line 104, sass/partials/_ui.scss */
 .status.shelved {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .status.shelved:before {
   content: "\f187";
   display: inline-block;
@@ -1300,19 +1300,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 105, sass/partials/_ui.scss */
+/* line 109, sass/partials/_ui.scss */
 .roles {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .roles:before {
   content: "\f007";
   display: inline-block;
@@ -1324,19 +1324,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 109, sass/partials/_ui.scss */
+/* line 113, sass/partials/_ui.scss */
 .topics {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .topics:before {
   content: "\f02b";
   display: inline-block;
@@ -1348,20 +1348,20 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 113, sass/partials/_ui.scss */
-.project {
+/* line 117, sass/partials/_ui.scss */
+.projects {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
-.project:before {
+/* line 34, sass/partials/_ui.scss */
+.projects:before {
   content: "\f0ae";
   display: inline-block;
   font-family: 'Font Awesome';
@@ -1372,19 +1372,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 117, sass/partials/_ui.scss */
+/* line 121, sass/partials/_ui.scss */
 .event {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .event:before {
   content: "\f133";
   display: inline-block;
@@ -1396,19 +1396,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 121, sass/partials/_ui.scss */
+/* line 125, sass/partials/_ui.scss */
 .location {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .location:before {
   content: "\f0ac";
   display: inline-block;
@@ -1420,19 +1420,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 125, sass/partials/_ui.scss */
+/* line 129, sass/partials/_ui.scss */
 .aperture {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .aperture:before {
   content: "\f192";
   display: inline-block;
@@ -1444,19 +1444,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 129, sass/partials/_ui.scss */
+/* line 133, sass/partials/_ui.scss */
 .focal_length {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .focal_length:before {
   content: "\f07e";
   display: inline-block;
@@ -1468,19 +1468,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 133, sass/partials/_ui.scss */
+/* line 137, sass/partials/_ui.scss */
 .exposure {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .exposure:before {
   content: "\f017";
   display: inline-block;
@@ -1492,19 +1492,19 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
 }
 
-/* line 137, sass/partials/_ui.scss */
+/* line 141, sass/partials/_ui.scss */
 .people {
   position: relative;
-  left: 2.14286em;
-  margin-right: 2.14286em;
+  left: 1.5em;
+  margin-right: 1.5em;
 }
-/* line 30, sass/partials/_ui.scss */
+/* line 34, sass/partials/_ui.scss */
 .people:before {
   content: "\f007";
   display: inline-block;
@@ -1516,10 +1516,255 @@ figcaption {
   -moz-osx-font-smoothing: grayscale;
   padding-right: 1em;
   color: #93a1a1;
-  width: 1.125em;
+  width: 1em;
   position: absolute;
-  margin-left: -2.14286em;
+  margin-left: -1.5em;
   top: 8.09017px;
+}
+
+/* line 145, sass/partials/_ui.scss */
+.home {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.home:before {
+  content: "\f015";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 149, sass/partials/_ui.scss */
+.engineering {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.engineering:before {
+  content: "\f12e";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 153, sass/partials/_ui.scss */
+.photo {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.photo:before {
+  content: "\f083";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 157, sass/partials/_ui.scss */
+.lab {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.lab:before {
+  content: "\f0c3";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 161, sass/partials/_ui.scss */
+.thoughts {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.thoughts:before {
+  content: "\f0eb";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 165, sass/partials/_ui.scss */
+.services {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.services:before {
+  content: "\f0b1";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 169, sass/partials/_ui.scss */
+.contact {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.contact:before {
+  content: "\f0e0";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 173, sass/partials/_ui.scss */
+.search {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.search:before {
+  content: "\f002";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 177, sass/partials/_ui.scss */
+.settings {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.settings:before {
+  content: "\f013";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 185, sass/partials/_ui.scss */
+.colors {
+  position: relative;
+  left: 1.5em;
+  margin-right: 1.5em;
+}
+/* line 34, sass/partials/_ui.scss */
+.colors:before {
+  content: "\f042";
+  display: inline-block;
+  font-family: 'Font Awesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 1em;
+  color: #93a1a1;
+  width: 1em;
+  position: absolute;
+  margin-left: -1.5em;
+  top: 8.09017px;
+}
+
+/* line 6, sass/partials/_header.scss */
+.main-navigation ul li {
+  display: inline-block;
 }
 
 /* line 1, sass/partials/_posts.scss */

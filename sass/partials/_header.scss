@@ -1,0 +1,9 @@
+
+.main-navigation{
+	@extend %sans;
+	ul {
+		@extend %no-bullet;
+		 li { display: inline-block; }
+	}
+}
+

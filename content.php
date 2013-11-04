@@ -36,7 +36,7 @@
 			<?php }; ?>
 		
 			<?php if ( $batbelt_project = get_field( '_project', get_the_ID(), true ) ) {?>
-			<li class="project"><span class="label"><?php _e( 'Project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
+			<li class="projects"><span class="label"><?php _e( 'Project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
 			<?php }; ?>
 		
 			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) {?>

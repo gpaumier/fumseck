@@ -4,6 +4,10 @@
 
 @import "partials/fontawesome";
 
+//// Variables /////////////////////////////////////////////////////////////////
+
+$fa-li-width: 1.5em;
+
 //// Typeface //////////////////////////////////////////////////////////////////
 
 @include font-face(
@@ -39,7 +43,7 @@
 		padding-right: 1em;
 		color: $secondary-content-color;
 		//Set fixed width by default
-		width: (18em / 16);
+		width: 1em;
 		@if $list {
 			position: absolute;
 			margin-left: -$fa-li-width;
@@ -59,8 +63,8 @@
 // Actual UI ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-.author {
-	@include fa-icon( $fa-var-user, true )
+.author, .about {
+	@include fa-icon( $fa-var-user, true ) // or for about: info-circle 
 }
 
 .categories {
@@ -110,8 +114,8 @@
 	@include fa-icon( $fa-var-tag, true )
 }
 
-.project {
-	@include fa-icon( $fa-var-tasks, true ) // or $fa-var-briefcase
+.projects {
+	@include fa-icon( $fa-var-tasks, true )
 }
 
 .event {
@@ -137,4 +141,51 @@
 .people {
 	@include fa-icon( $fa-var-user, true )
 }
+ 
+.home {
+	@include fa-icon( $fa-var-home, true )
+}
 
+.engineering {
+	@include fa-icon( $fa-var-puzzle-piece, true ) // or: cogs
+}
+
+.photo {
+	@include fa-icon( $fa-var-camera-retro, true ) // or: camera 
+}
+
+.lab {
+	@include fa-icon( $fa-var-flask, true )
+}
+
+.thoughts {
+	@include fa-icon( $fa-var-lightbulb-o, true ) // or: book
+}
+
+.services {
+	@include fa-icon( $fa-var-briefcase, true )
+}
+
+.contact {
+	@include fa-icon( $fa-var-envelope, true )
+}
+
+.search {
+	@include fa-icon( $fa-var-search, true )
+}
+
+.settings {
+	@include fa-icon( $fa-var-cog, true )
+}
+
+.language {
+	//@include fa-icon( inline-image('language-icon.svg'), true )
+}
+
+.colors {
+	@include fa-icon( $fa-var-adjust, true )
+}
+
+
+	
+	
