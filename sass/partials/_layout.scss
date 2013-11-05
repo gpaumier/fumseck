@@ -27,11 +27,16 @@ $wider-viewport: col2width( $wider-viewport-columns, $column-width , $gutter-wid
 
 // Set up the grids
 
+//// Common grids
+
+#site-header-container, article.regular, #site-footer-container {
+	@include container($smaller-viewport-columns, $fair-viewport-columns, $wider-viewport-columns);
+	@include susy-grid-background;
+}
+
+//// Grids for Image posts
+
 article {
-	&.regular {
-		@include container($smaller-viewport-columns, $fair-viewport-columns, $wider-viewport-columns);
-		//@include susy-grid-background;
-	}
 	
 	&.landscape {
 		@include container($fair-viewport-columns, $wider-viewport-columns);
@@ -44,6 +49,10 @@ article {
 	}
 
 }
+
+// Set up the layouts
+
+//// Layout for regular content
 
 article.regular {
 	header{
@@ -87,7 +96,7 @@ article.regular {
 	}
 }
 
-// Image posts
+//// Specific layout for image posts
 
 .format-image {
 	
@@ -243,6 +252,9 @@ article.regular {
 // TODO select only those
 
 .opt {
-	@extend %hidden;
+	display: none;
+	@include at-breakpoint($fair-viewport-columns) {
+		display: inline;
+	}
 }
 

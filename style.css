@@ -428,12 +428,12 @@ table {
 
 /*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
 /* line 3, sass/partials/_placeholders.scss */
-.opt, .format-image figcaption {
+.format-image figcaption {
   display: none;
 }
 
 /* line 7, sass/partials/_placeholders.scss */
-.byline, .meta1, .meta2, .image-meta, .image-pub-meta, .main-navigation ul {
+.byline, .meta1, .meta2, .image-meta, .image-pub-meta, .nav-menu {
   list-style-type: none;
 }
 
@@ -567,7 +567,7 @@ em strong, strong em {
 }
 
 /* line 156, sass/partials/_typography.scss */
-figcaption, .meta2, .image-meta, .image-pub-meta, .main-navigation {
+figcaption, .meta2, .image-meta, .image-pub-meta, .header-menu {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
 }
 
@@ -711,9 +711,26 @@ figcaption {
   box-sizing: border-box;
 }
 
+/* line 32, sass/partials/_layout.scss */
+#site-header-container, article.regular, #site-footer-container {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(6.53595%, rgba(100, 100, 225, 0.25)), color-stop(6.53595%, rgba(0, 0, 0, 0)), color-stop(8.49673%, rgba(0, 0, 0, 0)), color-stop(8.49673%, rgba(100, 100, 225, 0.25)), color-stop(15.03268%, rgba(100, 100, 225, 0.25)), color-stop(15.03268%, rgba(0, 0, 0, 0)), color-stop(16.99346%, rgba(0, 0, 0, 0)), color-stop(16.99346%, rgba(100, 100, 225, 0.25)), color-stop(23.52941%, rgba(100, 100, 225, 0.25)), color-stop(23.52941%, rgba(0, 0, 0, 0)), color-stop(25.4902%, rgba(0, 0, 0, 0)), color-stop(25.4902%, rgba(100, 100, 225, 0.25)), color-stop(32.02614%, rgba(100, 100, 225, 0.25)), color-stop(32.02614%, rgba(0, 0, 0, 0)), color-stop(33.98693%, rgba(0, 0, 0, 0)), color-stop(33.98693%, rgba(100, 100, 225, 0.25)), color-stop(40.52288%, rgba(100, 100, 225, 0.25)), color-stop(40.52288%, rgba(0, 0, 0, 0)), color-stop(42.48366%, rgba(0, 0, 0, 0)), color-stop(42.48366%, rgba(100, 100, 225, 0.25)), color-stop(49.01961%, rgba(100, 100, 225, 0.25)), color-stop(49.01961%, rgba(0, 0, 0, 0)), color-stop(50.98039%, rgba(0, 0, 0, 0)), color-stop(50.98039%, rgba(100, 100, 225, 0.25)), color-stop(57.51634%, rgba(100, 100, 225, 0.25)), color-stop(57.51634%, rgba(0, 0, 0, 0)), color-stop(59.47712%, rgba(0, 0, 0, 0)), color-stop(59.47712%, rgba(100, 100, 225, 0.25)), color-stop(66.01307%, rgba(100, 100, 225, 0.25)), color-stop(66.01307%, rgba(0, 0, 0, 0)), color-stop(67.97386%, rgba(0, 0, 0, 0)), color-stop(67.97386%, rgba(100, 100, 225, 0.25)), color-stop(74.5098%, rgba(100, 100, 225, 0.25)), color-stop(74.5098%, rgba(0, 0, 0, 0)), color-stop(76.47059%, rgba(0, 0, 0, 0)), color-stop(76.47059%, rgba(100, 100, 225, 0.25)), color-stop(83.00654%, rgba(100, 100, 225, 0.25)), color-stop(83.00654%, rgba(0, 0, 0, 0)), color-stop(84.96732%, rgba(0, 0, 0, 0)), color-stop(84.96732%, rgba(100, 100, 225, 0.25)), color-stop(91.50327%, rgba(100, 100, 225, 0.25)), color-stop(91.50327%, rgba(0, 0, 0, 0)), color-stop(93.46405%, rgba(0, 0, 0, 0)), color-stop(93.46405%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+}
 @media (min-width: 38.75em) {
-  /* line 31, sass/partials/_layout.scss */
-  article.regular {
+  /* line 32, sass/partials/_layout.scss */
+  #site-header-container, article.regular, #site-footer-container {
     max-width: 31em;
     padding-left: 0em;
     padding-right: 0em;
@@ -721,26 +738,27 @@ figcaption {
     margin-right: auto;
   }
   /* line 38, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  article.regular:after {
+  #site-header-container:after, article.regular:after, #site-footer-container:after {
     content: "";
     display: table;
     clear: both;
   }
 }
 @media (min-width: 55em) {
-  /* line 31, sass/partials/_layout.scss */
-  article.regular {
+  /* line 32, sass/partials/_layout.scss */
+  #site-header-container, article.regular, #site-footer-container {
     max-width: 44em;
   }
 }
 @media (min-width: 95.625em) {
-  /* line 31, sass/partials/_layout.scss */
-  article.regular {
+  /* line 32, sass/partials/_layout.scss */
+  #site-header-container, article.regular, #site-footer-container {
     max-width: 76.5em;
   }
 }
+
 @media (min-width: 55em) {
-  /* line 36, sass/partials/_layout.scss */
+  /* line 41, sass/partials/_layout.scss */
   article.landscape {
     max-width: 44em;
     padding-left: 0em;
@@ -756,13 +774,13 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 36, sass/partials/_layout.scss */
+  /* line 41, sass/partials/_layout.scss */
   article.landscape {
     max-width: 76.5em;
   }
 }
 @media (min-width: 63.125em) {
-  /* line 41, sass/partials/_layout.scss */
+  /* line 46, sass/partials/_layout.scss */
   article.portrait {
     max-width: 50.5em;
     padding-left: 0em;
@@ -778,20 +796,20 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 41, sass/partials/_layout.scss */
+  /* line 46, sass/partials/_layout.scss */
   article.portrait {
     max-width: 76.5em;
   }
 }
 @media (min-width: 193.125em) {
-  /* line 41, sass/partials/_layout.scss */
+  /* line 46, sass/partials/_layout.scss */
   article.portrait {
     max-width: 154.5em;
   }
 }
 
 @media (min-width: 55em) {
-  /* line 49, sass/partials/_layout.scss */
+  /* line 58, sass/partials/_layout.scss */
   article.regular header {
     width: 70.45455%;
     float: right;
@@ -799,7 +817,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 49, sass/partials/_layout.scss */
+  /* line 58, sass/partials/_layout.scss */
   article.regular header {
     width: 23.52941%;
     float: left;
@@ -808,7 +826,7 @@ figcaption {
   }
 }
 @media (min-width: 55em) {
-  /* line 59, sass/partials/_layout.scss */
+  /* line 68, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 70.45455%;
     float: right;
@@ -816,7 +834,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 59, sass/partials/_layout.scss */
+  /* line 68, sass/partials/_layout.scss */
   article.regular .featured-image, article.regular .default-image {
     width: 40.52288%;
     float: right;
@@ -826,7 +844,7 @@ figcaption {
 }
 
 @media (min-width: 55em) {
-  /* line 70, sass/partials/_layout.scss */
+  /* line 79, sass/partials/_layout.scss */
   .meta2 {
     width: 26.13636%;
     float: left;
@@ -834,7 +852,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 70, sass/partials/_layout.scss */
+  /* line 79, sass/partials/_layout.scss */
   .meta2 {
     width: 23.52941%;
     float: left;
@@ -844,7 +862,7 @@ figcaption {
 }
 
 @media (min-width: 55em) {
-  /* line 80, sass/partials/_layout.scss */
+  /* line 89, sass/partials/_layout.scss */
   .the-content {
     width: 70.45455%;
     float: right;
@@ -852,7 +870,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 80, sass/partials/_layout.scss */
+  /* line 89, sass/partials/_layout.scss */
   .the-content {
     width: 40.52288%;
     float: right;
@@ -862,7 +880,7 @@ figcaption {
 }
 
 @media (min-width: 95.625em) {
-  /* line 96, sass/partials/_layout.scss */
+  /* line 105, sass/partials/_layout.scss */
   .format-image.landscape figure {
     width: 74.5098%;
     float: left;
@@ -870,7 +888,7 @@ figcaption {
   }
 }
 @media (min-width: 46.875em) {
-  /* line 104, sass/partials/_layout.scss */
+  /* line 113, sass/partials/_layout.scss */
   .format-image.landscape .image-meta, .format-image.landscape .image-pub-meta {
     width: 26.13636%;
     float: left;
@@ -878,7 +896,7 @@ figcaption {
   }
 }
 @media (min-width: 46.875em) {
-  /* line 110, sass/partials/_layout.scss */
+  /* line 119, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .summary, .format-image.landscape .the-content {
     width: 70.45455%;
     float: right;
@@ -886,7 +904,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 116, sass/partials/_layout.scss */
+  /* line 125, sass/partials/_layout.scss */
   .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .summary, .format-image.landscape .image-pub-meta {
     width: 23.52941%;
     float: right;
@@ -894,7 +912,7 @@ figcaption {
   }
 }
 @media (min-width: 95.625em) {
-  /* line 122, sass/partials/_layout.scss */
+  /* line 131, sass/partials/_layout.scss */
   .format-image.landscape .the-content {
     width: 49.01961%;
     float: left;
@@ -903,28 +921,28 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) {
-  /* line 134, sass/partials/_layout.scss */
+  /* line 143, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 18em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) {
-  /* line 134, sass/partials/_layout.scss */
+  /* line 143, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 24.5em;
     margin: auto;
   }
 }
 @media only screen and (min-height: 55em) {
-  /* line 134, sass/partials/_layout.scss */
+  /* line 143, sass/partials/_layout.scss */
   .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
     max-width: 31em;
     margin: auto;
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 152, sass/partials/_layout.scss */
+  /* line 161, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 35.64356%;
     float: left;
@@ -933,7 +951,7 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 152, sass/partials/_layout.scss */
+  /* line 161, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 23.52941%;
     float: left;
@@ -942,7 +960,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 152, sass/partials/_layout.scss */
+  /* line 161, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 48.51485%;
     float: left;
@@ -951,7 +969,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 152, sass/partials/_layout.scss */
+  /* line 161, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 32.02614%;
     float: left;
@@ -960,7 +978,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 152, sass/partials/_layout.scss */
+  /* line 161, sass/partials/_layout.scss */
   .format-image.portrait figure {
     width: 40.52288%;
     float: left;
@@ -969,7 +987,7 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 181, sass/partials/_layout.scss */
+  /* line 190, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 35.64356%;
     float: right;
@@ -978,7 +996,7 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 181, sass/partials/_layout.scss */
+  /* line 190, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
@@ -987,7 +1005,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 181, sass/partials/_layout.scss */
+  /* line 190, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 35.64356%;
     float: right;
@@ -995,7 +1013,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 181, sass/partials/_layout.scss */
+  /* line 190, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
@@ -1004,7 +1022,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 181, sass/partials/_layout.scss */
+  /* line 190, sass/partials/_layout.scss */
   .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
     width: 23.52941%;
     float: right;
@@ -1013,7 +1031,7 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 209, sass/partials/_layout.scss */
+  /* line 218, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 37.5em;
     width: 74.25743%;
@@ -1024,7 +1042,7 @@ figcaption {
   }
 }
 @media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 209, sass/partials/_layout.scss */
+  /* line 218, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     max-width: 37.5em;
     width: 49.01961%;
@@ -1035,7 +1053,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 209, sass/partials/_layout.scss */
+  /* line 218, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 48.51485%;
     float: left;
@@ -1044,7 +1062,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 209, sass/partials/_layout.scss */
+  /* line 218, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 32.02614%;
     float: left;
@@ -1053,12 +1071,23 @@ figcaption {
   }
 }
 @media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 209, sass/partials/_layout.scss */
+  /* line 218, sass/partials/_layout.scss */
   .format-image.portrait .the-content {
     width: 40.52288%;
     float: left;
     margin-right: 1.96078%;
     margin-left: 25.4902%;
+  }
+}
+
+/* line 254, sass/partials/_layout.scss */
+.opt {
+  display: none;
+}
+@media (min-width: 55em) {
+  /* line 254, sass/partials/_layout.scss */
+  .opt {
+    display: inline;
   }
 }
 
@@ -1070,13 +1099,13 @@ figcaption {
   font-style: normal;
 }
 
-/* line 66, sass/partials/_ui.scss */
+/* line 67, sass/partials/_ui.scss */
 .author, .about {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .author:before, .about:before {
   content: "\f007";
   display: inline-block;
@@ -1094,13 +1123,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 70, sass/partials/_ui.scss */
+/* line 71, sass/partials/_ui.scss */
 .categories {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .categories:before {
   content: "\f07c";
   display: inline-block;
@@ -1118,13 +1147,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 74, sass/partials/_ui.scss */
+/* line 75, sass/partials/_ui.scss */
 .start_date, .pub_date, .date_taken {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .start_date:before, .pub_date:before, .date_taken:before {
   content: "\f073";
   display: inline-block;
@@ -1142,13 +1171,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 78, sass/partials/_ui.scss */
+/* line 79, sass/partials/_ui.scss */
 .batbelt_event .end_date {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .batbelt_event .end_date:before {
   content: "\f178";
   display: inline-block;
@@ -1166,13 +1195,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 82, sass/partials/_ui.scss */
+/* line 83, sass/partials/_ui.scss */
 .batbelt_project .end_date {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .batbelt_project .end_date:before {
   content: "\f046";
   display: inline-block;
@@ -1190,13 +1219,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 88, sass/partials/_ui.scss */
+/* line 89, sass/partials/_ui.scss */
 .status.research {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .status.research:before {
   content: "\f0c3";
   display: inline-block;
@@ -1213,13 +1242,13 @@ figcaption {
   margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 92, sass/partials/_ui.scss */
+/* line 93, sass/partials/_ui.scss */
 .status.ongoing {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .status.ongoing:before {
   content: "\f04b";
   display: inline-block;
@@ -1236,13 +1265,13 @@ figcaption {
   margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 96, sass/partials/_ui.scss */
+/* line 97, sass/partials/_ui.scss */
 .status.completed {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .status.completed:before {
   content: "\f046";
   display: inline-block;
@@ -1259,13 +1288,13 @@ figcaption {
   margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 100, sass/partials/_ui.scss */
+/* line 101, sass/partials/_ui.scss */
 .status.on-hold {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .status.on-hold:before {
   content: "\f04c";
   display: inline-block;
@@ -1282,13 +1311,13 @@ figcaption {
   margin-left: -1.5em;
   top: 8.09017px;
 }
-/* line 104, sass/partials/_ui.scss */
+/* line 105, sass/partials/_ui.scss */
 .status.shelved {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .status.shelved:before {
   content: "\f187";
   display: inline-block;
@@ -1306,13 +1335,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 109, sass/partials/_ui.scss */
+/* line 110, sass/partials/_ui.scss */
 .roles {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .roles:before {
   content: "\f007";
   display: inline-block;
@@ -1330,13 +1359,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 113, sass/partials/_ui.scss */
+/* line 114, sass/partials/_ui.scss */
 .topics {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .topics:before {
   content: "\f02b";
   display: inline-block;
@@ -1354,13 +1383,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 117, sass/partials/_ui.scss */
+/* line 118, sass/partials/_ui.scss */
 .projects {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .projects:before {
   content: "\f0ae";
   display: inline-block;
@@ -1378,13 +1407,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 121, sass/partials/_ui.scss */
+/* line 122, sass/partials/_ui.scss */
 .event {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .event:before {
   content: "\f133";
   display: inline-block;
@@ -1402,13 +1431,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 125, sass/partials/_ui.scss */
+/* line 126, sass/partials/_ui.scss */
 .location {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .location:before {
   content: "\f0ac";
   display: inline-block;
@@ -1426,13 +1455,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 129, sass/partials/_ui.scss */
+/* line 130, sass/partials/_ui.scss */
 .aperture {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .aperture:before {
   content: "\f192";
   display: inline-block;
@@ -1450,13 +1479,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 133, sass/partials/_ui.scss */
+/* line 134, sass/partials/_ui.scss */
 .focal_length {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .focal_length:before {
   content: "\f07e";
   display: inline-block;
@@ -1474,13 +1503,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 137, sass/partials/_ui.scss */
+/* line 138, sass/partials/_ui.scss */
 .exposure {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .exposure:before {
   content: "\f017";
   display: inline-block;
@@ -1498,13 +1527,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 141, sass/partials/_ui.scss */
+/* line 142, sass/partials/_ui.scss */
 .people {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .people:before {
   content: "\f007";
   display: inline-block;
@@ -1522,13 +1551,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 145, sass/partials/_ui.scss */
+/* line 146, sass/partials/_ui.scss */
 .home {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .home:before {
   content: "\f015";
   display: inline-block;
@@ -1546,13 +1575,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 149, sass/partials/_ui.scss */
+/* line 150, sass/partials/_ui.scss */
 .engineering {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .engineering:before {
   content: "\f12e";
   display: inline-block;
@@ -1570,13 +1599,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 153, sass/partials/_ui.scss */
+/* line 154, sass/partials/_ui.scss */
 .photo {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .photo:before {
   content: "\f083";
   display: inline-block;
@@ -1594,13 +1623,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 157, sass/partials/_ui.scss */
+/* line 158, sass/partials/_ui.scss */
 .lab {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .lab:before {
   content: "\f0c3";
   display: inline-block;
@@ -1618,13 +1647,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 161, sass/partials/_ui.scss */
+/* line 162, sass/partials/_ui.scss */
 .thoughts {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .thoughts:before {
   content: "\f0eb";
   display: inline-block;
@@ -1642,13 +1671,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 165, sass/partials/_ui.scss */
+/* line 166, sass/partials/_ui.scss */
 .services {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .services:before {
   content: "\f0b1";
   display: inline-block;
@@ -1666,13 +1695,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 169, sass/partials/_ui.scss */
+/* line 170, sass/partials/_ui.scss */
 .contact {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .contact:before {
   content: "\f0e0";
   display: inline-block;
@@ -1690,13 +1719,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 173, sass/partials/_ui.scss */
+/* line 174, sass/partials/_ui.scss */
 .search {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .search:before {
   content: "\f002";
   display: inline-block;
@@ -1714,13 +1743,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 177, sass/partials/_ui.scss */
+/* line 178, sass/partials/_ui.scss */
 .settings {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .settings:before {
   content: "\f013";
   display: inline-block;
@@ -1738,13 +1767,13 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 185, sass/partials/_ui.scss */
+/* line 186, sass/partials/_ui.scss */
 .colors {
   position: relative;
   left: 1.5em;
   margin-right: 1.5em;
 }
-/* line 34, sass/partials/_ui.scss */
+/* line 35, sass/partials/_ui.scss */
 .colors:before {
   content: "\f042";
   display: inline-block;
@@ -1762,9 +1791,56 @@ figcaption {
   top: 8.09017px;
 }
 
-/* line 6, sass/partials/_header.scss */
-.main-navigation ul li {
-  display: inline-block;
+/* line 8, sass/partials/_header.scss */
+#header {
+        /*
+		@include at-breakpoint($fair-viewport-columns) {
+			@include span-columns(5 omega, $fair-viewport-columns);
+		}
+		@include at-breakpoint($wider-viewport-columns) {
+			@include span-columns(3, $wider-viewport-columns);
+			@include pre(2);
+		}*/
+}
+
+/* line 21, sass/partials/_header.scss */
+#site-header {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdf6e3), color-stop(100%, #eee8d5));
+  background: -webkit-linear-gradient(#fdf6e3, #eee8d5);
+  background: -moz-linear-gradient(#fdf6e3, #eee8d5);
+  background: -o-linear-gradient(#fdf6e3, #eee8d5);
+  background: linear-gradient(#fdf6e3, #eee8d5);
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  margin-bottom: 64.72136px;
+}
+
+/* line 31, sass/partials/_header.scss */
+.nav-menu {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 55em) {
+  /* line 35, sass/partials/_header.scss */
+  .nav-menu li {
+    display: inline-block;
+  }
+  /* line 38, sass/partials/_header.scss */
+  .nav-menu li.home {
+    display: none;
+  }
+}
+
+/* line 43, sass/partials/_header.scss */
+.opt {
+  display: none;
+}
+@media (min-width: 55em) {
+  /* line 43, sass/partials/_header.scss */
+  .opt {
+    display: inline;
+  }
 }
 
 /* line 1, sass/partials/_posts.scss */

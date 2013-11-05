@@ -1,9 +1,49 @@
+// Layout
 
-.main-navigation{
-	@extend %sans;
-	ul {
-		@extend %no-bullet;
-		 li { display: inline-block; }
+
+//// Common layout for all content
+
+////// Header
+
+#header{/*
+		@include at-breakpoint($fair-viewport-columns) {
+			@include span-columns(5 omega, $fair-viewport-columns);
+		}
+		@include at-breakpoint($wider-viewport-columns) {
+			@include span-columns(3, $wider-viewport-columns);
+			@include pre(2);
+		}*/
+	}
+	
+	
+
+
+#site-header {
+	// TODO: add image background fallback
+	@include background(linear-gradient($background-color, $background-highlights-color));
+	// TODO: tweak settings as appropriate
+	@include single-box-shadow();
+	margin-bottom: $base-line-height * 2;
+}
+
+.header-menu { @extend %sans; }
+
+.nav-menu {
+	@extend %no-bullet;
+	width: 100%;
+	margin: auto;
+	li {
+		@include at-breakpoint($fair-viewport-columns) {
+			display: inline-block;
+			&.home { display: none; }
+		}
+	}
+}
+
+.opt {
+	display: none;
+	@include at-breakpoint($fair-viewport-columns) {
+		display: inline;
 	}
 }
 

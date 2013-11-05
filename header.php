@@ -11,15 +11,21 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<div id="page">
-			<header id="primary">
+			<header id="site-header">
+			<div id="site-header-container">
 				<hgroup>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-tagline opt"><?php bloginfo( 'description' ); ?></h2>
+					<h2 class="site-tagline"><?php bloginfo( 'description' ); ?></h2>
 				</hgroup>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="site-navigation" class="header-menu" role="navigation">
 					<h3 class="menu-toggle"><?php _e( 'Menu', 'fumseck' ); ?></h3>
 					<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'fumseck' ); ?>"><?php _e( 'Skip to content', 'fumseck' ); ?></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-			</header> <!-- #primary -->
+				<div id="site-settings" class="header-menu" >
+					<h3 class="menu-toggle"><?php _e( 'Settings', 'fumseck' ); ?></h3>
+					<?php wp_nav_menu( array( 'menu' => 'Settings', 'menu_class' => 'menu-settings' ) ); ?>
+				</div><!-- #site-settinngs -->
+			</div> <!-- #site-header-container -->
+			</header> <!-- #header -->
 			<div id="main">
