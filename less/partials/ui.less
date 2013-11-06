@@ -1,192 +1,109 @@
-
-////////////////////////////////////////////////////////////////////////////////
-// Font Awesome ////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-@import "partials/fontawesome";
-
-//// Variables /////////////////////////////////////////////////////////////////
-
-$fa-li-width: 1.5em;
-
-//// Typeface //////////////////////////////////////////////////////////////////
-
-@include font-face(
-	'Font Awesome', 
-	font-files(
-		'fontawesome/fontawesome-webfont.woff', woff,
-		'fontawesome/fontawesome-webfont.ttf', ttf,
-		'fontawesome/fontawesome-webfont.svg', svg),
-	'fontawesome/fontawesome-webfont.eot',
-	normal,
-	normal
-);
-
-//// Mixin for easy inclusion without butchering the markup ////////////////////
-
-// Adapted from the code provided with the font
-
-@mixin fa-icon($icon, $list: false, $position: 'before') {
-	@if $list {
-		position: relative;
-		left: $fa-li-width;
-		margin-right: $fa-li-width;
-	}
-	&:#{$position} {
-		content: $icon;
-		display: inline-block;
-		font-family: 'Font Awesome';
-		font-style: normal;
-		font-weight: normal;
-		line-height: 1;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;	
-		padding-right: 1em;
-		color: $secondary-content-color;
-		//Set fixed width by default
-		width: 1em;
-		@if $list {
-			position: absolute;
-			margin-left: -$fa-li-width;
-			top: $base-line-height * 0.25;
-		}
-	}
-	@content;
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// Buttons /////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-@import "sassy-buttons";
-
-////////////////////////////////////////////////////////////////////////////////
-// Actual UI ///////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+// Icons ///////////////////////////////////////////////////////////////////////
 
 .author, .about {
-	@include fa-icon( $fa-var-user, true ) // or for about: info-circle 
+	fa fa-user; // or for about: info-circle 
 }
 
 .categories {
-	@include fa-icon( $fa-var-folder-open, true )
+	fa fa-folder-open;
 }
 
 .start_date, .pub_date, .date_taken {
-	@include fa-icon( $fa-var-calendar, true )
+	fa fa-calendar;
 }
 
 .batbelt_event .end_date {
-	@include fa-icon( $fa-var-long-arrow-right, true  )
+	fa fa-long-arrow-right;
 }
 
 .batbelt_project .end_date {
-	@include fa-icon( $fa-var-check-square-o, true  )
+	fa fa-check-square-o;
 }
 
 .status {
 	
 	&.research {
-		@include fa-icon( $fa-var-flask, true )
+		fa fa-flask;
 	}
 	
 	&.ongoing {
-		@include fa-icon( $fa-var-play, true )
+		fa fa-play;
 	}
 	
 	&.completed {
-		@include fa-icon( $fa-var-check-square-o, true )
+		fa fa-check-square-o;
 	}
 	
 	&.on-hold {
-		@include fa-icon( $fa-var-pause, true )
+		fa fa-pause;
 	}
 	
 	&.shelved {
-		@include fa-icon( $fa-var-archive, true )
+		fa fa-archive;
 	}
 }
 
 .roles {
-	@include fa-icon( $fa-var-user, true )
+	fa fa-user;
 }
 
 .topics {
-	@include fa-icon( $fa-var-tag, true )
+	fa fa-tag;
 }
 
 .projects {
-	@include fa-icon( $fa-var-tasks, true )
+	fa fa-tasks;
 }
 
 .event {
-	@include fa-icon( $fa-var-calendar-o, true )
+	fa fa-calendar-o;
 }
 
 .location {
-	@include fa-icon( $fa-var-globe, true )
+	fa fa-globe;
 }
 
 .aperture {
-	@include fa-icon( $fa-var-dot-circle-o, true )
+	fa fa-dot-circle-o;
 }
 
 .focal_length {
-	@include fa-icon( $fa-var-resize-horizontal, true )
+	fa fa-resize-horizontal;
 }
 
 .exposure {
-	@include fa-icon( $fa-var-clock-o, true )
+	fa fa-clock-o;
 }
 
 .people {
-	@include fa-icon( $fa-var-user, true )
+	fa fa-user;
 }
  
 .home {
-	@include fa-icon( $fa-var-home, true )
+	fa fa-home;
 }
 
 .engineering {
-	@include fa-icon( $fa-var-puzzle-piece, true ) // or: cogs
+	fa fa-puzzle-piece; // or: cogs
 }
 
 .photo {
-	@include fa-icon( $fa-var-camera-retro, true ) // or: camera 
+	fa fa-camera-retro; // or: camera 
 }
 
 .lab {
-	@include fa-icon( $fa-var-flask, true )
+	fa fa-flask;
 }
 
-.thoughts {
-	@include fa-icon( $fa-var-lightbulb-o, true ) // or: book
-}
-
-.services {
-	@include fa-icon( $fa-var-briefcase, true )
-}
-
-.contact {
-	@include fa-icon( $fa-var-envelope, true )
-}
 
 .search {
-	@include fa-icon( $fa-var-search, true )
-}
-
-.settings {
-	@include fa-icon( $fa-var-cog, true )
+	fa fa-search;
 }
 
 .language {
-	//@include fa-icon( inline-image('language-icon.svg'), true )
+	// inline-image language-icon.svg 
 }
 
-.colors {
-	@include fa-icon( $fa-var-adjust, true )
+.assistive-text {
+  .sr-only();
 }
-
-
-	
-	

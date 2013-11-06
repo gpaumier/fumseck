@@ -34,4 +34,16 @@ function fumseck_default_image( $post_type ) {
 	// TODO
 }
 
+// Register Bootstrap's JavaScript
+
+function fumseck_register_bootstrap_js() {
+	wp_enqueue_script(
+		'bootstrap_js',
+		get_stylesheet_directory_uri() . '/3rdparty/bootstrap-3.0.1/dist/js/bootstrap.min.js',
+		array( 'jquery' )
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'fumseck_register_bootstrap_js' );
+
 ?>

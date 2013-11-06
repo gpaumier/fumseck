@@ -19,31 +19,46 @@
 
 
 #site-header {
-	// TODO: add image background fallback
-	@include background(linear-gradient($background-color, $background-highlights-color));
-	// TODO: tweak settings as appropriate
-	@include single-box-shadow();
-	margin-bottom: $base-line-height * 2;
-}
 
-.header-menu { @extend %sans; }
+	// Typography
+	.primary-content-size;
+	.fumseck-sans;
 
-.nav-menu {
-	@extend %no-bullet;
-	width: 100%;
-	margin: auto;
-	li {
-		@include at-breakpoint($fair-viewport-columns) {
-			display: inline-block;
-			&.home { display: none; }
+	// Appearance // TODO: add image background fallback
+	#gradient > .vertical(@background-color, @background-highlights-color);
+	.box-shadow(0 2px 5px @secondary-content-color);
+	margin-bottom: (@base-line-height * 2);
+
+	// Colors
+
+	a {
+		display: block;
+		color: @primary-content-color;
+		text-decoration: none;
+		&:visited,&:active{
+			color: @primary-content-color;
+		}
+		&:hover,&:focus{
+			color: @primary-accent-color;
+			background-color: @background-highlights-color;
 		}
 	}
+
+	// Layout
+	ul { padding-bottom: 0;};
 }
 
+#site-navigation { margin-bottom: 0; }
+
+/*
 .opt {
 	display: none;
 	@include at-breakpoint($fair-viewport-columns) {
 		display: inline;
 	}
 }
+*/
 
+.assistive-text {
+	.sr-only;
+}

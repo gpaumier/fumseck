@@ -47,31 +47,33 @@
 
 ////// Mixins //////////////////////////////////////////////////////////////////
 
-.serif {
+@fumseck-serif: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
+
+.fumseck-serif {
 	font-family: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
 }
 
-.serif-bold {
+.fumseck-serif-bold {
 	font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
 	font-weight: bold;
 }
 
-.serif-italic {
+.fumseck-serif-italic {
 	font-family: 'Latin Modern Roman Italic', 'Baskerville', 'Georgia', serif;
 	font-style: italic;
 }
 
-.serif-bolditalic {
+.fumseck-serif-bolditalic {
 	font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
 	font-weight: bold;
 	font-style: italic;
 }
 
-.serif-caps {
+.fumseck-serif-caps {
 	font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
 }
 
-.serif-caps-italic {
+.fumseck-serif-caps-italic {
 	font-family: 'Latin Modern Roman Caps Oblique', 'Baskerville', 'Georgia', serif;
 	font-style: italic;
 }
@@ -108,21 +110,23 @@
 	
 ////// Mixins //////////////////////////////////////////////////////////////////
 
-.sans {
+@fumseck-sans: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+
+.fumseck-sans {
 	font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
 }
 
-.sans-bold {
+.fumseck-sans-bold {
 	font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
 	font-weight: bold;
 }
 
-.sans-italic {
+.fumseck-sans-italic {
 	font-family: 'Latin Modern Sans Oblique', 'Futura', 'Verdana', sans-serif;
 	font-style: italic;
 }
 
-.sans-bolditalic {
+.fumseck-sans-bolditalic {
 	font-family: 'Latin Modern Sans Bold Oblique', 'Futura', 'Verdana', sans-serif;
 	font-weight: bold;
 	font-style: italic;
@@ -160,21 +164,23 @@
 	
 ////// Mixins ////////////////////////////////////////////////////////////
 
-.monospace {
+@fumseck-monospace: 'Latin Modern Monospace Regular', 'Courier', monospace;
+
+.fumseck-monospace {
 	font-family: 'Latin Modern Monospace Regular', 'Courier', monospace;
 }
 
-.monospace-italic {
+.fumseck-monospace-italic {
 	font-family: 'Latin Modern Monospace Italic', 'Courier', monospace;
 	font-style: italic;
 }
 
-.monospace-bold {
+.fumseck-monospace-bold {
 	font-family: 'Latin Modern Monospace Light Bold', 'Courier', monospace;
 	font-weight: bold;
 }
 
-.monospace-bolditalic {
+.fumseck-monospace-bolditalic {
 	font-family: 'Latin Modern Monospace Light Bold Oblique', 'Courier', monospace;
 	font-weight: bold;
 	font-style: italic;
@@ -220,75 +226,81 @@ ul, ol, dl, p, pre, h1, h2, h3 {
 	padding-bottom: @base-line-height;
 }
 
-@secondary-content-size: (@base-font-size / @modular-scale-ratio);
-@tertiary-content-size: (@base-font-size / (@modular-scale-ratio * @modular-scale-ratio));
+.primary-content-size { font-size: @base-font-size; };
+.secondary-content-size { font-size: (@base-font-size / @modular-scale-ratio); };
+.tertiary-content-size { font-size: (@base-font-size / (@modular-scale-ratio * @modular-scale-ratio)); };
+
+.large-content-size { font-size: (@base-font-size * @modular-scale-ratio); };
+.larger-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio); };
+.huge-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio * @modular-scale-ratio); };
 
 // Set up fonts ////////////////////////////////////////////////////////////////
 
 body {
-	.serif;
+	.fumseck-serif;
 }
 
 h1 {
-	font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio * @modular-scale-ratio);
-	.sans-bold;
+	.huge-content-size;
+	.fumseck-sans-bold;
 
 }
 h2 {
-	font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio);
-	.sans-bold;
+	.larger-content-size;
+	.fumseck-sans-bold;
 }
 h3 {
-	font-size: (@base-font-size * @modular-scale-ratio);
-	.sans-bold;
+	.large-content-size;
+	.fumseck-sans-bold;
 }
 
 .summary {
-	font-size: (@base-font-size * @modular-scale-ratio);
+	.large-content-size;
 }
 
 strong {
-	.serif-bold;
+	.fumseck-serif-bold;
 }
 
 em {
-	.serif-italic;
+	.fumseck-serif-italic;
 	}
 
 em strong, strong em {
-	.serif-bolditalic;
+	.fumseck-serif-bolditalic;
 }
 
 pre {
-	.monospace;
+	.fumseck-monospace;
 		
 	strong {
-		.monospace-bold;
+		.fumseck-monospace-bold;
 	}
 
 	em {
-		.monospace-italic;
+		.fumseck-monospace-italic;
 	}
 
 	em strong, strong em {
-		.monospace-bolditalic;
+		.fumseck-monospace-bolditalic;
 	}
 }
 
 figcaption {
-	font-size: @secondary-content-size;
-	.sans;
+	.secondary-content-size;
+	.fumseck-sans;
 	color: @secondary-content-color;
 }
 
 .byline, .meta1 {
-	font-size: @secondary-content-size;
-	.serif-caps;
+	.secondary-content-size;
+	.fumseck-serif-caps;
 	.no-bullet;
 }
 
 .meta2, .image-meta, .image-pub-meta {
-	font-size: @secondary-content-size;
-	.sans;
+	.secondary-content-size;
+	.fumseck-sans;
 	.no-bullet;
 }
+
