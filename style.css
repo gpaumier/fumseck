@@ -1,1894 +1,370 @@
- /*!
+/*!
 Theme Name: fumseck
 Theme URI: https://github.com/gpaumier/fumseck
 Author: Guillaume Paumier
 Author URI: https://guillaumepaumier.com/
 Description: A simple responsive theme
-Version: 0.1
+Version: 0.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: fumseck
 */
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-/* line 22, sass/partials/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-/* line 32, sass/partials/_normalize.scss */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-/* line 41, sass/partials/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
- */
-/* line 52, sass/partials/_normalize.scss */
-[hidden],
-template {
-  display: none;
-}
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-/* line 66, sass/partials/_normalize.scss */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-/* line 76, sass/partials/_normalize.scss */
-body {
-  margin: 0;
-}
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-/* line 88, sass/partials/_normalize.scss */
-a {
-  background: transparent;
-}
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-/* line 96, sass/partials/_normalize.scss */
-a:focus {
-  outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 105, sass/partials/_normalize.scss */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 118, sass/partials/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-/* line 127, sass/partials/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 136, sass/partials/_normalize.scss */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-/* line 144, sass/partials/_normalize.scss */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-/* line 152, sass/partials/_normalize.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-/* line 162, sass/partials/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-/* line 174, sass/partials/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-/* line 183, sass/partials/_normalize.scss */
-pre {
-  white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-/* line 191, sass/partials/_normalize.scss */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 199, sass/partials/_normalize.scss */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-/* line 208, sass/partials/_normalize.scss */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-/* line 215, sass/partials/_normalize.scss */
-sup {
-  top: -0.5em;
-}
-
-/* line 219, sass/partials/_normalize.scss */
-sub {
-  bottom: -0.25em;
-}
-
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
-/* line 231, sass/partials/_normalize.scss */
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-/* line 239, sass/partials/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-/* line 251, sass/partials/_normalize.scss */
-figure {
-  margin: 0;
-}
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-/* line 263, sass/partials/_normalize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-/* line 274, sass/partials/_normalize.scss */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-/* line 288, sass/partials/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-/* line 300, sass/partials/_normalize.scss */
-button,
-input {
-  line-height: normal;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-/* line 312, sass/partials/_normalize.scss */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-/* line 327, sass/partials/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-/* line 337, sass/partials/_normalize.scss */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-/* line 347, sass/partials/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-/* line 358, sass/partials/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-/* line 371, sass/partials/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-/* line 380, sass/partials/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-/* line 390, sass/partials/_normalize.scss */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
-
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-/* line 403, sass/partials/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
-/* line 3, sass/partials/_placeholders.scss */
-.format-image figcaption {
-  display: none;
-}
-
-/* line 7, sass/partials/_placeholders.scss */
-.byline, .meta1, .meta2, .image-meta, .image-pub-meta, .nav-menu {
+.no-bullet {
   list-style-type: none;
 }
-
-/* line 3, sass/partials/_base.scss */
+/*
+@mixin media-query ($canvas) {
+	@if $canvas == short-height {
+		@media only screen and (max-height:40em) { @content; }
+	}
+	@else if $canvas == medium-height {
+		@media only screen and (min-height:40em) and (max-height:55em) { @content; }
+	}
+	@else if $canvas == tall-height {
+		@media only screen and (min-height:55em) { @content; }
+	}
+}
+*/
+/*! Solarized colors by Ethan Schoonover http://ethanschoonover.com/solarized */
 body {
   background: #fdf6e3;
   color: #657b83;
 }
-
-/* line 10, sass/partials/_base.scss */
 a {
   color: #268bd2;
   text-decoration: none;
 }
-/* line 13, sass/partials/_base.scss */
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
-/* line 16, sass/partials/_base.scss */
-a:visited, a:active {
+a:visited,
+a:active {
   color: #6c71c4;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Regular";
-  src: url('fonts/latinmodern/roman/lmroman10-regular-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmroman10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-regular-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Regular';
+  src: url("fonts/latinmodern/roman/lmroman10-regular-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmroman10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmroman10-regular-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmroman10-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Bold";
-  src: url('fonts/latinmodern/roman/lmroman10-bold-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmroman10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-bold-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Bold';
+  src: url("fonts/latinmodern/roman/lmroman10-bold-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmroman10-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmroman10-bold-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmroman10-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Italic";
-  src: url('fonts/latinmodern/roman/lmroman10-italic-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmroman10-italic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-italic-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Italic';
+  src: url("fonts/latinmodern/roman/lmroman10-italic-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmroman10-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmroman10-italic-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmroman10-italic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Bold Italic";
-  src: url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmroman10-bolditalic-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Bold Italic';
+  src: url("fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmroman10-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmroman10-bolditalic-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmroman10-bolditalic-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Caps Regular";
-  src: url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmromancaps10-regular-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Caps Regular';
+  src: url("fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmromancaps10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmromancaps10-regular-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmromancaps10-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Latin Modern Roman Caps Oblique";
-  src: url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot');
-  src: url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.woff') format('woff'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/roman/lmromancaps10-oblique-webfont.svg') format('svg');
+  font-family: 'Latin Modern Roman Caps Oblique';
+  src: url("fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot");
+  src: url("fonts/latinmodern/roman/lmromancaps10-oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/roman/lmromancaps10-oblique-webfont.woff") format("woff"), url("fonts/latinmodern/roman/lmromancaps10-oblique-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
-
-/* line 79, sass/partials/_typography.scss */
-body {
+.serif {
   font-family: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
 }
-
-/* line 83, sass/partials/_typography.scss */
-strong {
+.serif-bold {
   font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
   font-weight: bold;
 }
-
-/* line 88, sass/partials/_typography.scss */
-em {
+.serif-italic {
   font-family: 'Latin Modern Roman Italic', 'Baskerville', 'Georgia', serif;
   font-style: italic;
 }
-
-/* line 93, sass/partials/_typography.scss */
-em strong, strong em {
+.serif-bolditalic {
   font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
   font-weight: bold;
   font-style: italic;
 }
-
-/* line 99, sass/partials/_typography.scss */
-.byline, .meta1 {
+.serif-caps {
   font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
 }
-
+.serif-caps-italic {
+  font-family: 'Latin Modern Roman Caps Oblique', 'Baskerville', 'Georgia', serif;
+  font-style: italic;
+}
 @font-face {
-  font-family: "Latin Modern Sans Regular";
-  src: url('fonts/latinmodern/sans/lmsans10-regular-webfont.eot');
-  src: url('fonts/latinmodern/sans/lmsans10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-regular-webfont.svg') format('svg');
+  font-family: 'Latin Modern Sans Regular';
+  src: url("fonts/latinmodern/sans/lmsans10-regular-webfont.eot");
+  src: url("fonts/latinmodern/sans/lmsans10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/sans/lmsans10-regular-webfont.woff") format("woff"), url("fonts/latinmodern/sans/lmsans10-regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Latin Modern Sans Bold";
-  src: url('fonts/latinmodern/sans/lmsans10-bold-webfont.eot');
-  src: url('fonts/latinmodern/sans/lmsans10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-bold-webfont.svg') format('svg');
+  font-family: 'Latin Modern Sans Bold';
+  src: url("fonts/latinmodern/sans/lmsans10-bold-webfont.eot");
+  src: url("fonts/latinmodern/sans/lmsans10-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/sans/lmsans10-bold-webfont.woff") format("woff"), url("fonts/latinmodern/sans/lmsans10-bold-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Latin Modern Sans Oblique";
-  src: url('fonts/latinmodern/sans/lmsans10-oblique-webfont.eot');
-  src: url('fonts/latinmodern/sans/lmsans10-oblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-oblique-webfont.svg') format('svg');
+  font-family: 'Latin Modern Sans Oblique';
+  src: url("fonts/latinmodern/sans/lmsans10-oblique-webfont.eot");
+  src: url("fonts/latinmodern/sans/lmsans10-oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/sans/lmsans10-oblique-webfont.woff") format("woff"), url("fonts/latinmodern/sans/lmsans10-oblique-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
-
 @font-face {
-  font-family: "Latin Modern Sans Bold Oblique";
-  src: url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot');
-  src: url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.woff') format('woff'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/sans/lmsans10-boldoblique-webfont.svg') format('svg');
+  font-family: 'Latin Modern Sans Bold Oblique';
+  src: url("fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot");
+  src: url("fonts/latinmodern/sans/lmsans10-boldoblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/sans/lmsans10-boldoblique-webfont.woff") format("woff"), url("fonts/latinmodern/sans/lmsans10-boldoblique-webfont.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
-
-/* line 156, sass/partials/_typography.scss */
-figcaption, .meta2, .image-meta, .image-pub-meta, .header-menu {
+.sans {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
 }
-
-/* line 160, sass/partials/_typography.scss */
-h1, h2, h3 {
+.sans-bold {
   font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
   font-weight: bold;
 }
-
-@font-face {
-  font-family: "Latin Modern Monospace Regular";
-  src: url('fonts/latinmodern/mono/lmmono10-regular-webfont.eot');
-  src: url('fonts/latinmodern/mono/lmmono10-regular-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmono10-regular-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Latin Modern Monospace Italic";
-  src: url('fonts/latinmodern/mono/lmmono10-italic-webfont.eot');
-  src: url('fonts/latinmodern/mono/lmmono10-italic-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmono10-italic-webfont.svg') format('svg');
-  font-weight: normal;
+.sans-italic {
+  font-family: 'Latin Modern Sans Oblique', 'Futura', 'Verdana', sans-serif;
   font-style: italic;
 }
-
-@font-face {
-  font-family: "Latin Modern Monospace Light Bold";
-  src: url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot');
-  src: url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmonolt10-bold-webfont.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Latin Modern Monospace Light Bold Oblique";
-  src: url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot');
-  src: url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot?#iefix') format('eot'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.woff') format('woff'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.ttf') format('truetype'), url('fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.svg') format('svg');
+.sans-bolditalic {
+  font-family: 'Latin Modern Sans Bold Oblique', 'Futura', 'Verdana', sans-serif;
   font-weight: bold;
   font-style: italic;
 }
-
-/* line 224, sass/partials/_typography.scss */
-pre {
+@font-face {
+  font-family: 'Latin Modern Monospace Regular';
+  src: url("fonts/latinmodern/mono/lmmono10-regular-webfont.eot");
+  src: url("fonts/latinmodern/mono/lmmono10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/mono/lmmono10-regular-webfont.woff") format("woff"), url("fonts/latinmodern/mono/lmmono10-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Latin Modern Monospace Italic';
+  src: url("fonts/latinmodern/mono/lmmono10-italic-webfont.eot");
+  src: url("fonts/latinmodern/mono/lmmono10-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/mono/lmmono10-italic-webfont.woff") format("woff"), url("fonts/latinmodern/mono/lmmono10-italic-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Latin Modern Monospace Light Bold';
+  src: url("fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot");
+  src: url("fonts/latinmodern/mono/lmmonolt10-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/mono/lmmonolt10-bold-webfont.woff") format("woff"), url("fonts/latinmodern/mono/lmmonolt10-bold-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Latin Modern Monospace Light Bold Oblique';
+  src: url("fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot");
+  src: url("fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.woff") format("woff"), url("fonts/latinmodern/mono/lmmonolt10-boldoblique-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+.monospace {
   font-family: 'Latin Modern Monospace Regular', 'Courier', monospace;
 }
-
-/* line 228, sass/partials/_typography.scss */
-pre em {
+.monospace-italic {
   font-family: 'Latin Modern Monospace Italic', 'Courier', monospace;
   font-style: italic;
 }
-
-/* line 233, sass/partials/_typography.scss */
-pre strong {
+.monospace-bold {
   font-family: 'Latin Modern Monospace Light Bold', 'Courier', monospace;
   font-weight: bold;
 }
-
-/* line 238, sass/partials/_typography.scss */
-pre em strong, pre strong em {
+.monospace-bolditalic {
   font-family: 'Latin Modern Monospace Light Bold Oblique', 'Courier', monospace;
   font-weight: bold;
   font-style: italic;
 }
-
-/* line 261, sass/partials/_typography.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 0;
+  border-bottom: 0;
 }
-
-/* line 61, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-* html {
-  font-size: 125%;
-}
-
-/* line 64, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 20px;
-  line-height: 1.61803em;
+  line-height: 32.36px;
 }
-
-/* line 280, sass/partials/_typography.scss */
-ul, ol, dl, p, pre, h1, h2, h3 {
-  padding-bottom: 32.36068px;
-}
-
-/* line 295, sass/partials/_typography.scss */
-h1 {
-  font-size: 1.728em;
-}
-
-/* line 300, sass/partials/_typography.scss */
-h2 {
-  font-size: 1.44em;
-}
-
-/* line 304, sass/partials/_typography.scss */
+ul,
+ol,
+dl,
+p,
+pre,
+h1,
+h2,
 h3 {
-  font-size: 1.2em;
+  padding-bottom: 32.36px;
 }
-
-/* line 309, sass/partials/_typography.scss */
+body {
+  font-family: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
+}
+h1 {
+  font-size: 34.559999999999995px;
+  font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
+  font-weight: bold;
+}
+h2 {
+  font-size: 28.799999999999997px;
+  font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
+  font-weight: bold;
+}
+h3 {
+  font-size: 24px;
+  font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
+  font-weight: bold;
+}
 .summary {
-  font-size: 1.2em;
+  font-size: 24px;
 }
-
-/* line 341, sass/partials/_typography.scss */
+strong {
+  font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
+  font-weight: bold;
+}
+em {
+  font-family: 'Latin Modern Roman Italic', 'Baskerville', 'Georgia', serif;
+  font-style: italic;
+}
+em strong,
+strong em {
+  font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
+  font-weight: bold;
+  font-style: italic;
+}
+pre {
+  font-family: 'Latin Modern Monospace Regular', 'Courier', monospace;
+}
+pre strong {
+  font-family: 'Latin Modern Monospace Light Bold', 'Courier', monospace;
+  font-weight: bold;
+}
+pre em {
+  font-family: 'Latin Modern Monospace Italic', 'Courier', monospace;
+  font-style: italic;
+}
+pre em strong,
+pre strong em {
+  font-family: 'Latin Modern Monospace Light Bold Oblique', 'Courier', monospace;
+  font-weight: bold;
+  font-style: italic;
+}
 figcaption {
-  font-size: 0.83333em;
+  font-size: 16.666666666666668px;
+  font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   color: #93a1a1;
 }
-
-/* line 347, sass/partials/_typography.scss */
-.byline, .meta1 {
-  font-size: 0.83333em;
-}
-
-/* line 353, sass/partials/_typography.scss */
-.meta2, .image-meta, .image-pub-meta {
-  font-size: 0.83333em;
-}
-
-/* line 14, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/susy-1.0.9/sass/susy/_grid.scss */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 32, sass/partials/_layout.scss */
-#site-header-container, article.regular, #site-footer-container {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(6.53595%, rgba(100, 100, 225, 0.25)), color-stop(6.53595%, rgba(0, 0, 0, 0)), color-stop(8.49673%, rgba(0, 0, 0, 0)), color-stop(8.49673%, rgba(100, 100, 225, 0.25)), color-stop(15.03268%, rgba(100, 100, 225, 0.25)), color-stop(15.03268%, rgba(0, 0, 0, 0)), color-stop(16.99346%, rgba(0, 0, 0, 0)), color-stop(16.99346%, rgba(100, 100, 225, 0.25)), color-stop(23.52941%, rgba(100, 100, 225, 0.25)), color-stop(23.52941%, rgba(0, 0, 0, 0)), color-stop(25.4902%, rgba(0, 0, 0, 0)), color-stop(25.4902%, rgba(100, 100, 225, 0.25)), color-stop(32.02614%, rgba(100, 100, 225, 0.25)), color-stop(32.02614%, rgba(0, 0, 0, 0)), color-stop(33.98693%, rgba(0, 0, 0, 0)), color-stop(33.98693%, rgba(100, 100, 225, 0.25)), color-stop(40.52288%, rgba(100, 100, 225, 0.25)), color-stop(40.52288%, rgba(0, 0, 0, 0)), color-stop(42.48366%, rgba(0, 0, 0, 0)), color-stop(42.48366%, rgba(100, 100, 225, 0.25)), color-stop(49.01961%, rgba(100, 100, 225, 0.25)), color-stop(49.01961%, rgba(0, 0, 0, 0)), color-stop(50.98039%, rgba(0, 0, 0, 0)), color-stop(50.98039%, rgba(100, 100, 225, 0.25)), color-stop(57.51634%, rgba(100, 100, 225, 0.25)), color-stop(57.51634%, rgba(0, 0, 0, 0)), color-stop(59.47712%, rgba(0, 0, 0, 0)), color-stop(59.47712%, rgba(100, 100, 225, 0.25)), color-stop(66.01307%, rgba(100, 100, 225, 0.25)), color-stop(66.01307%, rgba(0, 0, 0, 0)), color-stop(67.97386%, rgba(0, 0, 0, 0)), color-stop(67.97386%, rgba(100, 100, 225, 0.25)), color-stop(74.5098%, rgba(100, 100, 225, 0.25)), color-stop(74.5098%, rgba(0, 0, 0, 0)), color-stop(76.47059%, rgba(0, 0, 0, 0)), color-stop(76.47059%, rgba(100, 100, 225, 0.25)), color-stop(83.00654%, rgba(100, 100, 225, 0.25)), color-stop(83.00654%, rgba(0, 0, 0, 0)), color-stop(84.96732%, rgba(0, 0, 0, 0)), color-stop(84.96732%, rgba(100, 100, 225, 0.25)), color-stop(91.50327%, rgba(100, 100, 225, 0.25)), color-stop(91.50327%, rgba(0, 0, 0, 0)), color-stop(93.46405%, rgba(0, 0, 0, 0)), color-stop(93.46405%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 6.53595%, rgba(0, 0, 0, 0) 6.53595%, rgba(0, 0, 0, 0) 8.49673%, rgba(100, 100, 225, 0.25) 8.49673%, rgba(100, 100, 225, 0.25) 15.03268%, rgba(0, 0, 0, 0) 15.03268%, rgba(0, 0, 0, 0) 16.99346%, rgba(100, 100, 225, 0.25) 16.99346%, rgba(100, 100, 225, 0.25) 23.52941%, rgba(0, 0, 0, 0) 23.52941%, rgba(0, 0, 0, 0) 25.4902%, rgba(100, 100, 225, 0.25) 25.4902%, rgba(100, 100, 225, 0.25) 32.02614%, rgba(0, 0, 0, 0) 32.02614%, rgba(0, 0, 0, 0) 33.98693%, rgba(100, 100, 225, 0.25) 33.98693%, rgba(100, 100, 225, 0.25) 40.52288%, rgba(0, 0, 0, 0) 40.52288%, rgba(0, 0, 0, 0) 42.48366%, rgba(100, 100, 225, 0.25) 42.48366%, rgba(100, 100, 225, 0.25) 49.01961%, rgba(0, 0, 0, 0) 49.01961%, rgba(0, 0, 0, 0) 50.98039%, rgba(100, 100, 225, 0.25) 50.98039%, rgba(100, 100, 225, 0.25) 57.51634%, rgba(0, 0, 0, 0) 57.51634%, rgba(0, 0, 0, 0) 59.47712%, rgba(100, 100, 225, 0.25) 59.47712%, rgba(100, 100, 225, 0.25) 66.01307%, rgba(0, 0, 0, 0) 66.01307%, rgba(0, 0, 0, 0) 67.97386%, rgba(100, 100, 225, 0.25) 67.97386%, rgba(100, 100, 225, 0.25) 74.5098%, rgba(0, 0, 0, 0) 74.5098%, rgba(0, 0, 0, 0) 76.47059%, rgba(100, 100, 225, 0.25) 76.47059%, rgba(100, 100, 225, 0.25) 83.00654%, rgba(0, 0, 0, 0) 83.00654%, rgba(0, 0, 0, 0) 84.96732%, rgba(100, 100, 225, 0.25) 84.96732%, rgba(100, 100, 225, 0.25) 91.50327%, rgba(0, 0, 0, 0) 91.50327%, rgba(0, 0, 0, 0) 93.46405%, rgba(100, 100, 225, 0.25) 93.46405%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  background-position: left top;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  -ms-background-origin: content-box;
-  -o-background-origin: content-box;
-  background-origin: content-box;
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
-  background-clip: content-box;
-}
-@media (min-width: 38.75em) {
-  /* line 32, sass/partials/_layout.scss */
-  #site-header-container, article.regular, #site-footer-container {
-    max-width: 31em;
-    padding-left: 0em;
-    padding-right: 0em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #site-header-container:after, article.regular:after, #site-footer-container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (min-width: 55em) {
-  /* line 32, sass/partials/_layout.scss */
-  #site-header-container, article.regular, #site-footer-container {
-    max-width: 44em;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 32, sass/partials/_layout.scss */
-  #site-header-container, article.regular, #site-footer-container {
-    max-width: 76.5em;
-  }
-}
-
-@media (min-width: 55em) {
-  /* line 41, sass/partials/_layout.scss */
-  article.landscape {
-    max-width: 44em;
-    padding-left: 0em;
-    padding-right: 0em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  article.landscape:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 41, sass/partials/_layout.scss */
-  article.landscape {
-    max-width: 76.5em;
-  }
-}
-@media (min-width: 63.125em) {
-  /* line 46, sass/partials/_layout.scss */
-  article.portrait {
-    max-width: 50.5em;
-    padding-left: 0em;
-    padding-right: 0em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 38, ../../../../../../../../../usr/lib64/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  article.portrait:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 46, sass/partials/_layout.scss */
-  article.portrait {
-    max-width: 76.5em;
-  }
-}
-@media (min-width: 193.125em) {
-  /* line 46, sass/partials/_layout.scss */
-  article.portrait {
-    max-width: 154.5em;
-  }
-}
-
-@media (min-width: 55em) {
-  /* line 58, sass/partials/_layout.scss */
-  article.regular header {
-    width: 70.45455%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 58, sass/partials/_layout.scss */
-  article.regular header {
-    width: 23.52941%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 16.99346%;
-  }
-}
-@media (min-width: 55em) {
-  /* line 68, sass/partials/_layout.scss */
-  article.regular .featured-image, article.regular .default-image {
-    width: 70.45455%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 68, sass/partials/_layout.scss */
-  article.regular .featured-image, article.regular .default-image {
-    width: 40.52288%;
-    float: right;
-    margin-right: 0;
-    margin-right: 16.99346%;
-  }
-}
-
-@media (min-width: 55em) {
-  /* line 79, sass/partials/_layout.scss */
-  .meta2 {
-    width: 26.13636%;
-    float: left;
-    margin-right: 3.40909%;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 79, sass/partials/_layout.scss */
-  .meta2 {
-    width: 23.52941%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 16.99346%;
-  }
-}
-
-@media (min-width: 55em) {
-  /* line 89, sass/partials/_layout.scss */
-  .the-content {
-    width: 70.45455%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 89, sass/partials/_layout.scss */
-  .the-content {
-    width: 40.52288%;
-    float: right;
-    margin-right: 0;
-    margin-right: 16.99346%;
-  }
-}
-
-@media (min-width: 95.625em) {
-  /* line 105, sass/partials/_layout.scss */
-  .format-image.landscape figure {
-    width: 74.5098%;
-    float: left;
-    margin-right: 1.96078%;
-  }
-}
-@media (min-width: 46.875em) {
-  /* line 113, sass/partials/_layout.scss */
-  .format-image.landscape .image-meta, .format-image.landscape .image-pub-meta {
-    width: 26.13636%;
-    float: left;
-    margin-right: 3.40909%;
-  }
-}
-@media (min-width: 46.875em) {
-  /* line 119, sass/partials/_layout.scss */
-  .format-image.landscape header, .format-image.landscape .summary, .format-image.landscape .the-content {
-    width: 70.45455%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 125, sass/partials/_layout.scss */
-  .format-image.landscape header, .format-image.landscape .image-meta, .format-image.landscape .summary, .format-image.landscape .image-pub-meta {
-    width: 23.52941%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 95.625em) {
-  /* line 131, sass/partials/_layout.scss */
-  .format-image.landscape .the-content {
-    width: 49.01961%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-@media only screen and (max-height: 40em) {
-  /* line 143, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 18em;
-    margin: auto;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) {
-  /* line 143, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 24.5em;
-    margin: auto;
-  }
-}
-@media only screen and (min-height: 55em) {
-  /* line 143, sass/partials/_layout.scss */
-  .format-image.portrait figure, .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta, .format-image.portrait .the-content {
-    max-width: 31em;
-    margin: auto;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 161, sass/partials/_layout.scss */
-  .format-image.portrait figure {
-    width: 35.64356%;
-    float: left;
-    margin-right: 2.9703%;
-    margin-left: 12.87129%;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 161, sass/partials/_layout.scss */
-  .format-image.portrait figure {
-    width: 23.52941%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 161, sass/partials/_layout.scss */
-  .format-image.portrait figure {
-    width: 48.51485%;
-    float: left;
-    margin-right: 2.9703%;
-    margin-left: 12.87129%;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 161, sass/partials/_layout.scss */
-  .format-image.portrait figure {
-    width: 32.02614%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-@media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 161, sass/partials/_layout.scss */
-  .format-image.portrait figure {
-    width: 40.52288%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 190, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
-    width: 35.64356%;
-    float: right;
-    margin-right: 0;
-    margin-right: 12.87129%;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 190, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
-    width: 23.52941%;
-    float: right;
-    margin-right: 0;
-    margin-right: 25.4902%;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 190, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
-    width: 35.64356%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 190, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
-    width: 23.52941%;
-    float: right;
-    margin-right: 0;
-    margin-right: 16.99346%;
-  }
-}
-@media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 190, sass/partials/_layout.scss */
-  .format-image.portrait header, .format-image.portrait .image-meta, .format-image.portrait .summary, .format-image.portrait .image-pub-meta {
-    width: 23.52941%;
-    float: right;
-    margin-right: 0;
-    margin-right: 8.49673%;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 63.125em) {
-  /* line 218, sass/partials/_layout.scss */
-  .format-image.portrait .the-content {
-    max-width: 37.5em;
-    width: 74.25743%;
-    float: left;
-    margin-right: 2.9703%;
-    margin-left: 12.87129%;
-    margin-right: 12.87129%;
-  }
-}
-@media only screen and (max-height: 40em) and (min-width: 95.625em) {
-  /* line 218, sass/partials/_layout.scss */
-  .format-image.portrait .the-content {
-    max-width: 37.5em;
-    width: 49.01961%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-    margin-right: 25.4902%;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 63.125em) {
-  /* line 218, sass/partials/_layout.scss */
-  .format-image.portrait .the-content {
-    width: 48.51485%;
-    float: left;
-    margin-right: 2.9703%;
-    margin-left: 12.87129%;
-  }
-}
-@media only screen and (min-height: 40em) and (max-height: 55em) and (min-width: 95.625em) {
-  /* line 218, sass/partials/_layout.scss */
-  .format-image.portrait .the-content {
-    width: 32.02614%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-@media only screen and (min-height: 55em) and (min-width: 95.625em) {
-  /* line 218, sass/partials/_layout.scss */
-  .format-image.portrait .the-content {
-    width: 40.52288%;
-    float: left;
-    margin-right: 1.96078%;
-    margin-left: 25.4902%;
-  }
-}
-
-/* line 254, sass/partials/_layout.scss */
-.opt {
-  display: none;
-}
-@media (min-width: 55em) {
-  /* line 254, sass/partials/_layout.scss */
-  .opt {
-    display: inline;
-  }
-}
-
-@font-face {
-  font-family: "Font Awesome";
-  src: url('fonts/fontawesome/fontawesome-webfont.eot');
-  src: url('fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), url('fonts/fontawesome/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome/fontawesome-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 67, sass/partials/_ui.scss */
-.author, .about {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.author:before, .about:before {
-  content: "\f007";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 71, sass/partials/_ui.scss */
-.categories {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.categories:before {
-  content: "\f07c";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 75, sass/partials/_ui.scss */
-.start_date, .pub_date, .date_taken {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.start_date:before, .pub_date:before, .date_taken:before {
-  content: "\f073";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 79, sass/partials/_ui.scss */
-.batbelt_event .end_date {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.batbelt_event .end_date:before {
-  content: "\f178";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 83, sass/partials/_ui.scss */
-.batbelt_project .end_date {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.batbelt_project .end_date:before {
-  content: "\f046";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 89, sass/partials/_ui.scss */
-.status.research {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.status.research:before {
-  content: "\f0c3";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-/* line 93, sass/partials/_ui.scss */
-.status.ongoing {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.status.ongoing:before {
-  content: "\f04b";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-/* line 97, sass/partials/_ui.scss */
-.status.completed {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.status.completed:before {
-  content: "\f046";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-/* line 101, sass/partials/_ui.scss */
-.status.on-hold {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.status.on-hold:before {
-  content: "\f04c";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-/* line 105, sass/partials/_ui.scss */
-.status.shelved {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.status.shelved:before {
-  content: "\f187";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 110, sass/partials/_ui.scss */
-.roles {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.roles:before {
-  content: "\f007";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 114, sass/partials/_ui.scss */
-.topics {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.topics:before {
-  content: "\f02b";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 118, sass/partials/_ui.scss */
-.projects {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.projects:before {
-  content: "\f0ae";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 122, sass/partials/_ui.scss */
-.event {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.event:before {
-  content: "\f133";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 126, sass/partials/_ui.scss */
-.location {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.location:before {
-  content: "\f0ac";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 130, sass/partials/_ui.scss */
-.aperture {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.aperture:before {
-  content: "\f192";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 134, sass/partials/_ui.scss */
-.focal_length {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.focal_length:before {
-  content: "\f07e";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 138, sass/partials/_ui.scss */
-.exposure {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.exposure:before {
-  content: "\f017";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 142, sass/partials/_ui.scss */
-.people {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.people:before {
-  content: "\f007";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 146, sass/partials/_ui.scss */
-.home {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.home:before {
-  content: "\f015";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 150, sass/partials/_ui.scss */
-.engineering {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.engineering:before {
-  content: "\f12e";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 154, sass/partials/_ui.scss */
-.photo {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.photo:before {
-  content: "\f083";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 158, sass/partials/_ui.scss */
-.lab {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.lab:before {
-  content: "\f0c3";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 162, sass/partials/_ui.scss */
-.thoughts {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.thoughts:before {
-  content: "\f0eb";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 166, sass/partials/_ui.scss */
-.services {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.services:before {
-  content: "\f0b1";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 170, sass/partials/_ui.scss */
-.contact {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.contact:before {
-  content: "\f0e0";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 174, sass/partials/_ui.scss */
-.search {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.search:before {
-  content: "\f002";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 178, sass/partials/_ui.scss */
-.settings {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.settings:before {
-  content: "\f013";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 186, sass/partials/_ui.scss */
-.colors {
-  position: relative;
-  left: 1.5em;
-  margin-right: 1.5em;
-}
-/* line 35, sass/partials/_ui.scss */
-.colors:before {
-  content: "\f042";
-  display: inline-block;
-  font-family: 'Font Awesome';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding-right: 1em;
-  color: #93a1a1;
-  width: 1em;
-  position: absolute;
-  margin-left: -1.5em;
-  top: 8.09017px;
-}
-
-/* line 8, sass/partials/_header.scss */
-#header {
-        /*
-		@include at-breakpoint($fair-viewport-columns) {
-			@include span-columns(5 omega, $fair-viewport-columns);
-		}
-		@include at-breakpoint($wider-viewport-columns) {
-			@include span-columns(3, $wider-viewport-columns);
-			@include pre(2);
-		}*/
-}
-
-/* line 21, sass/partials/_header.scss */
-#site-header {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdf6e3), color-stop(100%, #eee8d5));
-  background: -webkit-linear-gradient(#fdf6e3, #eee8d5);
-  background: -moz-linear-gradient(#fdf6e3, #eee8d5);
-  background: -o-linear-gradient(#fdf6e3, #eee8d5);
-  background: linear-gradient(#fdf6e3, #eee8d5);
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
-  margin-bottom: 64.72136px;
-}
-
-/* line 31, sass/partials/_header.scss */
-.nav-menu {
-  width: 100%;
-  margin: auto;
-}
-@media (min-width: 55em) {
-  /* line 35, sass/partials/_header.scss */
-  .nav-menu li {
-    display: inline-block;
-  }
-  /* line 38, sass/partials/_header.scss */
-  .nav-menu li.home {
-    display: none;
-  }
-}
-
-/* line 43, sass/partials/_header.scss */
-.opt {
-  display: none;
-}
-@media (min-width: 55em) {
-  /* line 43, sass/partials/_header.scss */
-  .opt {
-    display: inline;
-  }
-}
-
-/* line 1, sass/partials/_posts.scss */
-.wp-post-image {
-  width: 100%;
-  height: auto;
-}
-
-/* line 8, sass/partials/_posts.scss */
-.syndication {
-  padding: 0;
-  font-size: 0.83333em;
-  color: #93a1a1;
-}
-/* line 14, sass/partials/_posts.scss */
-.syndication li {
-  display: inline-block;
-}
-/* line 23, sass/partials/_posts.scss */
-.syndication a {
-  color: #93a1a1;
-  text-decoration: none;
-  padding: .3em .6em;
-  margin-left: .7em;
-  -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  -ms-border-radius: 0.4em;
-  -o-border-radius: 0.4em;
-  border-radius: 0.4em;
-  background-color: #eee8d5;
-}
-/* line 30, sass/partials/_posts.scss */
-.syndication a:hover {
-  color: white;
-}
-/* line 33, sass/partials/_posts.scss */
-.syndication .facebook:hover {
-  background-color: #3b5998;
-}
-/* line 35, sass/partials/_posts.scss */
-.syndication .twitter:hover {
-  background-color: #00aced;
-}
-/* line 37, sass/partials/_posts.scss */
-.syndication .googleplus:hover {
-  background-color: #c03220;
-}
-/* line 39, sass/partials/_posts.scss */
-.syndication .tumblr:hover {
-  background-color: #365069;
+.byline,
+.meta1 {
+  font-size: 16.666666666666668px;
+  font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
+  list-style-type: none;
+}
+.meta2,
+.image-meta,
+.image-pub-meta {
+  font-size: 16.666666666666668px;
+  font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+  list-style-type: none;
 }
