@@ -5394,6 +5394,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .carousel-control.left {
+  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -5403,6 +5404,7 @@ button.close {
 .carousel-control.right {
   left: auto;
   right: 0;
+  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
@@ -7743,4 +7745,58 @@ figcaption {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+#menu-nav-menu .home,
+tr#menu-nav-menu .home,
+th#menu-nav-menu .home,
+td#menu-nav-menu .home {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  #menu-nav-menu .home {
+    display: block !important;
+  }
+  tr#menu-nav-menu .home {
+    display: table-row !important;
+  }
+  th#menu-nav-menu .home,
+  td#menu-nav-menu .home {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #menu-nav-menu .home.visible-sm {
+    display: block !important;
+  }
+  tr#menu-nav-menu .home.visible-sm {
+    display: table-row !important;
+  }
+  th#menu-nav-menu .home.visible-sm,
+  td#menu-nav-menu .home.visible-sm {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #menu-nav-menu .home.visible-md {
+    display: block !important;
+  }
+  tr#menu-nav-menu .home.visible-md {
+    display: table-row !important;
+  }
+  th#menu-nav-menu .home.visible-md,
+  td#menu-nav-menu .home.visible-md {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 1200px) {
+  #menu-nav-menu .home.visible-lg {
+    display: block !important;
+  }
+  tr#menu-nav-menu .home.visible-lg {
+    display: table-row !important;
+  }
+  th#menu-nav-menu .home.visible-lg,
+  td#menu-nav-menu .home.visible-lg {
+    display: table-cell !important;
+  }
 }
