@@ -21,11 +21,11 @@
 							
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-settings">
 								<span class="sr-only">Toggle navigation</span>
-								<span><i class="fa fa-cog fa-1g"></i></span>
+								<i class="fa fa-cog fa-1g"></i> <span class="hidden-xs">Menu <i class="fa fa-caret-down fa-smaller"></i></span>
 							</button>
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-menu">
-								<span class="sr-only">Toggle navigation</span>
-								<span><i class="fa fa-bars fa-1g"></i></span>
+								<span class="sr-only">Toggle settings</span>
+								<i class="fa fa-bars fa-1g"></i> <span class="hidden-xs">Settings <i class="fa fa-caret-down fa-smaller"></i></span>
 							</button>
 							<hgroup>
 								<h1 class="navbar-brand"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
