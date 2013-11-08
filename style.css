@@ -7685,6 +7685,21 @@ figcaption {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   list-style-type: none;
 }
+/*
+article {
+	.container;
+	.make-row();
+
+	// By default, we want a full-width layout, so we need to offset the negative margin
+	header, figure, aside, .the-content {
+		padding: 0 15px;
+	}
+
+
+
+}
+
+*/
 #header {
   /*
 		@include at-breakpoint($fair-viewport-columns) {
@@ -7698,14 +7713,8 @@ figcaption {
 #site-header {
   font-size: 20px;
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fdf6e3), to(#eee8d5));
-  background-image: -webkit-linear-gradient(top, #fdf6e3 0%, #eee8d5 100%);
-  background-image: -moz-linear-gradient(top, #fdf6e3 0%, #eee8d5 100%);
-  background-image: linear-gradient(to bottom, #fdf6e3 0%, #eee8d5 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffdf6e3', endColorstr='#ffeee8d5', GradientType=0);
-  -webkit-box-shadow: 0 2px 5px #93a1a1;
-  box-shadow: 0 2px 5px #93a1a1;
+  -webkit-box-shadow: 0 2px 10px #93a1a1;
+  box-shadow: 0 2px 10px #93a1a1;
   margin-bottom: 64.72px;
 }
 #site-header a {
