@@ -6,17 +6,19 @@
 			};
 	?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $ratio) ; ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $ratio ); ?>>
 
+<div class="container">
 	<figure>
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
 		<figcaption><?php the_title(); ?></figcaption>
 	</figure>
-	
+
 	<header><h1><?php the_title(); ?></h1></header>
-	
-	<aside>
-		<ul class="image-meta fa-ul">
+
+<div class="image-post-content">
+	<aside class="image-meta">
+		<ul class="fa-ul">
 		
 			<?php if ( $featured_image_exif ) {
 					if ( $exif_date_taken = $featured_image_exif['image_meta']['created_timestamp'] ) {?>
@@ -55,10 +57,12 @@
 				echo $summary;
 			} else {
 				the_excerpt();
-			}; ?></div>
+			}; ?>
+	</div>
 	
-	<aside>
-		<ul class="image-pub-meta fa-ul">
+	
+	<aside class="image-pub-meta">
+		<ul class="fa-ul">
 			<li class="pub_date"><i class="fa-li fa fa-calendar"></i> <span class="label"><?php _e( 'Published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time></li>
 			
 			<?php if ( $categories_list = get_the_category_list( __( ', ', 'fumseck' ) ) ) {?>
@@ -87,6 +91,8 @@
 		$full_content = str_replace(']]>', ']]&gt;', $full_content);?>
 	<div class="the-content"><?php echo $full_content; ?></div>
 	<?php }; ?>
-	
+
+</div>
+</div>
 </article><!-- #post -->
 

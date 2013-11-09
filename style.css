@@ -7346,14 +7346,14 @@ td.visible-print {
   list-style-type: none;
 }
 /*
-@mixin media-query ($canvas) {
-	@if $canvas == short-height {
+.media-query (@canvas) {
+	@if @canvas == short-height {
 		@media only screen and (max-height:40em) { @content; }
 	}
-	@else if $canvas == medium-height {
+	@else if @canvas == medium-height {
 		@media only screen and (min-height:40em) and (max-height:55em) { @content; }
 	}
-	@else if $canvas == tall-height {
+	@else if @canvas == tall-height {
 		@media only screen and (min-height:55em) { @content; }
 	}
 }
@@ -7720,6 +7720,146 @@ figcaption {
   font-size: 16.666666666666668px;
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   list-style-type: none;
+}
+.landscape figure,
+.landscape header,
+.landscape .image-post-content {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.landscape figure:before,
+.landscape header:before,
+.landscape .image-post-content:before,
+.landscape figure:after,
+.landscape header:after,
+.landscape .image-post-content:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.landscape figure:after,
+.landscape header:after,
+.landscape .image-post-content:after {
+  clear: both;
+}
+.landscape figure:before,
+.landscape header:before,
+.landscape .image-post-content:before,
+.landscape figure:after,
+.landscape header:after,
+.landscape .image-post-content:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.landscape figure:after,
+.landscape header:after,
+.landscape .image-post-content:after {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .landscape figure {
+    padding: 0 15px;
+  }
+}
+.landscape h1,
+.landscape aside,
+.landscape .summary,
+.landscape .the-content {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .landscape h1,
+  .landscape aside,
+  .landscape .summary,
+  .landscape .the-content {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .landscape h1,
+  .landscape aside,
+  .landscape .summary,
+  .landscape .the-content {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+@media (min-width: 992px) {
+  .landscape h1,
+  .landscape aside,
+  .landscape .summary,
+  .landscape .the-content {
+    margin-left: 8.333333333333332%;
+  }
+}
+@media (min-width: 1200px) {
+  .landscape h1,
+  .landscape aside,
+  .landscape .summary,
+  .landscape .the-content {
+    margin-left: 0%;
+  }
+}
+.landscape h1 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .landscape h1 {
+    float: left;
+    width: 100%;
+  }
+}
+.landscape .image-meta,
+.landscape .image-pub-meta {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .landscape .image-meta,
+  .landscape .image-pub-meta {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .landscape .image-meta,
+  .landscape .image-pub-meta {
+    left: 66.66666666666666%;
+  }
+}
+.landscape .summary,
+.landscape .the-content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .landscape .summary,
+  .landscape .the-content {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
+@media (min-width: 1200px) {
+  .landscape .summary,
+  .landscape .the-content {
+    right: 33.33333333333333%;
+  }
 }
 #header {
   /*

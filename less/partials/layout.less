@@ -1,3 +1,45 @@
 
-//// Common grids
+// Image posts /////////////////////////////////////////////////////////////////
 
+.landscape {
+	
+	figure, header, .image-post-content {
+		.make-row();
+	}
+
+	// We don't put the picture in colums in order to avoid the margins on small viewports
+	// but we need to re-add them for consistency on larger viewports
+		
+	figure {
+		@media only screen and (min-width: @screen-sm) {
+			padding: 0 (@grid-gutter-width / 2);
+		}
+	}
+	
+	// Until we have a large viewport, we stack everything
+
+	h1, aside, .summary, .the-content {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	// Then we have room to organize the blocks differently
+
+	h1 {
+		.make-lg-column(12);
+		}
+	
+	.image-meta, .image-pub-meta {
+		.make-lg-column(4);
+		.make-lg-column-push(8);
+	}
+
+	.summary, .the-content {
+		.make-lg-column(8);
+		.make-lg-column-pull(4);
+	}
+
+}
