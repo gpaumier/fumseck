@@ -7685,21 +7685,6 @@ figcaption {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   list-style-type: none;
 }
-/*
-article {
-	.container;
-	.make-row();
-
-	// By default, we want a full-width layout, so we need to offset the negative margin
-	header, figure, aside, .the-content {
-		padding: 0 15px;
-	}
-
-
-
-}
-
-*/
 #header {
   /*
 		@include at-breakpoint($fair-viewport-columns) {
