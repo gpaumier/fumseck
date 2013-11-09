@@ -30,17 +30,26 @@
 		?>
 	</aside>
 	
+	<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-0 summary">
+		<?php // Display the excerpt unless there's a summary
+			if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {
+				echo $summary;
+			} else {
+				the_excerpt();
+			}; ?>
+	</div>
+	
 	<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-0 the-content"><?php the_content(); ?></div>
 
 	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 hidden-lg">
-		<?php get_template_part( 'metadata' ); ?>
+		<?php get_template_part( 'metadata' ); // TODO: reuse data from metadata above ?>
 	</aside>
 	
 	<?php	if ( ! $post_thumbnail ) { ?>
 	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0">
 			<?php get_template_part( 'syndication' );} ?>
 	</aside>
-
+	
 </div>
 </article><!-- #post -->
 
