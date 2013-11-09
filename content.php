@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('regular container'); ?>>
 <div class="row">
-	<header class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-pull-1">
+	<header class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0">
 		<h1><?php the_title(); ?></h1>
 		<ul class="byline fa-ul">
 			<li class="author"><i class="fa-li fa fa-user"></i> <span class="label"><?php _e( 'By ' , 'fumseck' ); ?></span><?php the_author(); ?></li>
@@ -10,7 +10,7 @@
 </div>
 <div class="row">
 	<?php if ( $post_thumbnail = has_post_thumbnail() ) { ?>
-	<figure class="featured-image col-xs-12 col-sm-12 col-md-10 col-lg-8">
+	<figure class="featured-image col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-0">
 		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
 	<figcaption><?php if ( $custom_caption = get_field( '_featured_image_caption', get_the_ID(), true ) ) {
 					echo $custom_caption ;
@@ -30,15 +30,15 @@
 		?>
 	</aside>
 	
-	<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 the-content"><?php the_content(); ?></div>
+	<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-0 the-content"><?php the_content(); ?></div>
 
 	
-	<aside class="col-xs-12 col-sm-12 col-md-10 hidden-lg">
+	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 hidden-lg">
 		<?php get_template_part( 'metadata' ); ?>
 	</aside>
 	
 	<?php	if ( ! $post_thumbnail ) { ?>
-	<aside class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0">
 			<?php get_template_part( 'syndication' );} ?>
 	</aside>
 						
