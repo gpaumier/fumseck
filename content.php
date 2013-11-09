@@ -32,7 +32,6 @@
 	
 	<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-0 the-content"><?php the_content(); ?></div>
 
-	
 	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 hidden-lg">
 		<?php get_template_part( 'metadata' ); ?>
 	</aside>
@@ -41,9 +40,7 @@
 	<aside class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-4 col-lg-offset-0">
 			<?php get_template_part( 'syndication' );} ?>
 	</aside>
-						
-	
-	
+
 </div>
 </article><!-- #post -->
 
