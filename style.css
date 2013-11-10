@@ -7709,17 +7709,157 @@ figcaption {
   color: #93a1a1;
 }
 .byline,
-.meta1 {
+.project-meta1 {
   font-size: 16.666666666666668px;
   font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
   list-style-type: none;
 }
-.meta2,
+.post-meta,
+.project-meta2,
 .image-meta,
-.image-pub-meta {
+.image-pub-meta,
+.syndication {
   font-size: 16.666666666666668px;
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   list-style-type: none;
+}
+.regular header {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.regular header:before,
+.regular header:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.regular header:after {
+  clear: both;
+}
+.regular header:before,
+.regular header:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.regular header:after {
+  clear: both;
+}
+.regular h1,
+.regular .byline,
+.regular figure,
+.regular aside,
+.regular .summary,
+.regular .the-content,
+.regular .project-meta1 {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .regular h1,
+  .regular .byline,
+  .regular figure,
+  .regular aside,
+  .regular .summary,
+  .regular .the-content,
+  .regular .project-meta1 {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .regular h1,
+  .regular .byline,
+  .regular figure,
+  .regular aside,
+  .regular .summary,
+  .regular .the-content,
+  .regular .project-meta1 {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+@media (min-width: 992px) {
+  .regular h1,
+  .regular .byline,
+  .regular figure,
+  .regular aside,
+  .regular .summary,
+  .regular .the-content,
+  .regular .project-meta1 {
+    margin-left: 8.333333333333332%;
+  }
+}
+@media (min-width: 1200px) {
+  .regular h1,
+  .regular .byline,
+  .regular figure,
+  .regular aside,
+  .regular .summary,
+  .regular .the-content,
+  .regular .project-meta1 {
+    margin-left: 0%;
+  }
+}
+.regular h1,
+.regular .byline,
+.regular .meta1 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .regular h1,
+  .regular .byline,
+  .regular .meta1 {
+    float: left;
+    width: 100%;
+  }
+}
+.regular figure,
+.regular .summary,
+.regular .the-content {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .regular figure,
+  .regular .summary,
+  .regular .the-content {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
+.regular aside {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .regular aside {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .regular .fumseck-top {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .regular .fumseck-bottom {
+    display: none;
+  }
 }
 .landscape figure,
 .landscape header,

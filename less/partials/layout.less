@@ -1,3 +1,44 @@
+// Regular posts ///////////////////////////////////////////////////////////////
+
+.regular {
+	header {
+		.make-row();
+	}
+
+	h1, .byline, figure, aside, .summary, .the-content, .project-meta1 {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	h1, .byline, .meta1 {
+		.make-lg-column(12);
+	}
+
+	figure, .summary, .the-content {
+		.make-lg-column(8);
+	}
+
+	aside {
+		.make-lg-column(4);
+	}
+
+	.fumseck-top {
+		@media only screen and (max-width: @screen-lg) {
+			display: none;
+		}
+	}
+
+	.fumseck-bottom {
+		@media only screen and (min-width: @screen-lg) {
+			display: none;
+		}
+	}
+
+}
+
 
 // Image posts /////////////////////////////////////////////////////////////////
 
@@ -43,3 +84,8 @@
 	}
 
 }
+
+// Batbelt projects ////////////////////////////////////////////////////////////
+
+
+
