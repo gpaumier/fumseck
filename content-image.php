@@ -9,6 +9,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( $ratio ); ?>>
 
 <div class="container">
+	
+<div class="image-post-content">
 	<figure>
 		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
 		<figcaption><?php the_title(); ?></figcaption>
@@ -16,7 +18,6 @@
 
 	<header><h1><?php the_title(); ?></h1></header>
 
-<div class="image-post-content">
 	<aside class="image-meta">
 		<ul class="fa-ul">
 		
@@ -60,7 +61,6 @@
 			}; ?>
 	</div>
 	
-	
 	<aside class="image-pub-meta">
 		<ul class="fa-ul">
 			<li class="pub_date"><i class="fa-li fa fa-calendar"></i> <span class="meta-label"><?php _e( 'Published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time></li>
@@ -83,8 +83,8 @@
 		</ul>
 	</aside>
 	
-	<?php // TODO add syndication here ?>
-	
+</div>
+<div class="image-post-content">	
 	<?php // Only display the full content if there's more than the excerpt
 	if ( $full_content = get_the_content() ) {
 		$full_content = apply_filters('the_content', $full_content);
@@ -92,6 +92,9 @@
 	<div class="the-content"><?php echo $full_content; ?></div>
 	<?php }; ?>
 
+	<aside class="syndication">
+			<?php get_template_part( 'syndication' ); ?>
+	</aside>
 </div>
 </div>
 </article><!-- #post -->

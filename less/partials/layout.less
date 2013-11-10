@@ -40,7 +40,7 @@
 }
 
 
-// Image posts /////////////////////////////////////////////////////////////////
+// Image posts: landscape //////////////////////////////////////////////////////
 
 .landscape {
 	
@@ -48,7 +48,7 @@
 		.make-row();
 	}
 
-	// We don't put the picture in colums in order to avoid the margins on small viewports
+	// We don't put the picture in columns in order to avoid the margins on small viewports
 	// but we need to re-add them for consistency on larger viewports
 		
 	figure {
@@ -81,6 +81,53 @@
 	.summary, .the-content {
 		.make-lg-column(8);
 		.make-lg-column-pull(4);
+	}
+
+}
+
+// Image posts: portrait ///////////////////////////////////////////////////////
+
+@tiny-height: 200px;
+@shorter-height: 400px;
+@short-height: 600px;
+@medium-height: 800px;
+//@tall-height: 1000px;
+
+
+.portrait {
+
+	image-post-content {
+		.make-row();
+	}
+
+	// Until we have a large viewport, we stack everything, but we constrain the
+	// picture if we have short screens
+
+	header, aside, .summary, .the-content {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	figure {
+		.make-sm-column(10);
+		.make-sm-column-push(1);
+		.make-md-column(8);
+		.make-sm-column-push(2);
+		.make-lg-column(6);
+		.make-lg-column-push(0);
+	}
+
+	header, aside, .summary {
+		.make-lg-column(6);
+	}
+	.the-content {
+		.make-lg-column(8);
+	}
+	.syndication{
+		.make-lg-column(4);
 	}
 
 }
