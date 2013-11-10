@@ -14,13 +14,13 @@
 			<?php }; ?>
 				
 			<?php if ( $start_date = get_field( '_start_date', get_the_ID(), true ) ) { ?>
-			<li class="start_date"><i class="fa-li fa fa-calendar"></i> <span class="label"><?php _e( 'Started ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( $start_date ) ; ?>"><?php echo date_i18n( __('F j, Y', 'fumseck'), strtotime( $start_date ) ); ?></time></li>
+			<li class="start_date"><i class="fa-li fa fa-calendar"></i> <span class="meta-label details"><?php _e( 'Started ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( $start_date ) ; ?>"><?php echo date_i18n( __('F j, Y', 'fumseck'), strtotime( $start_date ) ); ?></time></li>
 			<?php }; ?>
 		
 			<?php if ( $end_date = get_field( '_end_date', get_the_ID(), true ) ) { ?>
-			<li class="end_date"><i class="fa-li fa fa-check-square-o"></i> <span class="label"><?php _e( 'Completed: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( $end_date ) ; ?>"><?php echo date_i18n( __('F j, Y', 'fumseck'), strtotime( $end_date ) ); ?></time></li>
+			<li class="end_date"><i class="fa-li fa fa-check-square-o"></i> <span class="meta-label details"><?php _e( 'Completed: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( $end_date ) ; ?>"><?php echo date_i18n( __('F j, Y', 'fumseck'), strtotime( $end_date ) ); ?></time></li>
 			<?php }elseif ( $status = get_field( '_status', get_the_ID(), true ) ) { ?>
-			<li class="status"><i class="fa-li fa fa-"></i> <span class="label"><?php _e( 'Status: ' , 'fumseck' ); ?></span><?php echo $status; ?></time></li>
+			<li class="status"><i class="fa-li fa fa-"></i> <span class="meta-label details"><?php _e( 'Status: ' , 'fumseck' ); ?></span><?php echo $status; ?></time></li>
 			<?php }; ?>
 		</ul>
 		</div>

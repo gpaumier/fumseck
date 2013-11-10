@@ -4,8 +4,8 @@
 		<h1><?php the_title(); ?></h1>
 		<div class="byline">
 		<ul class="fa-ul">
-			<li class="author"><i class="fa-li fa fa-user"></i> <span class="label"><?php _e( 'By ' , 'fumseck' ); ?></span><?php the_author(); ?></li>
-			<li class="pub_date"><i class="fa-li fa fa-calendar"></i> <span class="label"><?php _e( 'Published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time></li>
+			<li class="author"><i class="fa-li fa fa-user"></i> <span class="meta-label details"><?php _e( 'By ' , 'fumseck' ); ?></span><?php the_author(); ?></li>
+			<li class="pub_date"><i class="fa-li fa fa-calendar"></i> <span class="meta-label details"><?php _e( 'Published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time></li>
 		</ul>
 		</div>
 	</header>
