@@ -7345,19 +7345,6 @@ td.visible-print {
 .no-bullet {
   list-style-type: none;
 }
-/*
-.media-query (@canvas) {
-	@if @canvas == short-height {
-		@media only screen and (max-height:40em) { @content; }
-	}
-	@else if @canvas == medium-height {
-		@media only screen and (min-height:40em) and (max-height:55em) { @content; }
-	}
-	@else if @canvas == tall-height {
-		@media only screen and (min-height:55em) { @content; }
-	}
-}
-*/
 .fa-smaller {
   font-size: 0.7em;
 }
@@ -7999,6 +7986,33 @@ figcaption {
   .landscape .summary,
   .landscape .the-content {
     right: 33.33333333333333%;
+  }
+}
+.assistive-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media only screen and (max-width: 1200px) {
+  .details {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .image-meta li {
+    display: inline-block;
   }
 }
 #header {
