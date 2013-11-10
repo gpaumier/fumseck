@@ -35,12 +35,22 @@
 						
 						<div class="collapse navbar-collapse" id="bs-navbar-collapse-menu">
 							<ul id="menu-nav-menu" class="nav navbar-nav navbar-right">
+									<li class="visible-xs">
+									<?php get_search_form(); ?>
+								</li>
+								<li role="presentation" class="divider"></li>
 								<?php wp_nav_menu(array(
 									'theme_location' => 'primary',
 									'container' => false,
 									'items_wrap' => '%3$s')); ?>
 								<li class="dropdown hidden-xs">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog fa-fw"></i> Settings <i class="fa fa-caret-down fa-smaller"></i></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Search"><i class="fa fa-search fa-fw"></i><i class="fa fa-caret-down fa-smaller"></i></a>
+									<ul class="dropdown-menu" aria-labelledby="bs-navbar-collapse-search-dropdown">
+										<li><?php get_search_form(); ?></li>
+									</ul>
+								</li>
+								<li class="dropdown hidden-xs">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Settings"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down fa-smaller"></i></a>
 									<ul class="dropdown-menu" aria-labelledby="bs-navbar-collapse-settings-dropdown">
 										<li role="presentation" class="dropdown-header">Language</li>
 										<?php wp_nav_menu(array(
