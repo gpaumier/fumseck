@@ -1,6 +1,6 @@
 <?php
 
-// Declare WordPress features the theme explicitly supports
+// Declare WordPress features the theme explicitly supports ////////////////////
 
 add_theme_support( 'post-formats', array( 'image' ) );
 
@@ -10,7 +10,7 @@ add_theme_support( 'automatic-feed-links' );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
-// Modify the WP query to include custom content types to search results
+// Modify the WP query to include custom content types to search results ///////
 // and archive pages
 
 add_filter( 'pre_get_posts', 'fumseck_add_cpt_search' );
@@ -21,20 +21,20 @@ function fumseck_add_cpt_search( $query ) {
 	return $query;
 }
 
-// Return the linked title of a given post object
+// Return the linked title of a given post object //////////////////////////////
 
 function fumseck_linked_title( $id ) {
 	$post_title = get_the_title( $id );
 	echo '<a href="' . esc_url( get_permalink( $id ) ) . '" title="' . esc_attr( $post_title, 'fumseck' ) . '">'. $post_title . '</a>' ;
 }
 
-// Display the default image for content without a featured image
+// Display the default image for content without a featured image //////////////
 
 function fumseck_default_image( $post_type ) {
 	// TODO
 }
 
-// Register Bootstrap's JavaScript
+// Register Bootstrap's JavaScript /////////////////////////////////////////////
 
 function fumseck_register_bootstrap_js() {
 	wp_enqueue_script(
@@ -45,5 +45,19 @@ function fumseck_register_bootstrap_js() {
 }
 
 add_action( 'wp_enqueue_scripts', 'fumseck_register_bootstrap_js' );
+
+// Register the widgetized footer //////////////////////////////////////////////
+
+function fumseck_register_footer_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Footer', 'fumseck' ),
+        'id' => 'footer-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ) );
+}
+add_action( 'widgets_init', 'fumseck_register_footer_sidebar' );
 
 ?>
