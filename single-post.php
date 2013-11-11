@@ -9,7 +9,7 @@
 					<aside class="comments container">
 							<?php comments_template( '', true ); ?>
 					</aside>
-					
+				
 					<?php endwhile; // end of The Loop. ?>
 
 				</div><!-- #content -->

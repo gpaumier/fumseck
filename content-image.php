@@ -67,10 +67,6 @@
 			<?php get_template_part( 'metadata', 'image' ); ?>
 	</aside>
 	
-	<aside class="syndication">
-			<?php get_template_part( 'syndication' ); ?>
-	</aside>
-	
 </div>
 </div>
 </article><!-- #post -->

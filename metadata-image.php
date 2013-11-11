@@ -16,4 +16,6 @@
 			<?php if ( $batbelt_project = get_field( '_project', get_the_ID(), true ) ) {?>
 			<li class="projects"><i class="fa-li fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
 			<?php } ?>
+			
+			<?php get_template_part( 'syndication' ); ?>
 		</ul>

@@ -25,11 +25,7 @@
 	<?php }; ?>
 	
 	<aside class="post-meta fumseck-top">
-		<?php	get_template_part( 'metadata' );
-				if ( $post_thumbnail ) {
-					get_template_part( 'syndication' );
-				}
-		?>
+		<?php	get_template_part( 'metadata' ); ?>
 	</aside>
 	
 	<div class="summary">
@@ -46,12 +42,6 @@
 	<aside class="post-meta fumseck-bottom">
 		<?php get_template_part( 'metadata' ); // TODO: reuse data from metadata above ?>
 	</aside>
-	
-	<?php	if ( ! $post_thumbnail ) { ?>
-	<aside class="syndication">
-			<?php get_template_part( 'syndication' ); ?>
-	</aside>
-	<?php } ?>
 		
 </div>
 </article><!-- #post -->

@@ -7961,16 +7961,14 @@ figcaption {
     left: 66.66666666666666%;
   }
 }
-.landscape .image-pub-meta,
-.landscape .syndication {
+.landscape .image-pub-meta {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .landscape .image-pub-meta,
-  .landscape .syndication {
+  .landscape .image-pub-meta {
     float: left;
     width: 33.33333333333333%;
   }
@@ -8175,8 +8173,7 @@ figcaption {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .portrait .image-pub-meta,
-  .portrait .syndication {
+  .portrait .image-pub-meta {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
@@ -8198,8 +8195,7 @@ figcaption {
   }
 }
 @media only screen and (min-height: 800px) and (min-width: 1200px) {
-  .portrait .image-pub-meta,
-  .portrait .syndication {
+  .portrait .image-pub-meta {
     float: left;
     width: 33.33333333333333%;
   }
@@ -8369,6 +8365,26 @@ td#menu-nav-menu .home {
 }
 #menu-nav-menu li:last-child {
   border-right: 1px solid #eee8d5;
+}
+.syndication a {
+  text-decoration: none;
+  padding: 0 .2em;
+  border-radius: .4em;
+}
+.syndication a:hover {
+  color: white;
+}
+.syndication .facebook:hover {
+  background-color: #3b5998;
+}
+.syndication .twitter:hover {
+  background-color: #00aced;
+}
+.syndication .googleplus:hover {
+  background-color: #c03220;
+}
+.syndication .tumblr:hover {
+  background-color: #365069;
 }
 .footer-area {
   background-color: #002b36;

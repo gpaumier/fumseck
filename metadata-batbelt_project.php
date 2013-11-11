@@ -16,4 +16,6 @@
 			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) { ?>
 			<li class="event"><i class="fa-li fa fa-calendar-o"></i> <span class="meta-label"><?php _e( 'Event: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_event ); ?></li>
 			<?php }; ?>
+			
+			<?php get_template_part( 'syndication' ); ?>
 		</ul>

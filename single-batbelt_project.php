@@ -40,11 +40,7 @@
 	<?php }; ?>
 		
 	<aside class="project-meta2 fumseck-top">
-		<?php	get_template_part( 'metadata', 'batbelt_project' );
-				if ( $post_thumbnail ) {
-					get_template_part( 'syndication' );
-				}
-		?>
+		<?php	get_template_part( 'metadata', 'batbelt_project' );	?>
 	</aside>
 	
 	<div class="summary">
@@ -60,10 +56,6 @@
 	
 	<aside class="project-meta2 fumseck-bottom">
 		<?php get_template_part( 'metadata', 'batbelt_project' ); // TODO: reuse data from metadata above ?>
-	</aside>
-	
-	<aside class="syndication fumseck-bottom">
-			<?php get_template_part( 'syndication' ); ?>
 	</aside>
 	
 </article><!-- #post -->
