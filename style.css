@@ -8073,81 +8073,131 @@ figcaption {
     margin-left: 0%;
   }
 }
-.portrait figure {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+@media only screen and (max-height: 400px) {
+  .portrait figure {
+    max-width: 133.33333333333334px;
+    margin: auto;
+  }
 }
-@media (min-width: 768px) {
+@media only screen and (min-height: 400px) and (max-height: 600px) {
+  .portrait figure {
+    max-width: 266.6666666666667px;
+    margin: auto;
+  }
+}
+@media only screen and (min-height: 600px) and (max-height: 800px) {
+  .portrait figure {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .portrait figure {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-height: 800px) and (min-width: 768px) {
   .portrait figure {
     float: left;
     width: 83.33333333333334%;
   }
 }
-@media (min-width: 768px) {
+@media only screen and (min-height: 800px) and (min-width: 768px) {
   .portrait figure {
-    left: 8.333333333333332%;
+    margin-left: 8.333333333333332%;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-height: 800px) and (min-width: 992px) {
   .portrait figure {
     float: left;
     width: 66.66666666666666%;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-height: 800px) and (min-width: 768px) {
   .portrait figure {
-    left: 16.666666666666664%;
+    margin-left: 16.666666666666664%;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
   .portrait figure {
     float: left;
     width: 50%;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
   .portrait figure {
-    left: 0%;
+    margin-left: 0%;
   }
 }
-.portrait header,
-.portrait aside,
-.portrait .summary {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 1200px) {
+@media only screen and (max-height: 800px) {
   .portrait header,
   .portrait aside,
-  .portrait .summary {
-    float: left;
-    width: 50%;
+  .portrait .summary,
+  .portrait .the-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-.portrait .the-content {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 1200px) {
+@media only screen and (max-height: 800px) and (min-width: 1200px) {
+  .portrait header,
+  .portrait aside,
+  .portrait .summary,
   .portrait .the-content {
     float: left;
     width: 66.66666666666666%;
   }
 }
-.portrait .image-pub-meta,
-.portrait .syndication {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+@media only screen and (max-height: 800px) and (min-width: 1200px) {
+  .portrait header,
+  .portrait aside,
+  .portrait .summary,
+  .portrait .the-content {
+    margin-left: 16.666666666666664%;
+  }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-height: 800px) {
+  .portrait header,
+  .portrait .image-meta,
+  .portrait .summary {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .portrait .the-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .portrait .image-pub-meta,
+  .portrait .syndication {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
+  .portrait header,
+  .portrait .image-meta,
+  .portrait .summary {
+    float: left;
+    width: 50%;
+  }
+}
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
+  .portrait .the-content {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
   .portrait .image-pub-meta,
   .portrait .syndication {
     float: left;

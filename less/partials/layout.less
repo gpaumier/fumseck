@@ -126,26 +126,47 @@
 	}
 
 	figure {
-		.make-sm-column(10);
-		.make-sm-column-push(1);
-		.make-md-column(8);
-		.make-md-column-push(2);
-		.make-lg-column(6);
-		.make-lg-column-push(0);
+		@media only screen and (max-height: @shorter-height) {
+			max-width: (@tiny-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @shorter-height) and (max-height: @short-height) {
+			max-width: (@shorter-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @short-height) and (max-height: @medium-height) {
+			max-width: (@short-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @medium-height) {
+			.make-sm-column(10);
+			.make-sm-column-offset(1);
+			.make-md-column(8);
+			.make-sm-column-offset(2);
+			.make-lg-column(6);
+			.make-lg-column-offset(0);
+		}
 	}
 
-	header, aside, .summary {
-		.make-lg-column(6);
+	@media only screen and (max-height: @medium-height) {
+		header, aside, .summary, .the-content {
+			.make-lg-column(8);
+			.make-lg-column-offset(2);
+		}
 	}
+	@media only screen and (min-height: @medium-height) {
+		header, .image-meta, .summary {
+			.make-lg-column(6);
+		}
 
-	.the-content {
-		.make-lg-column(8);
+		.the-content {
+			.make-lg-column(8);
+		}
+
+		.image-pub-meta, .syndication{
+			.make-lg-column(4);
+		}
 	}
-
-	.image-pub-meta, .syndication{
-		.make-lg-column(4);
-	}
-
 }
 
 // Batbelt projects ////////////////////////////////////////////////////////////
