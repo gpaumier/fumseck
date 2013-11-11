@@ -7710,6 +7710,16 @@ figcaption {
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   list-style-type: none;
 }
+@media only screen and (max-width: 1200px) {
+  .fumseck-top {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .fumseck-bottom {
+    display: none;
+  }
+}
 .regular header {
   margin-left: -15px;
   margin-right: -15px;
@@ -7838,27 +7848,17 @@ figcaption {
     width: 33.33333333333333%;
   }
 }
-@media only screen and (max-width: 1200px) {
-  .regular .fumseck-top {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .regular .fumseck-bottom {
-    display: none;
-  }
+.format-image figcaption {
+  display: none;
 }
 .landscape figure,
-.landscape header,
 .landscape .image-post-content {
   margin-left: -15px;
   margin-right: -15px;
 }
 .landscape figure:before,
-.landscape header:before,
 .landscape .image-post-content:before,
 .landscape figure:after,
-.landscape header:after,
 .landscape .image-post-content:after {
   content: " ";
   /* 1 */
@@ -7866,15 +7866,12 @@ figcaption {
   /* 2 */
 }
 .landscape figure:after,
-.landscape header:after,
 .landscape .image-post-content:after {
   clear: both;
 }
 .landscape figure:before,
-.landscape header:before,
 .landscape .image-post-content:before,
 .landscape figure:after,
-.landscape header:after,
 .landscape .image-post-content:after {
   content: " ";
   /* 1 */
@@ -7882,7 +7879,6 @@ figcaption {
   /* 2 */
 }
 .landscape figure:after,
-.landscape header:after,
 .landscape .image-post-content:after {
   clear: both;
 }
@@ -7891,7 +7887,7 @@ figcaption {
     padding: 0 15px;
   }
 }
-.landscape h1,
+.landscape header,
 .landscape aside,
 .landscape .summary,
 .landscape .the-content {
@@ -7903,7 +7899,7 @@ figcaption {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .landscape h1,
+  .landscape header,
   .landscape aside,
   .landscape .summary,
   .landscape .the-content {
@@ -7912,7 +7908,7 @@ figcaption {
   }
 }
 @media (min-width: 992px) {
-  .landscape h1,
+  .landscape header,
   .landscape aside,
   .landscape .summary,
   .landscape .the-content {
@@ -7921,7 +7917,7 @@ figcaption {
   }
 }
 @media (min-width: 992px) {
-  .landscape h1,
+  .landscape header,
   .landscape aside,
   .landscape .summary,
   .landscape .the-content {
@@ -7929,46 +7925,73 @@ figcaption {
   }
 }
 @media (min-width: 1200px) {
-  .landscape h1,
+  .landscape header,
   .landscape aside,
   .landscape .summary,
   .landscape .the-content {
     margin-left: 0%;
   }
 }
-.landscape h1 {
+.landscape header {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .landscape h1 {
+  .landscape header {
     float: left;
     width: 100%;
   }
 }
-.landscape .image-meta,
-.landscape .image-pub-meta {
+.landscape .image-meta {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .landscape .image-meta,
-  .landscape .image-pub-meta {
+  .landscape .image-meta {
     float: left;
     width: 33.33333333333333%;
   }
 }
 @media (min-width: 1200px) {
-  .landscape .image-meta,
-  .landscape .image-pub-meta {
+  .landscape .image-meta {
     left: 66.66666666666666%;
   }
 }
-.landscape .summary,
+.landscape .image-pub-meta,
+.landscape .syndication {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .landscape .image-pub-meta,
+  .landscape .syndication {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+.landscape .summary {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .landscape .summary {
+    float: left;
+    width: 66.66666666666666%;
+  }
+}
+@media (min-width: 1200px) {
+  .landscape .summary {
+    right: 33.33333333333333%;
+  }
+}
 .landscape .the-content {
   position: relative;
   min-height: 1px;
@@ -7976,16 +7999,9 @@ figcaption {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .landscape .summary,
   .landscape .the-content {
     float: left;
     width: 66.66666666666666%;
-  }
-}
-@media (min-width: 1200px) {
-  .landscape .summary,
-  .landscape .the-content {
-    right: 33.33333333333333%;
   }
 }
 .portrait image-post-content {
@@ -8080,7 +8096,7 @@ figcaption {
     width: 66.66666666666666%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .portrait figure {
     left: 16.666666666666664%;
   }
@@ -8124,6 +8140,7 @@ figcaption {
     width: 66.66666666666666%;
   }
 }
+.portrait .image-pub-meta,
 .portrait .syndication {
   position: relative;
   min-height: 1px;
@@ -8131,6 +8148,7 @@ figcaption {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
+  .portrait .image-pub-meta,
   .portrait .syndication {
     float: left;
     width: 33.33333333333333%;

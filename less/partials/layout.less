@@ -1,3 +1,17 @@
+// Common styles ///////////////////////////////////////////////////////////////
+
+.fumseck-top {
+	@media only screen and (max-width: @screen-lg) {
+		display: none;
+	}
+}
+
+.fumseck-bottom {
+	@media only screen and (min-width: @screen-lg) {
+		display: none;
+	}
+}
+
 // Regular posts ///////////////////////////////////////////////////////////////
 
 .regular {
@@ -25,26 +39,19 @@
 		.make-lg-column(4);
 	}
 
-	.fumseck-top {
-		@media only screen and (max-width: @screen-lg) {
-			display: none;
-		}
-	}
-
-	.fumseck-bottom {
-		@media only screen and (min-width: @screen-lg) {
-			display: none;
-		}
-	}
-
 }
 
+// Image posts (common styles) /////////////////////////////////////////////////
+
+.format-image {
+	figcaption { display: none; }
+}
 
 // Image posts: landscape //////////////////////////////////////////////////////
 
 .landscape {
 	
-	figure, header, .image-post-content {
+	figure, .image-post-content {
 		.make-row();
 	}
 
@@ -59,7 +66,7 @@
 	
 	// Until we have a large viewport, we stack everything
 
-	h1, aside, .summary, .the-content {
+	header, aside, .summary, .the-content {
 		.make-xs-column(12);
 		.make-sm-column(12);
 		.make-md-column(10);
@@ -69,20 +76,27 @@
 
 	// Then we have room to organize the blocks differently
 
-	h1 {
+	header {
 		.make-lg-column(12);
 		}
 	
-	.image-meta, .image-pub-meta {
+	.image-meta {
 		.make-lg-column(4);
 		.make-lg-column-push(8);
 	}
 
-	.summary, .the-content {
+	.image-pub-meta, .syndication {
+		.make-lg-column(4);
+	}
+
+	.summary {
 		.make-lg-column(8);
 		.make-lg-column-pull(4);
 	}
 
+	.the-content {
+		.make-lg-column(8);
+	}
 }
 
 // Image posts: portrait ///////////////////////////////////////////////////////
@@ -115,7 +129,7 @@
 		.make-sm-column(10);
 		.make-sm-column-push(1);
 		.make-md-column(8);
-		.make-sm-column-push(2);
+		.make-md-column-push(2);
 		.make-lg-column(6);
 		.make-lg-column-push(0);
 	}
@@ -123,10 +137,12 @@
 	header, aside, .summary {
 		.make-lg-column(6);
 	}
+
 	.the-content {
 		.make-lg-column(8);
 	}
-	.syndication{
+
+	.image-pub-meta, .syndication{
 		.make-lg-column(4);
 	}
 

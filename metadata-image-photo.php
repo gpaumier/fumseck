@@ -1,24 +1,3 @@
-	<?php	$featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ); 
-			if ( $featured_image_exif['height'] >= $featured_image_exif['width'] ) {
-				$ratio = 'portrait';
-			} else {
-				$ratio = 'landscape';
-			};
-	?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( $ratio ); ?>>
-
-<div class="container">
-	
-<div class="image-post-content">
-	<figure>
-		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
-		<figcaption><?php the_title(); ?></figcaption>
-	</figure>
-
-	<header><h1><?php the_title(); ?></h1></header>
-
-	<aside class="image-meta">
 		<ul class="fa-ul">
 		
 			<?php if ( $featured_image_exif ) {
@@ -50,28 +29,3 @@
 			<?php }; # end exif?>
 		
 		</ul>
-	</aside>
-	
-	<div class="summary">
-		<?php // Display the excerpt unless there's a summary
-			if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {
-				echo $summary;
-			} else {
-				the_excerpt();
-			}; ?>
-	</div>
-	
-	<div class="the-content"><?php the_content(); ?></div>
-	
-	<aside class="image-pub-meta">
-			<?php get_template_part( 'metadata', 'image' ); ?>
-	</aside>
-	
-	<aside class="syndication">
-			<?php get_template_part( 'syndication' ); ?>
-	</aside>
-	
-</div>
-</div>
-</article><!-- #post -->
-
