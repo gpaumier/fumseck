@@ -20,12 +20,12 @@
 						<div class="navbar-header"> <!-- Toggle buttons when navigation  -->
 							
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-settings">
-								<span class="sr-only">Toggle navigation</span>
-								<i class="fa fa-cog fa-1g"></i> <span class="hidden-xs">Menu <i class="fa fa-caret-down fa-smaller"></i></span>
+								<span class="sr-only">Toggle settings</span>
+								<i class="fa fa-cog fa-1g"></i> <span class="navbar-toggle-label">Settings <i class="fa fa-caret-down fa-smaller"></i></span>
 							</button>
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse-menu">
-								<span class="sr-only">Toggle settings</span>
-								<i class="fa fa-bars fa-1g"></i> <span class="hidden-xs">Settings <i class="fa fa-caret-down fa-smaller"></i></span>
+								<span class="sr-only">Toggle navigation</span>
+								<i class="fa fa-bars fa-1g"></i> <span class="navbar-toggle-label">Menu <i class="fa fa-caret-down fa-smaller"></i></span>
 							</button>
 							<hgroup>
 								<h1 class="navbar-brand"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -43,13 +43,13 @@
 									'theme_location' => 'primary',
 									'container' => false,
 									'items_wrap' => '%3$s')); ?>
-								<li class="dropdown hidden-xs">
+								<li class="dropdown visible-lg">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Search"><i class="fa fa-search fa-fw"></i><i class="fa fa-caret-down fa-smaller"></i></a>
 									<ul class="dropdown-menu" aria-labelledby="bs-navbar-collapse-search-dropdown">
 										<li><?php get_search_form(); ?></li>
 									</ul>
 								</li>
-								<li class="dropdown hidden-xs">
+								<li class="dropdown visible-lg">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Settings"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down fa-smaller"></i></a>
 									<ul class="dropdown-menu" aria-labelledby="bs-navbar-collapse-settings-dropdown">
 										<li role="presentation" class="dropdown-header">Language</li>
@@ -63,7 +63,7 @@
 						</div>
 						
 						<div class="collapse navbar-collapse" id="bs-navbar-collapse-settings">
-							<ul class="nav navbar-nav navbar-right visible-xs" aria-labelledby="bs-navbar-collapse-settings-collapsed">
+							<ul class="nav navbar-nav navbar-right hidden-lg" aria-labelledby="bs-navbar-collapse-settings-collapsed">
 								<li role="presentation" class="dropdown-header">Language</li>
 								<?php wp_nav_menu(array(
 								'menu' => 'Language',
