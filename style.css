@@ -8204,6 +8204,32 @@ figcaption {
     width: 33.33333333333333%;
   }
 }
+.footer aside {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .footer aside {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .footer aside {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer aside {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
 .assistive-text {
   position: absolute;
   width: 1px;
@@ -8344,79 +8370,35 @@ td#menu-nav-menu .home {
 #menu-nav-menu li:last-child {
   border-right: 1px solid #eee8d5;
 }
-/*
-
-// Syndication buttons
-
-.syndication{
-	
-	// Layout
-	
-	padding: 0;
-	
-	li { display: inline-block;	}
-	
-	// Typography
-	
-	font-size: $secondary-content-size;
-	color: $secondary-content-color;
-	
-	// Links
-	
-	a {
-		color: $secondary-content-color;
-		text-decoration: none;
-		padding: .3em .6em;
-		margin-left: .7em;
-		@include border-radius(.4em);
-		background-color: $background-highlights-color;
-		&:hover { color: white;	}
-	}
-
-	.facebook:hover { background-color: $facebook-color; }
-	
-	.twitter:hover { background-color: $twitter-color; }
-	
-	.googleplus:hover { background-color: $googleplus-color; }
-	
-	.tumblr:hover { background-color: $tumblr-color; }
-}
-
-*/
-code {
-  word-wrap: break-word;
-}
 .footer-area {
   background-color: #002b36;
   color: #839496;
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
 }
+#footer-sidebar {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#footer-sidebar:before,
+#footer-sidebar:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#footer-sidebar:after {
+  clear: both;
+}
+#footer-sidebar:before,
+#footer-sidebar:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#footer-sidebar:after {
+  clear: both;
+}
 .footer h1 {
   font-size: 24px;
-}
-.footer aside {
-  float: left;
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .footer aside {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .footer aside {
-    float: left;
-    width: 50%;
-  }
-}
-@media (min-width: 1200px) {
-  .footer aside {
-    float: left;
-    width: 33.33333333333333%;
-  }
 }
