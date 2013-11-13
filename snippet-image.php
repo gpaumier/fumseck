@@ -11,7 +11,7 @@
 		$exif_date_taken = $featured_image_exif['image_meta']['created_timestamp']
 ?>
 		
-	<header class="after">
+	<header>
 		<h1><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-camera-retro"></i> <span class="meta-label"><?php _e( 'Photo taken on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( date( 'c', $exif_date_taken ) ); ?>"><?php echo date_i18n( __("F j, Y", 'fumseck'), $exif_date_taken ) ; ?></time>
