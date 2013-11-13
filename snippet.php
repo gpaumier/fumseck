@@ -7,7 +7,7 @@
 	<header class="before">
 		<h1><?php the_title(); ?></h1>
 		<p class="pub_date">
-			<i class="fa fa-pencil-square-o"></i> <span class="meta-label details"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
+			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
 	</header>
 	<figure class="featured-image">
@@ -17,7 +17,7 @@
 	<header class="after">
 		<h1><?php the_title(); ?></h1>
 		<p class="pub_date">
-			<i class="fa fa-pencil-square-o"></i> <span class="meta-label details"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
+			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
 	</header>
 		
@@ -30,7 +30,7 @@
 	<header>
 		<h1><?php the_title(); ?></h1>
 		<p class="pub_date">
-			<i class="fa fa-pencil-square-o"></i> <span class="meta-label details"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
+			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
 	</header>
 		
