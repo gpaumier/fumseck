@@ -5,7 +5,7 @@
 					<?php while ( have_posts() ) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('regular container'); ?>>
-	<header">
+	<header>
 		<h1><?php the_title(); ?></h1>
 		<div class="project-meta1">
 		<ul class="fa-ul">

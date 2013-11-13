@@ -41,7 +41,7 @@
 
 @headings-font-family:    @font-family-sans-serif;
 @headings-font-weight:    normal;
-@headings-line-height:    @base-line-height * 2;
+@headings-line-height:    @base-line-height ;
 @headings-color:          inherit;
 
 
@@ -79,9 +79,13 @@
 @btn-default-bg:                 #fff;
 @btn-default-border:             #ccc;
 
-@btn-primary-color:              #fff;
+//@btn-primary-color:              @brand-primary;
+//@btn-primary-bg:                 @background-highlights-color;
+//@btn-primary-border:             @brand-primary;
+
+@btn-primary-color:              @background-color;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:             @brand-primary;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;

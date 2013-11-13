@@ -1,0 +1,68 @@
+// Snippets ////////////////////////////////////////////////////////////////////
+
+.snippet {
+
+	a {
+		.make-row();
+		display: block;
+		padding-top: (@base-line-height / 2) - 1;
+		padding-bottom: (@base-line-height / 2);
+		border-top: 1px solid @secondary-content-color;
+		.clearfix;
+		color: @primary-content-color;
+		&:visited { color: @primary-content-color; }
+		&:hover {
+			background-color: @background-highlights-color;
+			h1 {
+				color: @primary-accent-color;
+			}
+		}
+	}
+
+	p {
+		padding-bottom: 0;
+	}
+
+	h1, .pub_date {
+		padding-bottom: (@base-line-height / 2);
+	}
+
+	h1 {
+		.larger-content-size;
+	}
+
+	.pub_date {
+		.fumseck-sans;
+		.secondary-content-size;
+		color: @secondary-content-color;
+	}
+
+	.summary { .primary-content-size; }
+
+	header, figure, .summary {
+		.make-xs-column(12);
+		.make-sm-column(8);
+	}
+
+	figure {
+		.make-sm-column(4);
+	}
+
+	&.has-picture {
+		@media only screen and (max-width: @screen-sm) {
+			header.after { display: none; }
+		}
+
+		@media only screen and (min-width: @screen-sm) {
+			header.before { display: none; }
+		}
+	}
+
+	&.no-picture {
+		header, .summary {
+		.make-sm-column-push(2);
+		}
+	}
+
+}
+

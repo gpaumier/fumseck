@@ -8,12 +8,14 @@ body {
 // Links
 
 a {
-	color: @primary-accent-color;
 	text-decoration: none;
 		&:hover,&:focus{
 			text-decoration: underline;
 		}
-	&:visited,&:active{
-		color:@violet;
+	&:visited,&:active{ color: @violet; }
+
+	&.btn {
+		&:visited,&:active { color: @background-color; }
 	}
+
 }
