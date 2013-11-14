@@ -5,8 +5,8 @@
 			if ( $end_date = get_field( '_end_date', get_the_ID(), true ) ) { 
 				$end_date_fmtd = '<time datetime="' . esc_attr( $end_date ) . '">' . date_i18n( __('F j, Y', 'fumseck'), strtotime( $end_date ) ) . '</time>';
 				$meta_info_fmtd = $meta_info_fmtd . sprintf( __( ' and completed on %s' , 'fumseck' ), $end_date_fmtd );
-			} elseif ( $status = get_field( '_status', get_the_ID(), true ) ) {
-				$meta_info_fmtd = $meta_info_fmtd . sprintf( __( ' and %s' , 'fumseck' ), $status );
+			} elseif ( $status = get_field_object('_status') ) {
+				$meta_info_fmtd = $meta_info_fmtd . sprintf( __( ' and %s' , 'fumseck' ), $status['choices'][ get_field('_status') ] );
 			}
 		}; ?>
 
