@@ -21,6 +21,26 @@ function fumseck_add_cpt_search( $query ) {
 	return $query;
 }
 
+// Exclude image posts from the main blog page /////////////////////////////////
+
+function fumseck_exclude_image_posts( $query ) {
+	if ( $query->is_main_query() && $query->is_home() ) {
+		$feip_query = array(
+			array(
+				'taxonomy' => 'post_format',
+				'field' => 'slug',
+				'terms' => array(
+					'post-format-image'
+				),
+				'operator' => 'NOT IN',
+			)
+		);
+		$query->set( 'tax_query', $feip_query );
+	}
+}
+
+add_action( 'pre_get_posts', 'fumseck_exclude_image_posts' );
+
 // Return the linked title of a given post object //////////////////////////////
 
 function fumseck_linked_title( $id ) {
