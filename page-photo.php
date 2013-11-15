@@ -9,7 +9,7 @@
 	<article id="page-<?php the_ID(); ?>" <?php post_class('page-photo-content'); ?>>
 	
 		<header>
-			<h1><?php the_title(); ?></h1>
+			<h1><i class="fa fa-camera-retro"></i> <?php the_title(); ?></h1>
 		</header>
 	
 		<div class="summary">
