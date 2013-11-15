@@ -9,7 +9,7 @@
 	<article id="page-<?php the_ID(); ?>" <?php post_class('page-archive-content'); ?>>
 	
 		<header>
-			<h1><i class="fa fa-camera-retro"></i> <?php the_title(); ?></h1>
+			<h1><i class="fa fa-tasks"></i> <?php the_title(); ?></h1>
 		</header>
 	
 		<div class="summary">
@@ -28,14 +28,7 @@
 	
 <?php	// Display image posts
 		$args = array (
-			'post_type' => 'post',
-			'tax_query' => array(
-				array(
-					'taxonomy' => 'post_format',
-					'field' => 'slug',
-					'terms' => array( 'post-format-image' )
-				)
-			),
+			'post_type' => 'batbelt_project',
 			'post_status' => 'publish',
 			'paged' => $paged,
 			'posts_per_page' => 12,
@@ -46,7 +39,7 @@
 		if ( $wp_query->have_posts() ) {
 			while ( $wp_query->have_posts() ) {
 				$wp_query->the_post();
-				get_template_part( 'snippet', 'image' );
+				get_template_part( 'snippet', 'batbelt_project' );
 			};
 			$wp_query = $main_query_backup;
 		}; ?>
