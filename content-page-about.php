@@ -28,12 +28,10 @@
 			<?php }; ?>
 	
 			<div class="summary">
-				<?php // Display the excerpt unless there's a summary
+				<?php // Display the summary if there's one
 					if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {
 						echo $summary;
-					} else {
-						the_excerpt();
-					}; ?>
+				}; ?>
 			</div>
 	
 			<div class="the-content"><?php the_content(); ?></div>
