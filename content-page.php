@@ -1,7 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('regular page no-sidebar container'); ?>>
 	
 	<header>
-		<h1><?php the_title(); ?></h1>
+		<h1><?php // Display the title icon if there's one
+			if ( $icon = get_field( '_icon', get_the_ID(), true ) ) { echo $icon; }; ?> 
+		<?php the_title(); ?></h1>
 	</header>
 	
 <div class="row">
