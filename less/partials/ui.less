@@ -8,3 +8,31 @@
 		.sr-only();
 	}
 }
+
+// Navigation links ////////////////////////////////////////////////////////////
+
+.nav-links {
+	.make-row();
+}
+
+.nav-link {
+	.make-xs-column(6);
+	.make-sm-column(6);
+	.make-md-column(5);
+	.make-md-column(4);
+	
+	&.previous {
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+	
+	text-align: center;
+	
+	a {
+		.button-style-link;
+		border: 1px solid @background-highlights-color;
+		border-radius: 6px;
+	}
+}
+
+	// TODO: hide text label and only use nav icons for xxs viewports

@@ -21,3 +21,21 @@
 }
 
 .@{fa-css-prefix}-smaller { font-size: 0.7em; }
+
+// Button-style links //////////////////////////////////////////////////////////
+
+.button-style-link {
+	display: block;
+	.fumseck-sans;
+	color: @primary-content-color;
+	text-decoration: none;
+	&:visited,&:active{
+		color: @primary-content-color;
+	}
+	&:hover,&:focus{
+		color: @primary-accent-color;
+		background-color: @background-highlights-color;
+	}
+}
+
+
