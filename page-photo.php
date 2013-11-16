@@ -12,13 +12,24 @@
 			<h1><i class="fa fa-camera-retro"></i> <?php the_title(); ?></h1>
 		</header>
 	
+		<?php if ( $paged < 2 ) { ?>
+		
 		<div class="summary">
-		<?php	if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {
-					echo $summary;
-				}; ?>
+			<?php	if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {
+						echo $summary;
+					}; ?>
 		</div>
 	
 		<div class="the-content"><?php the_content(); ?></div>
+
+		<?php } else { ?>
+		
+		<div class="the-content">
+						<?php	if ( $paged_content = get_field( '_paged_content', get_the_ID(), true ) ) {
+						echo $paged_content;
+					}; ?></div>
+
+		<?php }; ?>
 
 	</article><!-- #post -->
 	</div>
