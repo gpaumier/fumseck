@@ -19,7 +19,7 @@
 	.make-xs-column(6);
 	.make-sm-column(6);
 	.make-md-column(5);
-	.make-md-column(4);
+	.make-lg-column(4);
 	
 	&.previous {
 		.make-md-column-offset(1);
@@ -32,6 +32,18 @@
 		.button-style-link;
 		border: 1px solid @background-highlights-color;
 		border-radius: 6px;
+	}
+}
+
+.nav-full-width {
+
+	.previous {
+		.make-md-column-offset(0);
+	}
+
+	.next {
+		.make-md-column-offset(2);
+		.make-lg-column-offset(4);
 	}
 }
 

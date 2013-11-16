@@ -8,9 +8,9 @@
 	</header><!-- .archive-header -->
 	
 	<?php get_template_part( 'common', 'archive' ); // the loop is in there ?>
-
+	
 <?php }; // else we don't have content to display and we should probably do something about it (TODO) ?>
-			
+	
 </div><!-- #content -->
 
 <?php get_footer(); ?>
