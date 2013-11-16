@@ -27,10 +27,8 @@
 								<span class="sr-only">Toggle navigation</span>
 								<i class="fa fa-bars fa-1g"></i> <span class="navbar-toggle-label">Menu <i class="fa fa-caret-down fa-smaller"></i></span>
 							</button>
-							<hgroup>
 								<h1 class="navbar-brand"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 								<!-- TODO: style <h2 class="site-tagline"><?php bloginfo( 'description' ); ?></h2> -->
-							</hgroup>
 						</div>
 						
 						<div class="collapse navbar-collapse" id="bs-navbar-collapse-menu">
