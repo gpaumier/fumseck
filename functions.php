@@ -80,4 +80,22 @@ function fumseck_register_footer_sidebar() {
 }
 add_action( 'widgets_init', 'fumseck_register_footer_sidebar' );
 
+// Output the list of languages for each page //////////////////////////////////
+
+function fumseck_list_languages() {
+	$languages = icl_get_languages('skip_missing=0');
+	$output = '';
+	foreach ($languages as $l){
+		if ($l['active']) {
+			$output .= '<li role="presentation" class="setting-active"><span class="no-link-menu-item"><i class="fa fa-chevron-right fa-smaller fa-fw"></i> ' . $l['native_name'] . '</span></li>' . "\n";
+		} elseif ($l['missing']) {
+			$output .= '<li role="presentation" class="setting-disabled"><span class="no-link-menu-item"><i class="fa fa-ban fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</span></li>' . "\n";
+		} else {
+			$output .= '<li role="presentation" class="setting-inactive"><a href="'. $l['url'] . '"><i class="fa fa-chevron-right fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</a></li>' . "\n";
+			
+		}
+	}
+	echo $output;
+}  
+
 ?>

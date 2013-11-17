@@ -58,3 +58,35 @@
 		&:last-child { border-right: 1px solid @background-highlights-color; }
 	}
 }
+
+.no-link-menu-item {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.setting-disabled {
+	color: @secondary-content-color;
+
+	.reveal {
+		color: @background-color;
+	}
+	
+	&:hover .reveal {
+		color: @secondary-content-color;
+	}
+
+}
+
+.setting-inactive {
+	.reveal {
+		color: @background-color;
+	}
+	
+	&:hover .reveal {
+		color: @primary-accent-color;
+	}
+
+}

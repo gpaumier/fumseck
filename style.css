@@ -8451,6 +8451,7 @@ figcaption {
   color: #657b83;
   text-decoration: none;
   border: 1px solid #eee8d5;
+  background-color: #eee8d5;
   border-radius: 6px;
 }
 .nav-link a:visited,
@@ -8461,6 +8462,9 @@ figcaption {
 .nav-link a:focus {
   color: #268bd2;
   background-color: #eee8d5;
+}
+.nav-link a:hover {
+  border: 1px solid #93a1a1;
 }
 @media (min-width: 992px) {
   .nav-full-width .previous {
@@ -8476,16 +8480,6 @@ figcaption {
   .nav-full-width .next {
     margin-left: 33.33333333333333%;
   }
-}
-#header {
-  /*
-		@include at-breakpoint($fair-viewport-columns) {
-			@include span-columns(5 omega, $fair-viewport-columns);
-		}
-		@include at-breakpoint($wider-viewport-columns) {
-			@include span-columns(3, $wider-viewport-columns);
-			@include pre(2);
-		}*/
 }
 #site-header {
   font-size: 20px;
@@ -8595,6 +8589,28 @@ td#menu-nav-menu .home {
 }
 #menu-nav-menu li:last-child {
   border-right: 1px solid #eee8d5;
+}
+.no-link-menu-item {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  white-space: nowrap;
+}
+.setting-disabled {
+  color: #93a1a1;
+}
+.setting-disabled .reveal {
+  color: #fdf6e3;
+}
+.setting-disabled:hover .reveal {
+  color: #93a1a1;
+}
+.setting-inactive .reveal {
+  color: #fdf6e3;
+}
+.setting-inactive:hover .reveal {
+  color: #268bd2;
 }
 .syndication a {
   text-decoration: none;

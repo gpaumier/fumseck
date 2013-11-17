@@ -50,11 +50,8 @@
 								<li class="dropdown visible-lg">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Settings"><i class="fa fa-cog fa-fw"></i><i class="fa fa-caret-down fa-smaller"></i></a>
 									<ul class="dropdown-menu" aria-labelledby="bs-navbar-collapse-settings-dropdown">
-										<li role="presentation" class="dropdown-header">Language</li>
-										<?php wp_nav_menu(array(
-											'menu' => 'Language',
-											'container' => false,
-											'items_wrap' => '%3$s')); ?>
+										<li role="presentation" class="dropdown-header"><?php _e('Language', 'fumseck'); ?></li>
+										<?php fumseck_list_languages(); ?>
 									</ul>
 								</li>
 							</ul>
@@ -62,11 +59,8 @@
 						
 						<div class="collapse navbar-collapse" id="bs-navbar-collapse-settings">
 							<ul class="nav navbar-nav navbar-right hidden-lg" aria-labelledby="bs-navbar-collapse-settings-collapsed">
-								<li role="presentation" class="dropdown-header">Language</li>
-								<?php wp_nav_menu(array(
-								'menu' => 'Language',
-								'container' => false,
-								'items_wrap' => '%3$s')); ?>
+								<li role="presentation" class="dropdown-header"><?php _e('Language', 'fumseck'); ?></li>
+									<?php fumseck_list_languages(); ?>
 							</ul>
 						</div>
 						
