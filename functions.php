@@ -92,10 +92,9 @@ function fumseck_list_languages() {
 			$output .= '<li role="presentation" class="setting-disabled"><span class="no-link-menu-item"><i class="fa fa-ban fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</span></li>' . "\n";
 		} else {
 			$output .= '<li role="presentation" class="setting-inactive"><a href="'. $l['url'] . '"><i class="fa fa-chevron-right fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</a></li>' . "\n";
-			
 		}
 	}
 	echo $output;
-}  
+}
 
 ?>
