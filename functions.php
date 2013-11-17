@@ -87,11 +87,28 @@ function fumseck_list_languages() {
 	$output = '';
 	foreach ($languages as $l){
 		if ($l['active']) {
-			$output .= '<li role="presentation" class="setting-active"><span class="no-link-menu-item"><i class="fa fa-chevron-right fa-smaller fa-fw"></i> ' . $l['native_name'] . '</span></li>' . "\n";
+			$output .= '<li role="presentation" class="setting-active" title="'
+					. esc_attr( sprintf( __('This page is currently shown in %s', 'fumseck'), $l['translated_name']))
+					. '"><span class="no-link-menu-item"><i class="fa fa-chevron-right fa-smaller fa-fw"></i> '
+					. $l['native_name']
+					. '</span></li>'
+					. "\n";
 		} elseif ($l['missing']) {
-			$output .= '<li role="presentation" class="setting-disabled"><span class="no-link-menu-item"><i class="fa fa-ban fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</span></li>' . "\n";
+			$output .= '<li role="presentation" class="setting-disabled" title="'
+					. esc_attr( sprintf( __('This page is not available in %s', 'fumseck'), $l['translated_name']))
+					. '"><span class="no-link-menu-item"><i class="fa fa-ban fa-smaller reveal fa-fw"></i> '
+					. $l['native_name']
+					. '</span></li>'
+					. "\n";
 		} else {
-			$output .= '<li role="presentation" class="setting-inactive"><a href="'. $l['url'] . '"><i class="fa fa-chevron-right fa-smaller reveal fa-fw"></i> ' . $l['native_name'] . '</a></li>' . "\n";
+			$output .= '<li role="presentation" class="setting-inactive" title="'
+					. esc_attr( sprintf( __('Show this page in %s', 'fumseck'), $l['translated_name']))
+					. '"><a href="'
+					. $l['url']
+					. '"><i class="fa fa-chevron-right fa-smaller reveal fa-fw"></i> '
+					. $l['native_name']
+					. '</a></li>'
+					. "\n";
 		}
 	}
 	echo $output;
