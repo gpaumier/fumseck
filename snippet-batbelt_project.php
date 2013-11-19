@@ -23,7 +23,7 @@
 		</p>
 	</header>
 	<figure class="featured-image">
-		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+		<?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 	</figure>
 
 	<header class="after">

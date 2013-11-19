@@ -12,7 +12,7 @@
 	
 <div class="image-post-content">
 	<figure>
-		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+		<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 		<figcaption><?php the_title(); ?></figcaption>
 	</figure>
 

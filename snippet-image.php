@@ -4,7 +4,7 @@
 	<a href="<?php echo esc_url( get_permalink()); ?>">
 
 	<figure class="featured-image">
-		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+		<?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
 	</figure>
 		
 <?php	$featured_image_exif = wp_get_attachment_metadata( get_post_thumbnail_id() ); 

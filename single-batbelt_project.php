@@ -28,7 +28,7 @@
 	
 	<?php if ( $post_thumbnail = has_post_thumbnail() ) { ?>
 	<figure class="featured-image">
-		<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>
+		<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 	<figcaption><?php if ( $custom_caption = get_field( '_featured-image-caption', get_the_ID(), true ) ) {
 					echo $custom_caption ;
 				} ?> </figcaption>
