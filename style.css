@@ -8612,26 +8612,6 @@ td#menu-nav-menu .home {
 .setting-inactive:hover .reveal {
   color: #268bd2;
 }
-.syndication a {
-  text-decoration: none;
-  padding: 0 .2em;
-  border-radius: .4em;
-}
-.syndication a:hover {
-  color: white;
-}
-.syndication .facebook:hover {
-  background-color: #3b5998;
-}
-.syndication .twitter:hover {
-  background-color: #00aced;
-}
-.syndication .googleplus:hover {
-  background-color: #c03220;
-}
-.syndication .tumblr:hover {
-  background-color: #365069;
-}
 .footer-area {
   background-color: #002b36;
   color: #839496;
