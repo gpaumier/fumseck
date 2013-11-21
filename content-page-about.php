@@ -4,7 +4,7 @@
 		
 		<nav class="about-menu" role="navigation">
 			<?php wp_nav_menu(array(
-					'menu' => 'About',
+					'theme_location' => 'fumseck_about_menu',
 					'container' => false,)); ?>
 		</nav>
 		

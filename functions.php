@@ -10,16 +10,29 @@ add_theme_support( 'automatic-feed-links' );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
+// Register the menus //////////////////////////////////////////////
+
+function fumseck_register_menus() {
+	register_nav_menus(
+		array(
+			'fumseck_top_nav' => __( 'Primary top navigation' ),
+			'fumseck_about_menu' => __( 'Menu for About page set' )
+		)
+	);
+}
+
+add_action( 'init', 'fumseck_register_menus' );
+
 // Modify the WP query to include custom content types to search results ///////
 // and archive pages
-
-add_filter( 'pre_get_posts', 'fumseck_add_cpt_search' );
 
 function fumseck_add_cpt_search( $query ) {
 	if ( ($query->is_search || $query->is_archive) && ! is_admin() )
 		$query->set( 'post_type', array( 'post', 'batbelt_project', 'batbelt_event' ) );
 	return $query;
 }
+
+add_filter( 'pre_get_posts', 'fumseck_add_cpt_search' );
 
 // Exclude image posts from the main blog page /////////////////////////////////
 

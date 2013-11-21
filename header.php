@@ -38,7 +38,7 @@
 								</li>
 								<li role="presentation" class="divider"></li>
 								<?php wp_nav_menu(array(
-									'theme_location' => 'primary',
+									'theme_location' => 'fumseck_top_nav',
 									'container' => false,
 									'items_wrap' => '%3$s')); ?>
 								<li class="dropdown visible-lg">
