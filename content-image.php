@@ -28,7 +28,10 @@
 			<?php };?>
 			
 			<?php if ( $batbelt_location = get_the_term_list( get_the_ID(), 'batbelt_locations', '', __( ', ', 'fumseck' ) ) ) {?>
-			<li class="location"><i class="fa-li fa fa-globe"></i> <span class="meta-label details"><?php _ex( 'in ' , 'in location', 'fumseck' ); ?></span><?php printf( $batbelt_location ); ?></li>
+			<li class="location"><i class="fa-li fa fa-globe"></i> <span class="meta-label details"><?php _ex( 'in ' , 'in location', 'fumseck' ); ?></span><?php printf( $batbelt_location ); ?>
+				<?php 	if ( $featured_image_exif ) { fumseck_display_exif_geocoord( $featured_image_exif ); } ?>
+			
+			</li>
 			<?php };?>
 			
 			<?php if ( $batbelt_event = get_field( '_event', get_the_ID(), true ) ) {?>
@@ -51,7 +54,7 @@
 		
 		</ul>
 	</aside>
-	
+
 	<div class="summary">
 		<?php // Display the summary if there's one
 			if ( $summary = get_field( '_summary', get_the_ID(), true ) ) {

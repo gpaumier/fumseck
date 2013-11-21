@@ -16,7 +16,7 @@ add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form'
 add_filter( 'pre_get_posts', 'fumseck_add_cpt_search' );
 
 function fumseck_add_cpt_search( $query ) {
-	if ( $query->is_search || $query->is_archive && ! is_admin() )
+	if ( ($query->is_search || $query->is_archive) && ! is_admin() )
 		$query->set( 'post_type', array( 'post', 'batbelt_project', 'batbelt_event' ) );
 	return $query;
 }
@@ -112,6 +112,118 @@ function fumseck_list_languages() {
 		}
 	}
 	echo $output;
+}
+
+// Extracts the geographic coordinates of the photo if they're in the Exif
+// metadata and saves them to the database along other metadata ////////////////
+
+//// Helper function: converts a fraction string to a decimal
+
+function fumseck_frac_string_to_dec( $fraction ) {
+	list($num, $denum ) = explode( '/', $fraction );
+	if ($denum) {
+		return ($num / $denum);
+	}
+}
+
+//// Helper function: converts deg/min/sec geocoord to decimal degrees
+
+function fumseck_geocoord_DMS_to_DegDec($degrees, $minutes, $seconds, $direction) {
+	
+	if ( $direction == 'W' or $direction == 'S' ) {
+		$sign = -1;
+	} else {
+		$sign = 1;
+	}
+	
+	return ( $sign * ( $degrees +  ( ($minutes * 60 + $seconds) / 3600 ) ) );
+	
+}
+
+//// Actual geocoord extraction and saving
+
+function fumseck_extract_exif_geocoord($meta, $file) {
+		$exif = exif_read_data( $file );
+		if ( $exif['GPSLatitude'] and $exif['GPSLatitudeRef'] and $exif['GPSLongitude'] and $exif['GPSLongitudeRef'] ) {
+			
+			// Save both DMS and DegDec values for easier access later
+			
+			$meta['latitude_DMS'] = array( 
+				'degrees' => fumseck_frac_string_to_dec($exif['GPSLatitude'][0]),
+				'minutes' => fumseck_frac_string_to_dec($exif['GPSLatitude'][1]),
+				'seconds' => fumseck_frac_string_to_dec($exif['GPSLatitude'][2]),
+				'direction' => $exif['GPSLatitudeRef']
+			);
+			
+			//// Harmonize MinDec and DMS and round the seconds
+			
+			$tmp_minutes = $meta['latitude_DMS']['minutes'];
+			$meta['latitude_DMS']['minutes'] = intval($tmp_minutes);
+			$meta['latitude_DMS']['seconds'] = intval( $meta['latitude_DMS']['seconds'] + (floatval($tmp_minutes) - intval($tmp_minutes)) * 60);
+			
+			//// Convert to DegDec
+			
+			$meta['latitude_DegDec'] = fumseck_geocoord_DMS_to_DegDec( 
+				$meta['latitude_DMS']['degrees'],
+				$meta['latitude_DMS']['minutes'],
+				$meta['latitude_DMS']['seconds'],
+				$meta['latitude_DMS']['direction']
+			);
+			
+			// Repeat for longitude
+			
+			$meta['longitude_DMS'] = array( 
+				'degrees' => fumseck_frac_string_to_dec($exif['GPSLongitude'][0]),
+				'minutes' => fumseck_frac_string_to_dec($exif['GPSLongitude'][1]),
+				'seconds' => fumseck_frac_string_to_dec($exif['GPSLongitude'][2]),
+				'direction' => $exif['GPSLongitudeRef']
+			);
+			
+			$tmp_minutes = $meta['longitude_DMS']['minutes'];
+			$meta['longitude_DMS']['minutes'] = intval($tmp_minutes);
+			$meta['longitude_DMS']['seconds'] = intval( $meta['longitude_DMS']['seconds'] + ( floatval($tmp_minutes) - intval($tmp_minutes)) * 60);
+			
+			$meta['longitude_DegDec'] = fumseck_geocoord_DMS_to_DegDec( 
+				$meta['longitude_DMS']['degrees'],
+				$meta['longitude_DMS']['minutes'],
+				$meta['longitude_DMS']['seconds'],
+				$meta['longitude_DMS']['direction']
+			);
+		}
+	return $meta;
+}
+
+add_filter('wp_read_image_metadata', 'fumseck_extract_exif_geocoord', '', 2);
+
+// Displays linked geo coordinates if they exist ///////////////////////////////
+
+function fumseck_display_exif_geocoord($featured_image_exif) {
+	
+	$exif_latitude = $featured_image_exif['image_meta']['latitude_DegDec'];
+	$exif_longitude = $featured_image_exif['image_meta']['longitude_DegDec'];
+	
+	if ( $exif_latitude && $exif_longitude ) {
+		
+		$output = sprintf(
+				'%d° %d′ %d″ %s, %d° %d′ %d″ %s', 
+				$featured_image_exif['image_meta']['latitude_DMS']['degrees'],
+				$featured_image_exif['image_meta']['latitude_DMS']['minutes'],
+				$featured_image_exif['image_meta']['latitude_DMS']['seconds'],
+				$featured_image_exif['image_meta']['latitude_DMS']['direction'],
+				$featured_image_exif['image_meta']['longitude_DMS']['degrees'],
+				$featured_image_exif['image_meta']['longitude_DMS']['minutes'],
+				$featured_image_exif['image_meta']['longitude_DMS']['seconds'],
+				$featured_image_exif['image_meta']['longitude_DMS']['direction']
+				);
+		
+		$output = '(<a '
+				. 'href="http://www.openstreetmap.org/?mlat=' . $exif_latitude . '&mlon=' . $exif_longitude . '" '
+				. 'title="' . __('View this location on OpenStreetMap (opens in another window)', 'fumseck') . '" '
+				. 'target="_blank"'
+				. '>' . $output . '</a>)';
+		
+		echo $output;
+	}
 }
 
 // Temporary workaround so the site name displays correctly ////////////////////
