@@ -10,7 +10,7 @@
 
 <div class="container">
 	
-<div class="image-post-content">
+<div class="image-post-intro">
 	<figure>
 		<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 		<figcaption><?php the_title(); ?></figcaption>
@@ -62,6 +62,8 @@
 			}; ?>
 	</div>
 	
+</div>	
+<div class="image-post-content">
 	<div class="the-content"><?php the_content(); ?></div>
 	
 	<aside class="image-pub-meta">

@@ -25,7 +25,7 @@
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class('container snippet no-picture'); ?>>
 	
-	<a class="snippet" href="<?php echo esc_url( get_permalink()); ?>">
+	<a href="<?php echo esc_url( get_permalink()); ?>">
 	
 	<header>
 		<h1><?php the_title(); ?></h1>

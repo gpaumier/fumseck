@@ -26,6 +26,7 @@
 		</div>
 	</header>
 	
+<div class="row">
 	<?php if ( $post_thumbnail = has_post_thumbnail() ) { ?>
 	<figure class="featured-image">
 		<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
@@ -55,7 +56,8 @@
 	<aside class="project-meta2 fumseck-bottom">
 		<?php get_template_part( 'metadata', 'batbelt_project' ); // TODO: reuse data from metadata above ?>
 	</aside>
-	
+
+</div>	
 </article><!-- #post -->
 
 	<div class="container">

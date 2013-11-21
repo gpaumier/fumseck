@@ -12,6 +12,14 @@
 	}
 }
 
+article, figure {
+	padding-bottom: @base-line-height;
+}
+
+figcaption p {
+	padding-bottom: 0;
+}
+
 // Regular posts ///////////////////////////////////////////////////////////////
 
 .regular {
@@ -94,7 +102,7 @@
 
 .landscape {
 	
-	figure, .image-post-content {
+	figure, .image-post-intro, .image-post-content {
 		.make-row();
 	}
 
@@ -103,7 +111,8 @@
 		
 	figure {
 		@media only screen and (min-width: @screen-sm) {
-			padding: 0 (@grid-gutter-width / 2);
+			padding-left: (@grid-gutter-width / 2);
+			padding-right: (@grid-gutter-width / 2);
 		}
 	}
 	
@@ -185,7 +194,7 @@
 			.make-sm-column(10);
 			.make-sm-column-offset(1);
 			.make-md-column(8);
-			.make-sm-column-offset(2);
+			.make-md-column-offset(2);
 			.make-lg-column(6);
 			.make-lg-column-offset(0);
 		}
