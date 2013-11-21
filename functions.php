@@ -64,7 +64,14 @@ function fumseck_linked_title( $id ) {
 // Display the default image for content without a featured image //////////////
 
 function fumseck_default_image( $post_type ) {
-	// TODO
+	
+	if ( ($post_type == 'post') or ($post_type == 'page') ) {
+		
+		$output = '<img class="img-responsive" width="760" height="247" '
+					. 'alt="Vitruve Man" '
+					. 'src="' . get_template_directory_uri() . '/images/default-picture-760.jpg' . '"></img>';
+		echo $output;
+	}
 }
 
 // Register Bootstrap's JavaScript /////////////////////////////////////////////
