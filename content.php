@@ -20,7 +20,7 @@
 	</figure>
 	<?php } else { ?>
 	<figure class="default-image">
-		<?php fumseck_default_image( get_post_format() ); ?>
+		<?php fumseck_default_image( get_post_type() ); ?>
 	</figure>
 	<?php }; ?>
 	
