@@ -270,5 +270,15 @@ function twentythirteen_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'twentythirteen_wp_title', 10, 2 );
 
+// Brand the site title in the header //////////////////////////////////////////
+
+function fumseck_brand_site_title() {
+	$title = strtolower ( get_bloginfo('name') );
+	list($firstname, $lastname ) = explode( ' ', $title );
+	$output = '<span class="brand1">' . $firstname . '</span>'
+			. '<span class="brand2">' . $lastname . '</span>';
+	echo $output;
+}
+
 
 ?>
