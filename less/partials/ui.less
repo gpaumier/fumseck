@@ -52,3 +52,27 @@
 }
 
 	// TODO: hide text label and only use nav icons for xxs viewports
+
+// About page set menu /////////////////////////////////////////////////////////
+
+#menu-about {
+
+	.no-bullet;
+	padding-left: 0;
+
+	a {
+		.button-style-link;
+		border-left: 6px solid @background-color;
+		padding: 8px;
+
+		&:hover {
+			border-left: 6px solid @primary-accent-color;
+		}
+	}
+
+	.current_page_item a {
+		background-color: @background-highlights-color;
+		color: @secondary-accent-color;
+		border-left: 6px solid @secondary-accent-color;
+	}
+}
