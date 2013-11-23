@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Photo page
+*/
+?>
+
 <?php get_header(); ?>
 
 <div id="content" role="main" class="page page-archive container">
