@@ -10,13 +10,17 @@ add_theme_support( 'automatic-feed-links' );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form' ) );
 
+// Load localization files /////////////////////////////////////////////////////
+
+load_theme_textdomain('fumseck');
+
 // Register the menus //////////////////////////////////////////////
 
 function fumseck_register_menus() {
 	register_nav_menus(
 		array(
-			'fumseck_top_nav' => __( 'Primary top navigation' ),
-			'fumseck_about_menu' => __( 'Menu for About page set' )
+			'fumseck_top_nav' => __( 'Primary top navigation', 'fumseck' ),
+			'fumseck_about_menu' => __( 'Menu for About page set', 'fumseck' )
 		)
 	);
 }
@@ -264,7 +268,7 @@ function twentythirteen_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'twentythirteen' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'fumseck' ), max( $paged, $page ) );
 
 	return $title;
 }

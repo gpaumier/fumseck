@@ -1,0 +1,272 @@
+# Guillaume Paumier <gp@guillaumepaumier.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: fumseck\n"
+"POT-Creation-Date: 2013-11-22 21:42+0100\n"
+"PO-Revision-Date: 2013-11-23 08:23+0100\n"
+"Last-Translator: Guillaume Paumier <gp@guillaumepaumier.com>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_x:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x;esc_html__;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/"
+"wp-content/themes/fumseck\n"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:10
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:20
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:33
+msgid "Article published on "
+msgstr "Article publié le "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:10
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:20
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet.php:33
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:2
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-image.php:17
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:17
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:21
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content.php:8
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:2
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:6
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:26
+msgid "F j, Y"
+msgstr "j F Y"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:2
+msgctxt "image published on"
+msgid "Published on "
+msgstr "Publiée le "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:4
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:8
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:12
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:4
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:8
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:12
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:2
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:6
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:30
+msgid ", "
+msgstr ", "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:5
+msgctxt "image in categories"
+msgid "in "
+msgstr "Classée dans "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:9
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:9
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:7
+msgid "Topics: "
+msgstr "Thèmes : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:13
+msgid "People: "
+msgstr "Personnes : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-image.php:17
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:11
+msgid "Project: "
+msgstr "Projet : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/index.php:7
+msgid "Thoughts"
+msgstr "Articles"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/syndication.php:4
+#, php-format
+msgid ""
+"You can share this post on %s, %s, %s, or elsewhere with the <a href=\"%s"
+"\">permalink</a>."
+msgstr ""
+"Vous pouvez partager cet article sur %s, %s, %s, ou ailleurs avec le <a href="
+"\"%s\">permalien</a>."
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/common-archive.php:13
+msgid " Previous entries"
+msgstr " Articles précédents"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/common-archive.php:14
+msgid "Next entries "
+msgstr "Articles suivants "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-projects.php:61
+msgid " Previous projects"
+msgstr " Projets précédents"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-projects.php:62
+msgid "Next projects "
+msgstr "Projets suivants "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:5
+msgid "Roles: "
+msgstr "Rôles : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:13
+msgid "Part of: "
+msgstr "Sous-projet de : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata-batbelt_project.php:17
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:15
+msgid "Event: "
+msgstr "Évènement : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-image.php:17
+msgid "Photo taken on "
+msgstr "Photo prise le "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:17
+msgid "Started "
+msgstr "Commencé "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:21
+msgid "Completed: "
+msgstr "Terminé : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:23
+msgid "Status: "
+msgstr "Statut : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:65
+msgid "Previous project "
+msgstr "Projet précédent "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:66
+msgid "Next project "
+msgstr "Projet suivant "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:15
+msgid "Skip to content"
+msgstr "Aller directement au contenu"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:54
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:63
+msgid "Language"
+msgstr "Langue"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content.php:7
+msgid "By "
+msgstr "Par "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content.php:8
+msgid "Published on "
+msgstr "Publié le "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content.php:49
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:78
+msgid "Previous entry "
+msgstr "Article précédent "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content.php:50
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:79
+msgid "Next entry "
+msgstr "Article suivant "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/metadata.php:3
+msgctxt "in categories"
+msgid "In "
+msgstr "Classé dans "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/taxonomy-batbelt_roles.php:7
+msgid "Role: "
+msgstr "Rôle : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-photo.php:66
+msgid " Previous photos"
+msgstr " Photos précédentes"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-photo.php:67
+msgid "Next photos "
+msgstr "Photos suivantes "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:3
+#, php-format
+msgid " started on %s"
+msgstr " commencé le %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:7
+#, php-format
+msgid " and completed on %s"
+msgstr " et terminé le %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:9
+#, php-format
+msgid " and %s"
+msgstr " et %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:22
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:32
+msgid "Project"
+msgstr "Projet"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:45
+msgid "Project "
+msgstr "Projet "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:18
+msgid "Primary top navigation"
+msgstr "Navigation principale (haut)"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:19
+msgid "Menu for About page set"
+msgstr "Menu pour les pages À propos"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:93
+msgid "Footer"
+msgstr "Bas de page"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:111
+#, php-format
+msgid "This page is currently shown in %s"
+msgstr "Cette page est actuellement affichée en %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:118
+#, php-format
+msgid "This page is not available in %s"
+msgstr "Cette page n'est pas disponible en %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:125
+#, php-format
+msgid "Show this page in %s"
+msgstr "Afficher cette page en %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:241
+msgid "View this location on OpenStreetMap (opens in another window)"
+msgstr "Afficher ce lieu sur OpenStreetMap (ouvre une nouvelle fenêtre)"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:267
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:26
+msgid "Taken on "
+msgstr "Prise le "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:31
+msgctxt "in location"
+msgid "in "
+msgstr "à "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:38
+msgid "during "
+msgstr "pendant "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:43
+msgid "Aperture: "
+msgstr "Ouverture : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:47
+msgid "Focal length: "
+msgstr "Distance focale : "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/content-image.php:51
+msgid "Exposure time: "
+msgstr "Temps de pose : "
