@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fumseck\n"
-"POT-Creation-Date: 2013-11-22 21:42+0100\n"
-"PO-Revision-Date: 2013-11-23 08:23+0100\n"
+"POT-Creation-Date: 2013-11-23 09:28+0100\n"
+"PO-Revision-Date: 2013-11-23 09:29+0100\n"
 "Last-Translator: Guillaume Paumier <gp@guillaumepaumier.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: en\n"
@@ -97,11 +97,19 @@ msgstr " Articles précédents"
 msgid "Next entries "
 msgstr "Articles suivants "
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-projects.php:61
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/fumseck_photo_page.php:72
+msgid " Previous photos"
+msgstr " Photos précédentes"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/fumseck_photo_page.php:73
+msgid "Next photos "
+msgstr "Photos suivantes "
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/fumseck_projects_page.php:67
 msgid " Previous projects"
 msgstr " Projets précédents"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-projects.php:62
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/fumseck_projects_page.php:68
 msgid "Next projects "
 msgstr "Projets suivants "
 
@@ -123,12 +131,12 @@ msgid "Photo taken on "
 msgstr "Photo prise le "
 
 #: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:17
-msgid "Started "
-msgstr "Commencé "
+msgid "Started on "
+msgstr "Commencé le "
 
 #: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:21
-msgid "Completed: "
-msgstr "Terminé : "
+msgid "Completed on "
+msgstr "Terminé le "
 
 #: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/single-batbelt_project.php:23
 msgid "Status: "
@@ -142,12 +150,12 @@ msgstr "Projet précédent "
 msgid "Next project "
 msgstr "Projet suivant "
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:15
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:14
 msgid "Skip to content"
 msgstr "Aller directement au contenu"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:54
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:63
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:53
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/header.php:62
 msgid "Language"
 msgstr "Langue"
 
@@ -178,14 +186,6 @@ msgstr "Classé dans "
 msgid "Role: "
 msgstr "Rôle : "
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-photo.php:66
-msgid " Previous photos"
-msgstr " Photos précédentes"
-
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/page-photo.php:67
-msgid "Next photos "
-msgstr "Photos suivantes "
-
 #: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/snippet-batbelt_project.php:3
 #, php-format
 msgid " started on %s"
@@ -210,38 +210,42 @@ msgstr "Projet"
 msgid "Project "
 msgstr "Projet "
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:18
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:22
 msgid "Primary top navigation"
 msgstr "Navigation principale (haut)"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:19
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:23
 msgid "Menu for About page set"
 msgstr "Menu pour les pages À propos"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:93
-msgid "Footer"
-msgstr "Bas de page"
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:97
+msgid "Footer (en, default)"
+msgstr "Pied de page (anglais, par défaut)"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:111
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:105
+msgid "Footer (fr)"
+msgstr "PIed de page (fr)"
+
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:123
 #, php-format
 msgid "This page is currently shown in %s"
 msgstr "Cette page est actuellement affichée en %s"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:118
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:130
 #, php-format
 msgid "This page is not available in %s"
 msgstr "Cette page n'est pas disponible en %s"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:125
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:137
 #, php-format
 msgid "Show this page in %s"
 msgstr "Afficher cette page en %s"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:241
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:253
 msgid "View this location on OpenStreetMap (opens in another window)"
 msgstr "Afficher ce lieu sur OpenStreetMap (ouvre une nouvelle fenêtre)"
 
-#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:267
+#: /srv/www/htdocs/broadway.lepommierdujardin.fr/dev/wp/wp-content/themes/fumseck/functions.php:279
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
