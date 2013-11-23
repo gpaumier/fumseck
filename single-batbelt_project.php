@@ -19,8 +19,8 @@
 		
 			<?php if ( $end_date = get_field( '_end_date', get_the_ID(), true ) ) { ?>
 			<li class="end_date"><i class="fa-li fa fa-check-square-o"></i> <span class="meta-label details"><?php _e( 'Completed: ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( $end_date ) ; ?>"><?php echo date_i18n( __('F j, Y', 'fumseck'), strtotime( $end_date ) ); ?></time></li>
-			<?php }elseif ( $status = get_field( '_status', get_the_ID(), true ) ) { ?>
-			<li class="status"><i class="fa-li fa fa-"></i> <span class="meta-label details"><?php _e( 'Status: ' , 'fumseck' ); ?></span><?php echo $status; ?></time></li>
+			<?php }elseif ( $status = get_field_object('_status') ) { ?>
+			<li class="status"><i class="fa-li fa fa-"></i> <span class="meta-label details"><?php _e( 'Status: ' , 'fumseck' ); ?></span><?php echo ucfirst($status['choices'][ get_field('_status') ]); ?></time></li>
 			<?php }; ?>
 		</ul>
 		</div>
