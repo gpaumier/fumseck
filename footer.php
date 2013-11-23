@@ -4,7 +4,11 @@
 			
 			<div class="footer-area">
 				<aside class="footer container">
-					<?php dynamic_sidebar( 'footer-sidebar' ); ?>
+					<?php	if( defined('ICL_LANGUAGE_CODE') ) {
+								dynamic_sidebar( 'footer-sidebar-' . ICL_LANGUAGE_CODE ); 
+							} else {
+								dynamic_sidebar( 'footer-sidebar-en' );
+							}; ?>
 				</aside>
 			</div>
 			

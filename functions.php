@@ -92,17 +92,25 @@ add_action( 'wp_enqueue_scripts', 'fumseck_register_bootstrap_js' );
 
 // Register the widgetized footer //////////////////////////////////////////////
 
-function fumseck_register_footer_sidebar() {
+function fumseck_register_footer_sidebars() {
     register_sidebar( array(
-        'name' => __( 'Footer', 'fumseck' ),
-        'id' => 'footer-sidebar',
+        'name' => __( 'Footer (en, default)', 'fumseck' ),
+        'id' => 'footer-sidebar-en',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ) );
+    register_sidebar( array(
+        'name' => __( 'Footer (fr)', 'fumseck' ),
+        'id' => 'footer-sidebar-fr',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h1 class="widget-title">',
         'after_title' => '</h1>',
     ) );
 }
-add_action( 'widgets_init', 'fumseck_register_footer_sidebar' );
+add_action( 'widgets_init', 'fumseck_register_footer_sidebars' );
 
 // Output the list of languages for each page //////////////////////////////////
 
