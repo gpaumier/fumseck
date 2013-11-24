@@ -1,0 +1,21 @@
+// Colors and typography
+
+body {
+	background: @background-color;
+	color: @primary-content-color;
+} 
+
+// Links
+
+a {
+	text-decoration: none;
+		&:hover,&:focus{
+			text-decoration: underline;
+		}
+	&:visited,&:active{ color: @violet; }
+
+	&.btn {
+		&:visited,&:active { color: @background-color; }
+	}
+
+}

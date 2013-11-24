@@ -1,0 +1,50 @@
+ /*!
+Theme Name: fumseck
+Theme URI: https://github.com/gpaumier/fumseck
+Author: Guillaume Paumier
+Author URI: https://guillaumepaumier.com/
+Description: A simple responsive theme
+Version: 0.2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: fumseck
+*/
+
+// 3rd party components ////////////////////////////////////////////////////////
+
+@3rdparty-folder: "3rdparty";
+@bootstrap-folder: "bootstrap-3.0.2";
+
+// TODO: import specific modules since we don't need stuff like glyphs
+// And work directly with Less files
+@import "@{3rdparty-folder}/@{bootstrap-folder}/less/bootstrap.less";
+
+@font-awesome-folder: "font-awesome-4.0.3";
+@import "@{3rdparty-folder}/@{font-awesome-folder}/less/font-awesome.less";
+@fa-font-path: "@{3rdparty-folder}/@{font-awesome-folder}/fonts";
+
+//@less-elements-folder: "lesselements-9f60313d75";
+//@import "@{3rdparty-folder}/@{less-elements-folder}/elements.less";
+
+// Definitions /////////////////////////////////////////////////////////////////
+
+@import "partials/mixins";
+@import "partials/solarized";
+@import "partials/colors";
+
+// Site ////////////////////////////////////////////////////////////////////////
+
+@import "partials/base";
+@import "partials/typography";
+@import "partials/layout";
+@import "partials/ui";
+@import "partials/bootstrap-config";
+
+// Content /////////////////////////////////////////////////////////////////////
+
+@import "partials/header";
+@import "partials/posts";
+@import "partials/footer";
+@import "partials/archives";
+@import "partials/wordpress";

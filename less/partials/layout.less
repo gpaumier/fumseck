@@ -1,0 +1,238 @@
+// Common styles ///////////////////////////////////////////////////////////////
+
+.fumseck-top {
+	@media only screen and (max-width: @screen-lg) {
+		display: none;
+	}
+}
+
+.fumseck-bottom {
+	@media only screen and (min-width: @screen-lg) {
+		display: none;
+	}
+}
+
+article, figure {
+	padding-bottom: @base-line-height;
+}
+
+figcaption p {
+	padding-bottom: 0;
+}
+
+// Regular posts ///////////////////////////////////////////////////////////////
+
+.regular {
+	header {
+		.make-row();
+	}
+
+	h1, .byline, figure, aside, .summary, .the-content, .project-meta1 {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	h1, .byline, .meta1 {
+		.make-lg-column(12);
+	}
+
+	figure, .summary, .the-content {
+		.make-lg-column(8);
+	}
+
+	aside {
+		.make-lg-column(4);
+	}
+
+}
+
+// Regular pages ///////////////////////////////////////////////////////////////
+
+// No sidebar: like regular posts but we center the content
+
+.no-sidebar {
+	h1 {
+		.make-lg-column(8);
+	}
+	h1, figure, .summary, .the-content {
+		.make-lg-column-offset(2);
+	}
+}
+
+// With sidebar
+
+.has-sidebar {
+	nav, article {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+	nav {
+		.make-lg-column(4);
+	}
+	article {
+		.make-lg-column(8);
+	}
+}
+
+// Photo page //////////////////////////////////////////////////////////////////
+
+.page-archive {
+	.intro-archive, .list-archive {
+		.make-row();
+	}
+}
+
+.page-archive-content {
+	.make-xs-column(12);
+}
+
+// Image posts (common styles) /////////////////////////////////////////////////
+
+.format-image {
+	figcaption { display: none; }
+}
+
+// Image posts: landscape //////////////////////////////////////////////////////
+
+.landscape {
+	
+	figure, .image-post-intro, .image-post-content {
+		.make-row();
+	}
+
+	// We don't put the picture in columns in order to avoid the margins on small viewports
+	// but we need to re-add them for consistency on larger viewports
+		
+	figure {
+		@media only screen and (min-width: @screen-sm) {
+			padding-left: (@grid-gutter-width / 2);
+			padding-right: (@grid-gutter-width / 2);
+		}
+	}
+	
+	// Until we have a large viewport, we stack everything
+
+	header, aside, .summary, .the-content {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	// Then we have room to organize the blocks differently
+
+	header {
+		.make-lg-column(12);
+		}
+	
+	.image-meta {
+		.make-lg-column(4);
+		.make-lg-column-push(8);
+	}
+
+	.image-pub-meta {
+		.make-lg-column(4);
+	}
+
+	.summary {
+		.make-lg-column(8);
+		.make-lg-column-pull(4);
+	}
+
+	.the-content {
+		.make-lg-column(8);
+	}
+}
+
+// Image posts: portrait ///////////////////////////////////////////////////////
+
+@tiny-height: 200px;
+@shorter-height: 400px;
+@short-height: 600px;
+@medium-height: 800px;
+//@tall-height: 1000px;
+
+
+.portrait {
+
+	image-post-content {
+		.make-row();
+	}
+
+	// Until we have a large viewport, we stack everything, but we constrain the
+	// picture if we have short screens
+
+	header, aside, .summary, .the-content {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(10);
+		.make-md-column-offset(1);
+		.make-lg-column-offset(0); // reset offset
+	}
+
+	figure {
+		@media only screen and (max-height: @shorter-height) {
+			max-width: (@tiny-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @shorter-height) and (max-height: @short-height) {
+			max-width: (@shorter-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @short-height) and (max-height: @medium-height) {
+			max-width: (@short-height * 2 / 3);
+			margin: auto;
+		}
+		@media only screen and (min-height: @medium-height) {
+			.make-sm-column(10);
+			.make-sm-column-offset(1);
+			.make-md-column(8);
+			.make-md-column-offset(2);
+			.make-lg-column(6);
+			.make-lg-column-offset(0);
+		}
+	}
+
+	@media only screen and (max-height: @medium-height) {
+		header, aside, .summary, .the-content {
+			.make-lg-column(8);
+			.make-lg-column-offset(2);
+		}
+	}
+	@media only screen and (min-height: @medium-height) {
+		header, .image-meta, .summary {
+			.make-lg-column(6);
+		}
+
+		.the-content {
+			.make-lg-column(8);
+		}
+
+		.image-pub-meta {
+			.make-lg-column(4);
+		}
+	}
+}
+
+// Batbelt projects ////////////////////////////////////////////////////////////
+
+// same as .regular posts
+
+// Footer //////////////////////////////////////////////////////////////////////
+
+.footer {
+	aside {
+		.make-xs-column(12);
+		.make-sm-column(12);
+		.make-md-column(6);
+		.make-lg-column(4);
+	}
+}
+

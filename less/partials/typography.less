@@ -1,0 +1,306 @@
+
+// Typefaces ///////////////////////////////////////////////////////////////////
+
+//// Latin Modern Roman ////////////////////////////////////////////////////////
+
+.font-face(
+	'Latin Modern Roman Regular', 
+	'latinmodern/roman/lmroman10-regular-webfont',
+	normal,
+	normal
+);
+
+.font-face(
+	'Latin Modern Roman Bold', 
+	'latinmodern/roman/lmroman10-bold-webfont',
+	bold,
+	normal
+);
+
+.font-face(
+	'Latin Modern Roman Italic', 
+	'latinmodern/roman/lmroman10-italic-webfont',
+	normal,
+	italic
+);
+
+.font-face(
+	'Latin Modern Roman Bold Italic', 
+	'latinmodern/roman/lmroman10-bolditalic-webfont',
+	bold,
+	italic
+);
+
+.font-face(
+	'Latin Modern Roman Caps Regular', 
+	'latinmodern/roman/lmromancaps10-regular-webfont',
+	normal,
+	normal
+);
+
+.font-face(
+	'Latin Modern Roman Caps Oblique', 
+	'latinmodern/roman/lmromancaps10-oblique-webfont',
+	normal,
+	italic
+);
+
+////// Mixins //////////////////////////////////////////////////////////////////
+
+@fumseck-serif: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
+
+.fumseck-serif {
+	font-family: 'Latin Modern Roman Regular', 'Baskerville', 'Georgia', serif;
+}
+
+.fumseck-serif-bold {
+	font-family: 'Latin Modern Roman Bold', 'Baskerville', 'Georgia', serif;
+	font-weight: bold;
+}
+
+.fumseck-serif-italic {
+	font-family: 'Latin Modern Roman Italic', 'Baskerville', 'Georgia', serif;
+	font-style: italic;
+}
+
+.fumseck-serif-bolditalic {
+	font-family: 'Latin Modern Roman Bold Italic', 'Baskerville', 'Georgia', serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.fumseck-serif-caps {
+	font-family: 'Latin Modern Roman Caps Regular', 'Baskerville', 'Georgia', serif;
+}
+
+.fumseck-serif-caps-italic {
+	font-family: 'Latin Modern Roman Caps Oblique', 'Baskerville', 'Georgia', serif;
+	font-style: italic;
+}
+
+//// Latin Modern Sans /////////////////////////////////////////////////////////
+
+.font-face(
+	'Latin Modern Sans Regular', 
+	'latinmodern/sans/lmsans10-regular-webfont',
+	normal,
+	normal
+);
+
+.font-face(
+	'Latin Modern Sans Bold', 
+	'latinmodern/sans/lmsans10-bold-webfont',
+	bold,
+	normal
+);
+
+.font-face(
+	'Latin Modern Sans Oblique', 
+	'latinmodern/sans/lmsans10-oblique-webfont',
+	normal,
+	italic
+);
+
+.font-face(
+	'Latin Modern Sans Bold Oblique', 
+	'latinmodern/sans/lmsans10-boldoblique-webfont',
+	bold,
+	italic
+);
+	
+////// Mixins //////////////////////////////////////////////////////////////////
+
+@fumseck-sans: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+
+.fumseck-sans {
+	font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
+}
+
+.fumseck-sans-bold {
+	font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
+	font-weight: bold;
+}
+
+.fumseck-sans-italic {
+	font-family: 'Latin Modern Sans Oblique', 'Futura', 'Verdana', sans-serif;
+	font-style: italic;
+}
+
+.fumseck-sans-bolditalic {
+	font-family: 'Latin Modern Sans Bold Oblique', 'Futura', 'Verdana', sans-serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
+//// Latin Modern Monospace ////////////////////////////////////////////////////
+
+.font-face(
+	'Latin Modern Monospace Regular', 
+	'latinmodern/mono/lmmono10-regular-webfont',
+	normal,
+	normal
+);
+
+.font-face(
+	'Latin Modern Monospace Italic', 
+	'latinmodern/mono/lmmono10-italic-webfont',
+	normal,
+	italic
+);
+
+.font-face(
+	'Latin Modern Monospace Light Bold', 
+	'latinmodern/mono/lmmonolt10-bold-webfont',
+	bold,
+	normal
+);
+
+.font-face(
+	'Latin Modern Monospace Light Bold Oblique', 
+	'latinmodern/mono/lmmonolt10-boldoblique-webfont',
+	bold,
+	italic
+);
+	
+////// Mixins ////////////////////////////////////////////////////////////
+
+@fumseck-monospace: 'Latin Modern Monospace Regular', 'Courier', monospace;
+
+.fumseck-monospace {
+	font-family: 'Latin Modern Monospace Regular', 'Courier', monospace;
+}
+
+.fumseck-monospace-italic {
+	font-family: 'Latin Modern Monospace Italic', 'Courier', monospace;
+	font-style: italic;
+}
+
+.fumseck-monospace-bold {
+	font-family: 'Latin Modern Monospace Light Bold', 'Courier', monospace;
+	font-weight: bold;
+}
+
+.fumseck-monospace-bolditalic {
+	font-family: 'Latin Modern Monospace Light Bold Oblique', 'Courier', monospace;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+// Reset to set up vertical rhythm /////////////////////////////////////////////
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+// Set up vertical rhythm and modular scale ////////////////////////////////////
+
+@modular-scale-ratio: 1.2;
+@height-ratio: 1.618;
+@base-font-size: 20px;
+@base-line-height: (@base-font-size * @height-ratio);
+
+html {
+	font-size: @base-font-size;
+	line-height: @base-line-height;
+}
+
+ul, ol, dl, p, pre, h1, h2, h3 {
+	padding-bottom: @base-line-height;
+}
+
+.primary-content-size { font-size: @base-font-size; };
+.secondary-content-size { font-size: (@base-font-size / @modular-scale-ratio); };
+.tertiary-content-size { font-size: (@base-font-size / (@modular-scale-ratio * @modular-scale-ratio)); };
+
+.large-content-size { font-size: (@base-font-size * @modular-scale-ratio); };
+.larger-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio); };
+.huge-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio * @modular-scale-ratio); };
+
+// Set up fonts ////////////////////////////////////////////////////////////////
+
+body {
+	.fumseck-serif;
+}
+
+h1 {
+	.huge-content-size;
+	.fumseck-sans-bold;
+
+}
+h2 {
+	.larger-content-size;
+	.fumseck-sans-bold;
+}
+h3 {
+	.large-content-size;
+	.fumseck-sans-bold;
+}
+
+.summary {
+	.large-content-size;
+}
+
+strong {
+	.fumseck-serif-bold;
+}
+
+em {
+	.fumseck-serif-italic;
+	}
+
+em strong, strong em {
+	.fumseck-serif-bolditalic;
+}
+
+pre {
+	.fumseck-monospace;
+		
+	strong {
+		.fumseck-monospace-bold;
+	}
+
+	em {
+		.fumseck-monospace-italic;
+	}
+
+	em strong, strong em {
+		.fumseck-monospace-bolditalic;
+	}
+}
+
+figcaption {
+	.secondary-content-size;
+	.fumseck-sans;
+	color: @secondary-content-color;
+}
+
+.byline, .project-meta1 {
+	.secondary-content-size;
+	.fumseck-serif-caps;
+	.no-bullet;
+}
+
+.post-meta, .project-meta2, .image-meta, .image-pub-meta, .syndication {
+	.secondary-content-size;
+	.fumseck-sans;
+	.no-bullet;
+}
+

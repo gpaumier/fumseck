@@ -1,0 +1,110 @@
+// Layout
+
+
+//// Common layout for all content
+
+////// Header
+
+#site-header {
+
+	// Typography
+	.primary-content-size;
+	.fumseck-sans;
+
+	// Appearance // TODO: add image background fallback
+	.box-shadow(0 2px 10px @secondary-content-color);
+	margin-bottom: (@base-line-height * 2);
+
+	// Colors
+
+	a {
+		.button-style-link;
+	}
+
+	// Layout
+	ul { padding-bottom: 0;};
+}
+
+#navbar-brand {
+	.large-content-size;
+	padding: 0;
+}
+
+a#brand-title {
+	.fumseck-sans-bold;
+	display: block;
+	padding: 8px 0;
+	&:hover {
+		background-color: @background-color;
+	}
+}
+
+.brand1 {
+	color: @primary-accent-color;
+}
+
+.brand2 {
+	color: @secondary-accent-color;
+}
+
+#site-navigation { margin-bottom: 0; }
+
+.assistive-text {
+	.sr-only;
+}
+
+#menu-nav-menu .home {
+	.hidden-lg;
+}
+
+.navbar-toggle-label {
+	@media only screen and (max-width: @screen-sm) { 
+		.sr-only;
+	}
+}
+
+.navbar-toggle { color: @primary-content-color; }
+
+#menu-nav-menu {
+	li {
+		border-left: 1px solid @background-highlights-color;
+		&:last-child { border-right: 1px solid @background-highlights-color; }
+	}
+}
+
+.no-link-menu-item {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.setting-active {
+		background-color: @background-highlights-color;
+		color: @secondary-accent-color;
+}
+
+.setting-disabled {
+	color: @secondary-content-color;
+
+	.reveal {
+		color: @background-color;
+	}
+	
+	&:hover .reveal {
+		color: @secondary-content-color;
+	}
+
+}
+
+.setting-inactive {
+	.reveal {
+		color: @background-color;
+	}
+	
+	&:hover .reveal {
+		color: @primary-accent-color;
+	}
+
+}
