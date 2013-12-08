@@ -83,7 +83,7 @@ function fumseck_default_image( $post_type ) {
 function fumseck_register_bootstrap_js() {
 	wp_enqueue_script(
 		'bootstrap_js',
-		get_stylesheet_directory_uri() . '/3rdparty/bootstrap-3.0.2/dist/js/bootstrap.min.js',
+		get_stylesheet_directory_uri() . '/3rdparty/bootstrap-3.0.3/dist/js/bootstrap.min.js',
 		array( 'jquery' )
 	);
 }
