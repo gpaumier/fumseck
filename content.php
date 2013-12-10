@@ -46,7 +46,7 @@
 
 	<div class="container">
 		<nav class="nav-links">
-			<div class="nav-link previous"><?php next_post_link('%link', '<i class="fa fa-caret-left"></i> ' . __( 'Previous entry ' , 'fumseck' )) ?></div>
-			<div class="nav-link next"><?php previous_post_link('%link', __( 'Next entry ' , 'fumseck' ) . '<i class="fa fa-caret-right"></i>') ?></div>
+			<div class="nav-link previous"><?php previous_post_link('%link', '<i class="fa fa-caret-left"></i> ' . __( 'Previous entry ' , 'fumseck' )) ?></div>
+			<div class="nav-link next"><?php next_post_link('%link', __( 'Next entry ' , 'fumseck' ) . '<i class="fa fa-caret-right"></i>') ?></div>
 		</nav>
 	</div>
