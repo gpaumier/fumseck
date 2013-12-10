@@ -46,5 +46,4 @@
 	</div>
 	
 	</a>
-</div>
 </article><!-- #post -->

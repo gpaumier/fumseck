@@ -1,4 +1,6 @@
-	<?php	while ( have_posts() ) {
+	<div class="archive-content">
+
+<?php	while ( have_posts() ) {
 				the_post();
 				$post_type = get_post_type();
 				if ( $post_type == 'post' ) {
@@ -7,6 +9,7 @@
 					get_template_part( 'snippet', $post_type );
 				};
 			}; // end of The Loop. ?>
+	</div>
 
 	<div class="container">
 		<nav class="nav-links nav-full-width">
