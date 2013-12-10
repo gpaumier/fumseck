@@ -232,7 +232,10 @@ ul, ol, dl, p, pre, h1, h2, h3 {
 
 .large-content-size { font-size: (@base-font-size * @modular-scale-ratio); };
 .larger-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio); };
-.huge-content-size { font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio * @modular-scale-ratio); };
+.huge-content-size {
+	font-size: (@base-font-size * @modular-scale-ratio * @modular-scale-ratio * @modular-scale-ratio);
+	line-height: @base-line-height * 2;
+};
 
 // Set up fonts ////////////////////////////////////////////////////////////////
 
@@ -242,7 +245,7 @@ body {
 
 h1 {
 	.huge-content-size;
-	.fumseck-sans-bold;
+	.fumseck-serif-bold;
 
 }
 h2 {
@@ -294,7 +297,7 @@ figcaption {
 
 .byline, .project-meta1 {
 	.secondary-content-size;
-	.fumseck-serif-caps;
+	.fumseck-sans;
 	.no-bullet;
 }
 
