@@ -294,16 +294,23 @@ figcaption {
 	color: @secondary-content-color;
 }
 
-.byline, .project-meta1 {
+.byline, .project-meta1, .post-meta, .project-meta2, .image-meta,
+.image-pub-meta, .syndication, .copyright-info {
 	.secondary-content-size;
 	.fumseck-sans;
 	.no-bullet;
-}
+	
+	strong {
+		.fumseck-sans-bold;
+	}
 
-.post-meta, .project-meta2, .image-meta, .image-pub-meta, .syndication {
-	.secondary-content-size;
-	.fumseck-sans;
-	.no-bullet;
+	em {
+		.fumseck-sans-italic;
+		}
+
+	em strong, strong em {
+		.fumseck-sans-bolditalic;
+	}
 }
 
 // Snippets ////////////////////////////////////////////////////////////////////

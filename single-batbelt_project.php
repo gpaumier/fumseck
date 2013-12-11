@@ -53,6 +53,15 @@
 	
 	<div class="the-content"><?php the_content(); ?></div>
 	
+	<?php if ( $copyright_info = get_field( '_copyright_info', get_the_ID(), true ) ) {?>
+	<div class="copyright-info">
+		<div class="copyright-info-inner">
+			<i class="fa fa-paperclip"></i> <span class="copyright-info-label"><?php _e( 'Copyright information:' , 'fumseck' ); ?></span>
+			<div class="copyright-info-content"> <?php echo $copyright_info ; ?></div>
+		</div>
+	</div>
+	<?php }; ?>
+	
 	<aside class="project-meta2 fumseck-bottom">
 		<?php get_template_part( 'metadata', 'batbelt_project' ); // TODO: reuse data from metadata above ?>
 	</aside>
