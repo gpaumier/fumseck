@@ -17,7 +17,7 @@
 	<a href="<?php echo esc_url( get_permalink()); ?>">
 	
 	<header class="before">
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project' , 'fumseck' ); echo $meta_info_fmtd ?></span>
 		</p>
@@ -27,7 +27,7 @@
 	</figure>
 
 	<header class="after">
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project' , 'fumseck' );  echo $meta_info_fmtd ?></span>
 		</p>
@@ -40,7 +40,7 @@
 	<a class="snippet" href="<?php echo esc_url( get_permalink()); ?>">
 	
 	<header>
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project ' , 'fumseck' );  echo $meta_info_fmtd ?></span>
 		</p>

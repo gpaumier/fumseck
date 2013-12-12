@@ -5,7 +5,7 @@
 	<a href="<?php echo esc_url( get_permalink()); ?>">
 	
 	<header class="before">
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
@@ -15,7 +15,7 @@
 	</figure>
 
 	<header class="after">
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
@@ -28,7 +28,7 @@
 	<a href="<?php echo esc_url( get_permalink()); ?>">
 	
 	<header>
-		<h1><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?></h1>
 		<p class="pub_date">
 			<i class="fa fa-pencil-square-o"></i> <span class="meta-label"><?php _e( 'Article published on ' , 'fumseck' ); ?></span><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ; ?>" pubdate><?php echo date_i18n( __('F j, Y', 'fumseck'), get_the_date('U') ) ; ?></time>
 		</p>
