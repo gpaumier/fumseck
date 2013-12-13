@@ -22,7 +22,7 @@
 				
 			<?php	if ( $fullres = get_field( '_full_res', get_the_ID(), true ) ) { ?>
 				
-				<a title="<?php echo esc_attr( _e( 'Download full size version' , 'fumseck' ) ); ?>"
+				<a title="<?php echo esc_attr( _e( 'Download full-size version' , 'fumseck' ) ); ?>"
 					href="<?php echo esc_url($fullres);?>">
 					<?php _e( 'Download full size version' , 'fumseck' ); ?></a>
 			</li>
@@ -30,9 +30,9 @@
 			<?php	} else { 
 						$local_fullres = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
 				
-				<a title="<?php echo esc_attr( _e( 'Download full size version' , 'fumseck' ) ); ?>"
+				<a title="<?php echo esc_attr( _e( 'Download full-size version' , 'fumseck' ) ); ?>"
 					href="<?php echo esc_url($local_fullres[0]);?>">
-					<?php _e( 'Download full size version' , 'fumseck' ); ?></a> <?php echo '(' . $local_fullres[1] . '×' . $local_fullres[2] . ')'?>
+					<?php _e( 'Download full-size version' , 'fumseck' ); ?></a> <?php echo '(' . $local_fullres[1] . '×' . $local_fullres[2] . ')'?>
 			</li>
 			
 			<?php	} ?>
