@@ -17,5 +17,25 @@
 			<li class="projects"><i class="fa-li fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project: ' , 'fumseck' ); ?></span><?php fumseck_linked_title( $batbelt_project ); ?></li>
 			<?php } ?>
 			
+			<li class="fullsize">
+				<i class="fa-li fa fa-download"></i> 
+				
+			<?php	if ( $fullres = get_field( '_full_res', get_the_ID(), true ) ) { ?>
+				
+				<a title="<?php echo esc_attr( _e( 'Download full size version' , 'fumseck' ) ); ?>"
+					href="<?php echo esc_url($fullres);?>">
+					<?php _e( 'Download full size version' , 'fumseck' ); ?></a>
+			</li>
+				
+			<?php	} else { 
+						$local_fullres = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); ?>
+				
+				<a title="<?php echo esc_attr( _e( 'Download full size version' , 'fumseck' ) ); ?>"
+					href="<?php echo esc_url($local_fullres[0]);?>">
+					<?php _e( 'Download full size version' , 'fumseck' ); ?></a> <?php echo '(' . $local_fullres[1] . '×' . $local_fullres[2] . ')'?>
+			</li>
+			
+			<?php	} ?>
+			
 			<?php get_template_part( 'syndication' ); ?>
 		</ul>
