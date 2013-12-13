@@ -7632,13 +7632,20 @@ h1 {
 }
 h2 {
   font-size: 28.799999999999997px;
-  font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
-  font-weight: bold;
 }
 h3 {
   font-size: 24px;
+}
+h2,
+h3 {
   font-family: 'Latin Modern Sans Bold', 'Futura', 'Verdana', sans-serif;
   font-weight: bold;
+}
+h2 em,
+h3 em {
+  font-family: 'Latin Modern Sans Bold Oblique', 'Futura', 'Verdana', sans-serif;
+  font-weight: bold;
+  font-style: italic;
 }
 .summary {
   font-size: 24px;
