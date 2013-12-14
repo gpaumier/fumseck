@@ -8533,11 +8533,11 @@ figcaption p {
     margin-left: 33.33333333333333%;
   }
 }
-#menu-about {
+.about-menu ul {
   list-style-type: none;
   padding-left: 0;
 }
-#menu-about a {
+.about-menu a {
   display: block;
   font-family: 'Latin Modern Sans Regular', 'Futura', 'Verdana', sans-serif;
   color: #657b83;
@@ -8545,19 +8545,19 @@ figcaption p {
   border-left: 6px solid #fdf6e3;
   padding: 8px;
 }
-#menu-about a:visited,
-#menu-about a:active {
+.about-menu a:visited,
+.about-menu a:active {
   color: #657b83;
 }
-#menu-about a:hover,
-#menu-about a:focus {
+.about-menu a:hover,
+.about-menu a:focus {
   color: #268bd2;
   background-color: #eee8d5;
 }
-#menu-about a:hover {
+.about-menu a:hover {
   border-left: 6px solid #268bd2;
 }
-#menu-about .current_page_item a {
+.about-menu .current_page_item a {
   background-color: #eee8d5;
   color: #b58900;
   border-left: 6px solid #b58900;
