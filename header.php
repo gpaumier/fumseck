@@ -8,7 +8,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<meta property="fb:admins" content="579323492087704" />
+		<meta property="fb:admins" content="710543474" />
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
