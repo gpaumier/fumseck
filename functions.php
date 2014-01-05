@@ -292,5 +292,71 @@ function fumseck_brand_site_title() {
 	echo $output;
 }
 
+// Set up OpenGraph, Twitter cards, etc. ///////////////////////////////////////
+
+function fumseck_pagemeta() {
+	
+	// Initialize
+	
+	$output = '';
+	global $post;
+	$post_id = $post->ID;
+	
+	
+	// Get metadata for the page from WordPress
+	
+	$post_title = get_the_title($post_id);
+	
+	$post_has_featured_image = has_post_thumbnail( $post_id );
+	
+	if( $post_has_featured_image ) {
+		$post_featured_image_large = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); // [URL, w, h, resized?]
+	};
+	
+	$summary = substr( get_field( '_summary', $post_id, true ), 3, -5); // substr to remove first ant last <p> tags
+	
+	// TODO: handle multiple paragraphs in the summary
+	
+	
+	if ( ! $summary ) {		// if no summary, try a manual excerpt
+		$summary = $post->post_excerpt;
+	};	// TODO: do something if there's no manual excerpt either
+
+	
+	// Static metadata
+	
+	$output .= '<meta name="twitter:site" content="@gpaumier"><meta name="twitter:creator" content="@gpaumier">';
+	
+	
+	// Common metadata
+	
+	$output .= '<meta name="twitter:title" content="' . $post_title . '">';
+	
+	if ( get_post_format( $post_id ) === 'image' ) {
+		
+		$output .= '<meta name="twitter:card" content="photo">';
+		$output .= '<meta name="twitter:image" content="' . $post_featured_image_large[0] . '">';
+		$output .= '<meta name="twitter:image:width" content="' . $post_featured_image_large[1] . '">';
+		$output .= '<meta name="twitter:image:height" content="' . $post_featured_image_large[2] . '">';
+		
+	} else {	// Not a photo
+		
+		$output .= '<meta name="twitter:description" content="' . $summary . '">';
+		
+		if( $post_has_featured_image ) {
+			
+			$output .= '<meta name="twitter:card" content="summary_large_image">';
+			$output .= '<meta name="twitter:image:src" content="' . $post_featured_image_large[0] . '">';
+			
+		} else {
+			
+			$output .= '<meta name="twitter:card" content="summary">';
+		}
+		
+	};
+	
+
+	echo $output;
+}
 
 ?>

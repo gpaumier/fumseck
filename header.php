@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<meta property="fb:admins" content="710543474" />
+		<?php if( is_singular()){ fumseck_pagemeta();}; ?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
