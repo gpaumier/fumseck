@@ -306,6 +306,7 @@ function fumseck_pagemeta() {
 	// Get metadata for the page from WordPress
 	
 	$post_title = get_the_title($post_id);
+	$post_permalink = get_permalink($post_id);
 	
 	$post_has_featured_image = has_post_thumbnail( $post_id );
 	
@@ -313,24 +314,37 @@ function fumseck_pagemeta() {
 		$post_featured_image_large = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large'); // [URL, w, h, resized?]
 	};
 	
-	$summary = substr( get_field( '_summary', $post_id, true ), 3, -5); // substr to remove first ant last <p> tags
-	
-	// TODO: handle multiple paragraphs in the summary
+	$post_summary = wp_strip_all_tags( get_field( '_summary', $post_id, true ));
 	
 	
-	if ( ! $summary ) {		// if no summary, try a manual excerpt
-		$summary = $post->post_excerpt;
+	if ( ! $post_summary ) {		// if no summary, try a manual excerpt
+		$post_summary = $post->post_excerpt;
 	};	// TODO: do something if there's no manual excerpt either
 
 	
 	// Static metadata
 	
-	$output .= '<meta name="twitter:site" content="@gpaumier"><meta name="twitter:creator" content="@gpaumier">';
+	$output .= '<meta name="twitter:site" content="@gpaumier"><meta name="twitter:creator" content="@gpaumier">';	
+	$output .= '<meta property="fb:admins" content="710543474" />';
+	$output .= '<meta property="article:author" content="https://www.facebook.com/gllmpmr" />';
+	$output .= '<meta property="article:publisher" content="https://www.facebook.com/gllmpmr" />';
 	
+	$output .= '<meta property="og:type" content="article" />'; // TODO: be more specific
 	
 	// Common metadata
 	
+	$output .= '<meta property="og:site_name" content="' . get_bloginfo( 'name' ) . '"/>';
+	
 	$output .= '<meta name="twitter:title" content="' . $post_title . '">';
+	$output .= '<meta property="og:title" content="' . $post_title . '"/>';
+	
+	
+	$output .= '<meta property="og:url" content="' . $post_permalink . '" />';
+	
+	
+	$output .= '<meta property="og:description" content="' . $post_summary . '" />';
+	
+	// TODO: add locale
 	
 	if ( get_post_format( $post_id ) === 'image' ) {
 		
@@ -338,15 +352,20 @@ function fumseck_pagemeta() {
 		$output .= '<meta name="twitter:image" content="' . $post_featured_image_large[0] . '">';
 		$output .= '<meta name="twitter:image:width" content="' . $post_featured_image_large[1] . '">';
 		$output .= '<meta name="twitter:image:height" content="' . $post_featured_image_large[2] . '">';
+		$output .= '<meta property="og:image:width" content="' . $post_featured_image_large[1] . '" />';
+		$output .= '<meta property="og:image:height" content="' . $post_featured_image_large[2] . '" />';
 		
 	} else {	// Not a photo
 		
-		$output .= '<meta name="twitter:description" content="' . $summary . '">';
+		$output .= '<meta name="twitter:description" content="' . $post_summary . '">';
 		
 		if( $post_has_featured_image ) {
 			
 			$output .= '<meta name="twitter:card" content="summary_large_image">';
 			$output .= '<meta name="twitter:image:src" content="' . $post_featured_image_large[0] . '">';
+			$output .= '<meta property="og:image" content="' . $post_featured_image_large[0] . '" />';
+			$output .= '<meta property="og:image:width" content="' . $post_featured_image_large[1] . '" />';
+			$output .= '<meta property="og:image:height" content="' . $post_featured_image_large[2] . '" />';
 			
 		} else {
 			
