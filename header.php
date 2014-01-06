@@ -8,7 +8,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<?php if( is_singular()){ fumseck_pagemeta();}; ?>
+		<?php fumseck_pagemeta(); ?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
