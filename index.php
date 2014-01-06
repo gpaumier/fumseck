@@ -4,7 +4,7 @@
 
 <?php if ( have_posts() ) { ?>
 	<header class="blog-header container">
-		<h1 class="archive-title"><i class="fa fa-pencil-square-o"></i> <?php _e( 'Thoughts' , 'fumseck' ); ?></h1>
+		<h1 class="archive-title"><i class="fa fa-pencil-square-o"></i> <?php _e( 'Articles' , 'fumseck' ); ?></h1>
 	</header><!-- .archive-header -->
 	
 	<?php get_template_part( 'common', 'archive' ); // the loop is in there ?>
