@@ -379,4 +379,32 @@ function fumseck_pagemeta() {
 	echo $output;
 }
 
+
+// Add featured picture and summary to the RSS feed ////////////////////////////
+
+function add_picture_and_summary_to_feed( $content ) {
+	
+	global $post;
+	
+	if( is_feed() ) {
+		$post_id = $post->ID;
+		
+		$post_summary = get_field( '_summary', $post_id, true );
+		if ( $post_summary ){
+			$content = $post_summary . $content;
+		}
+		
+		if ( has_post_thumbnail( $post_id ) ){
+			$featured_image_wrapped = get_the_post_thumbnail( $post_id, 'large' );
+			$content = $featured_image_wrapped . $content;
+		}
+
+	}
+	return $content;
+}
+
+add_filter( 'the_content', 'add_picture_and_summary_to_feed' );
+
+////////////////////////////////////////////////////////////////////////////////
+
 ?>
