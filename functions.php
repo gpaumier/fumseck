@@ -327,7 +327,7 @@ function fumseck_pagemeta() {
 	$output .= '<meta name="twitter:site" content="@gpaumier"><meta name="twitter:creator" content="@gpaumier">';	
 	$output .= '<meta name="twitter:domain" content="guillaumepaumier.com">';	
 	$output .= '<meta property="fb:admins" content="710543474" />';
-	$output .= '<meta property="fb:admins" content="579323492087704" />';
+	//$output .= '<meta property="fb:admins" content="579323492087704" />';
 	$output .= '<meta property="article:author" content="https://www.facebook.com/gllmpmr" />';
 	$output .= '<meta property="article:publisher" content="https://www.facebook.com/gllmpmr" />';
 	
