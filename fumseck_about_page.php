@@ -2,9 +2,7 @@
 /*
 Template Name: About page set
 */
-?>
-
-<?php get_header(); ?>
+?><?php get_header(); ?>
 
 <div id="content" role="main" class="page page-about-set">
 
