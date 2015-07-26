@@ -30,7 +30,7 @@
 	<header class="before">
 		<h1 class="snippet-title"><?php the_title(); ?>
 		<?php if ( $underway ) {   ?>
-		&nbsp;&nbsp;<span class="label label-default">report underway</span>
+		&nbsp; &nbsp;<span class="label label-default">report underway</span>
 		<?php }; ?>
 		</h1>
 		<p class="pub_date">
@@ -42,7 +42,11 @@
 	</figure>
 
 	<header class="after">
-		<h1 class="snippet-title"><?php the_title(); ?></h1>
+		<h1 class="snippet-title"><?php the_title(); ?>
+		<?php if ( $underway ) {   ?>
+		&nbsp; &nbsp;<span class="label label-default">report underway</span>
+		<?php }; ?>
+		</h1>
 		<p class="pub_date">
 			<i class="fa fa-tasks"></i> <span class="meta-label"><?php _e( 'Project' , 'fumseck' );  echo $meta_info_fmtd ?></span>
 		</p>
