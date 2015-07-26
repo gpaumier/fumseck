@@ -8749,7 +8749,7 @@ td#menu-nav-menu .home {
 .snippet figure {
   padding-bottom: 0;
 }
-.snippet a,.snippet.project-underway {
+.snippet a,.project-underway {
   margin-left: -15px;
   margin-right: -15px;
   display: block;
@@ -8760,12 +8760,12 @@ td#menu-nav-menu .home {
 }
 .snippet a:before,
 .snippet a:after,
-.snippet.project-underway:before,
-.snippet.project-underway:after {
+.project-underway:before,
+.project-underway:after {
   content: " ";
   display: table;
 }
-.snippet a:after,.snippet.project-underway:after {
+.snippet a:after,.project-underway:after {
   clear: both;
 }
 .snippet a:visited {
