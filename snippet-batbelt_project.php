@@ -65,7 +65,7 @@
 	<header>
 		<h1 class="snippet-title"><?php the_title(); ?>
 		<?php if ( $underway ) {   ?>
-		&nbsp;&nbsp;<span class="label label-default">report underway</span>
+		&nbsp; &nbsp;<span class="label label-default">report underway</span>
 		<?php }; ?>
 		</h1>
 		<p class="pub_date">
