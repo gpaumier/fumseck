@@ -7,7 +7,7 @@ Description: A simple responsive theme
 Version: 0.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: 
+Tags:
 Text Domain: fumseck
 */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
@@ -8749,7 +8749,7 @@ td#menu-nav-menu .home {
 .snippet figure {
   padding-bottom: 0;
 }
-.snippet a {
+.snippet a,.snippet.project-underway {
   margin-left: -15px;
   margin-right: -15px;
   display: block;
@@ -8759,35 +8759,13 @@ td#menu-nav-menu .home {
   color: #657b83;
 }
 .snippet a:before,
-.snippet a:after {
+.snippet a:after,
+.snippet.project-underway:before,
+.snippet.project-underway:after {
   content: " ";
   display: table;
 }
-.snippet a:after {
-  clear: both;
-}
-.snippet a:before,
-.snippet a:after {
-  content: " ";
-  display: table;
-}
-.snippet a:after {
-  clear: both;
-}
-.snippet a:before,
-.snippet a:after {
-  content: " ";
-  display: table;
-}
-.snippet a:after {
-  clear: both;
-}
-.snippet a:before,
-.snippet a:after {
-  content: " ";
-  display: table;
-}
-.snippet a:after {
+.snippet a:after,.snippet.project-underway:after {
   clear: both;
 }
 .snippet a:visited {
@@ -8798,6 +8776,9 @@ td#menu-nav-menu .home {
 }
 .snippet a:hover h1 {
   color: #268bd2;
+}
+.snippet.project-underway {
+  opacity: 0.6;
 }
 .snippet p {
   padding-bottom: 0;
