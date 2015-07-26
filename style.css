@@ -8777,8 +8777,8 @@ td#menu-nav-menu .home {
 .snippet a:hover h1 {
   color: #268bd2;
 }
-.snippet.project-underway {
-  opacity: 0.6;
+.project-underway {
+  opacity: 0.5;
 }
 .snippet p {
   padding-bottom: 0;
