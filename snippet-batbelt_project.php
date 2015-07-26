@@ -15,13 +15,13 @@
 
 <?php if ( $post_thumbnail = has_post_thumbnail() ) {  ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project has-picture'); ?>>
+
 	<?php if ( $underway ) {   ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project has-picture project-underway'); ?>>
+	<div class="project-underway">
 
 	<?php } else {   ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project has-picture'); ?>>
 
 	<a href="<?php echo esc_url( get_permalink()); ?>">
 
@@ -46,15 +46,15 @@
 
 <?php } else { ?>
 
+	<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project no-picture'); ?>>
+
 	<?php if ( $underway ) {   ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project no-picture project-underway'); ?>>
+	<div class="project-underway">
 
 	<?php } else {   ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('container snippet snippet-batbelt_project no-picture'); ?>>
-
-	<a class="snippet" href="<?php echo esc_url( get_permalink()); ?>">
+	<a href="<?php echo esc_url( get_permalink()); ?>">
 
 	<?php }; ?>
 
@@ -76,7 +76,9 @@
 			}; ?>
 	</div>
 
-	<?php if ( ! $underway ) {   ?>
+	<?php if ( $underway ) {   ?>
+	</div>
+	<?php } else {   ?>
 	</a>
 	<?php }; ?>
 </article><!-- #post -->
